@@ -1,0 +1,40 @@
+ideas = {
+	country = {
+		cheat_ccm_resources_decr_lv1 = {
+			picture = generic_production_bonus
+			available = { is_ai = no }
+			cancel_if_invalid = no
+			level = 1
+			modifier = {
+				LOCAL_RESOURCES_FACTOR = -0.25
+			}
+		}
+		cheat_ccm_resources_decr_lv2 = {
+			picture = generic_production_bonus
+			available = { is_ai = no }
+			cancel_if_invalid = no
+			level = 2
+			modifier = {
+				LOCAL_RESOURCES_FACTOR = -1
+			}
+		}
+		cheat_ccm_resources_lv1 = {
+			picture = generic_production_bonus
+			available = { is_ai = no }
+			cancel_if_invalid = no
+			level = 3
+			modifier = {
+				LOCAL_RESOURCES_FACTOR = 0.25
+			}
+		}
+		cheat_ccm_resources_lv2 = {
+			picture = generic_production_bonus
+			available = { is_ai = no }
+			cancel_if_invalid = no
+			level = 4
+			modifier = {
+				LOCAL_RESOURCES_FACTOR = 1
+			}
+		}
+	}
+}

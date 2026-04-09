@@ -1,0 +1,180 @@
+# Easy Buff Mod on_actions
+
+on_actions = {
+	# Monthly opinion boost for internal factions if the player has the internal_factions_EB_booster flag
+	on_monthly = {
+		effect = {
+			if = {
+				limit = {
+					is_ai = no
+					has_country_flag = internal_factions_EB_booster
+				}
+
+				ROOT = {
+					if = {
+						limit = { has_idea = small_medium_business_owners
+						}
+						set_temp_variable = { temp_opinion = 100 }
+						change_small_medium_business_owners_opinion = yes
+					}
+
+					if = {
+						limit = { has_idea = international_bankers
+						}
+						set_temp_variable = { temp_opinion = 100 }
+						change_international_bankers_opinion = yes
+					}
+
+					if = {
+						limit = { has_idea = fossil_fuel_industry
+						}
+						set_temp_variable = { temp_opinion = 100 }
+						change_fossil_fuel_industry_opinion = yes
+					}
+
+					if = {
+						limit = { has_idea = industrial_conglomerates
+						}
+						set_temp_variable = { temp_opinion = 100 }
+						change_industrial_conglomerates_opinion = yes
+					}
+
+					if = {
+						limit = {  has_idea = oligarchs
+						}
+						set_temp_variable = { temp_opinion = 100 }
+						change_oligarchs_opinion = yes
+					}
+
+					if = {
+						limit = { has_idea = maritime_industry
+							}
+						set_temp_variable = { temp_opinion = 100 }
+						change_maritime_industry_opinion = yes
+					}
+
+					if = {
+						limit = { has_idea = intelligence_community
+							}
+						set_temp_variable = { temp_opinion = 100 }
+						change_intelligence_community_opinion = yes
+					}
+
+					if = {
+						limit = {  has_idea = the_military
+							}
+						set_temp_variable = { temp_opinion = 100 }
+						change_the_military_opinion = yes
+					}
+
+					if = {
+						limit = { has_idea = defense_industry
+							}
+						set_temp_variable = { temp_opinion = 100 }
+						change_defense_industry_opinion = yes
+					}
+
+					if = {
+						limit = { has_idea = wahabi_ulema
+							}
+						set_temp_variable = { temp_opinion = 100 }
+						change_the_wahabi_ulema_opinion = yes
+					}
+
+					if = {
+						limit = { has_idea = the_priesthood
+							}
+						set_temp_variable = { temp_opinion = 100 }
+						change_the_priesthood_opinion = yes
+					}
+
+					if = {
+						limit = { has_idea = the_ulema
+							}
+						set_temp_variable = { temp_opinion = 100 }
+						change_the_ulema_opinion = yes
+					}
+
+					if = {
+						limit = { has_idea = the_clergy
+							}
+						set_temp_variable = { temp_opinion = 100 }
+						change_the_clergy_opinion = yes
+					}
+
+					if = {
+						limit = { has_idea = communist_cadres
+							}
+						set_temp_variable = { temp_opinion = 100 }
+						change_communist_cadres_opinion = yes
+					}
+
+					if = {
+						limit = { has_idea = farmers
+							}
+						set_temp_variable = { temp_opinion = 100 }
+						change_farmers_opinion = yes
+					}
+
+					if = {
+						limit = { has_idea = landowners
+							}
+						set_temp_variable = { temp_opinion = 100 }
+						change_landowners_opinion = yes
+					}
+
+					if = {
+						limit = { has_idea = labour_unions
+							}
+						set_temp_variable = { temp_opinion = 100 }
+						change_labour_unions_opinion = yes
+					}
+
+					if = {
+						limit = { has_idea = foreign_jihadis
+							}
+						set_temp_variable = { temp_opinion = 100 }
+						change_foreign_jihadis_opinion = yes
+					}
+
+					if = {
+						limit = { has_idea = iranian_quds_force
+							}
+						set_temp_variable = { temp_opinion = 100 }
+						change_iranian_quds_force_opinion = yes
+					}
+
+					if = {
+						limit = { has_idea = saudi_royal_family
+							}
+						set_temp_variable = { temp_opinion = 100 }
+						change_saudi_royal_family_opinion = yes
+					}
+
+					if = {
+						limit = { has_idea = chaebols
+							}
+						set_temp_variable = { temp_opinion = 100 }
+						change_chaebols_opinion = yes
+					}
+
+					if = {
+						limit = { has_idea = wall_street
+							}
+						set_temp_variable = { temp_opinion = 100 }
+						change_wall_street_opinion = yes
+					}
+
+					if = {
+						limit = { has_idea = the_donju
+							}
+						set_temp_variable = { temp_opinion = 100 }
+						change_the_donju_opinion = yes
+					}
+				}
+			}
+		}
+	}
+}
+        
+       

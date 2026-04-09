@@ -1,0 +1,130 @@
+ideas = {
+	cheat_economics = {
+		cheat_economics_lvl1 = {
+			picture = generic_pp_unity_bonus
+			available = { is_ai = no }
+			cancel_if_invalid = no
+			level = 1
+			modifier = {
+				resource_export_multiplier_modifier = 0.10
+				tax_gain_multiplier_modifier = 0.10
+				population_tax_income_multiplier_modifier = 0.05
+                corporate_tax_income_multiplier_modifier = 0.05
+				personnel_cost_multiplier_modifier = -0.10
+				equipment_cost_multiplier_modifier = -0.15
+				bureaucracy_cost_multiplier_modifier = -0.10
+				police_cost_multiplier_modifier = -0.10
+				education_cost_multiplier_modifier = -0.10
+				health_cost_multiplier_modifier = -0.10
+				social_cost_multiplier_modifier = -0.10
+				cyber_cost_multiplier_modifier = -0.10
+
+				#eb_immig_employ_multiplier_modifier = 0.5
+				#eb_immig_employ2_multiplier_modifier = 0.5
+				migration_rate_value_factor = 0.15
+			}
+		}
+		cheat_economics_lvl2 = {
+			picture = generic_pp_unity_bonus
+			available = { is_ai = no }
+			cancel_if_invalid = no
+			level = 2
+			modifier = {
+				resource_export_multiplier_modifier = 0.25
+				tax_gain_multiplier_modifier = 0.25
+				population_tax_income_multiplier_modifier = 0.125
+                corporate_tax_income_multiplier_modifier = 0.125
+				personnel_cost_multiplier_modifier = -0.25
+				equipment_cost_multiplier_modifier = -0.35
+				bureaucracy_cost_multiplier_modifier = -0.25
+				police_cost_multiplier_modifier = -0.25
+				education_cost_multiplier_modifier = -0.25
+				health_cost_multiplier_modifier = -0.25
+				social_cost_multiplier_modifier = -0.25
+				cyber_cost_multiplier_modifier = -0.25
+
+				#eb_immig_employ_multiplier_modifier = 1
+				#eb_immig_employ2_multiplier_modifier = 1
+				migration_rate_value_factor = 0.5
+			}
+		}
+		cheat_economics_lvl3 = {
+			picture = generic_pp_unity_bonus
+			available = { is_ai = no }
+			cancel_if_invalid = no
+			level = 3
+			modifier = {
+				resource_export_multiplier_modifier = 1
+				tax_gain_multiplier_modifier = 1
+				population_tax_income_multiplier_modifier = 0.5
+                corporate_tax_income_multiplier_modifier = 0.5
+				personnel_cost_multiplier_modifier = -0.75
+				equipment_cost_multiplier_modifier = -1
+				bureaucracy_cost_multiplier_modifier = -0.75
+				police_cost_multiplier_modifier = -0.75
+				education_cost_multiplier_modifier = -0.75
+				health_cost_multiplier_modifier = -0.75
+				social_cost_multiplier_modifier = -0.75
+				cyber_cost_multiplier_modifier = -0.75
+
+				#eb_immig_employ_multiplier_modifier = 2
+				#eb_immig_employ2_multiplier_modifier = 2
+				migration_rate_value_factor = 1
+			}
+		}
+		cheat_economics_lvl4 = {
+			picture = generic_pp_unity_bonus
+			available = { is_ai = no }
+			cancel_if_invalid = no
+			level = 4
+			modifier = {
+				resource_export_multiplier_modifier = 2
+				tax_gain_multiplier_modifier = 2
+				population_tax_income_multiplier_modifier = 1
+                corporate_tax_income_multiplier_modifier = 1
+				personnel_cost_multiplier_modifier = -3
+				equipment_cost_multiplier_modifier = -2
+				bureaucracy_cost_multiplier_modifier = -1.5
+				police_cost_multiplier_modifier = -1.5
+				education_cost_multiplier_modifier = -1.5
+				health_cost_multiplier_modifier = -1.5
+				social_cost_multiplier_modifier = -1.5
+				cyber_cost_multiplier_modifier = -1.5
+
+				#eb_immig_employ_multiplier_modifier = 4
+				#eb_immig_employ2_multiplier_modifier = 4
+				migration_rate_value_factor = 5
+			}
+		}
+		cheat_economics_insane = {
+			picture = generic_pp_unity_bonus
+			available = { is_ai = no }
+			cancel_if_invalid = no
+			level = 8
+			modifier = {
+				resource_export_multiplier_modifier = 20
+				tax_gain_multiplier_modifier = 20
+				population_tax_income_multiplier_modifier = 10
+                corporate_tax_income_multiplier_modifier = 10
+				personnel_cost_multiplier_modifier = -10
+				equipment_cost_multiplier_modifier = -20
+				bureaucracy_cost_multiplier_modifier = -10
+				police_cost_multiplier_modifier = -10
+				education_cost_multiplier_modifier = -10
+				health_cost_multiplier_modifier = -10
+				social_cost_multiplier_modifier = -10
+				cyber_cost_multiplier_modifier = -10
+
+				#eb_immig_employ_multiplier_modifier = 9
+				#eb_immig_employ2_multiplier_modifier = 9
+				migration_rate_value_factor = 10
+			}
+		}
+		cheat_nothingeconomics = {
+			picture = generic_pp_unity_bonus
+			available = { is_ai = no }
+			cancel_if_invalid = no
+			level = 9
+		}
+	}
+}

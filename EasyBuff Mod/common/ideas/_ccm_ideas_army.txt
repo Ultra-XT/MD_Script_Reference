@@ -1,0 +1,96 @@
+ideas = {
+	country = {
+		cheat_ccm_army_decr_lv1 = {
+			picture = generic_infantry_bonus
+			available = { is_ai = no }
+			cancel_if_invalid = no
+			level = 1
+			modifier = {
+				land_reinforce_rate = -0.2
+				ARMY_ORG_FACTOR = -0.3
+				LOCAL_ORG_REGAIN = -0.2
+				ARMY_MORALE_FACTOR = -0.3
+
+				DEFENCE = -0.2
+				OFFENCE = -0.2
+				ARMY_SPEED_FACTOR = -0.1
+				ARMY_ARMOR_SPEED_FACTOR = -0.1
+
+				ATTRITION = 0.1
+
+				EXPERIENCE_LOSS_FACTOR = 0.4
+			}
+		}
+		cheat_ccm_army_decr_lv2 = {
+			picture = generic_infantry_bonus
+			available = { is_ai = no }
+			cancel_if_invalid = no
+			level = 2
+			modifier = {
+				land_reinforce_rate = -0.5
+				NO_SUPPLY_GRACE = -240
+				ARMY_ORG_FACTOR = -0.5
+				LOCAL_ORG_REGAIN = -0.3
+				ORG_LOSS_WHEN_MOVING = 0.5
+				ARMY_MORALE_FACTOR = -0.6
+
+				DEFENCE = -0.4
+				OFFENCE = -0.4
+				ARMY_SPEED_FACTOR = -0.2
+				ARMY_ARMOR_SPEED_FACTOR = -0.2
+				TRAINING_TIME_FACTOR = 0.5
+
+				ATTRITION = 0.2
+				COMBAT_WIDTH_FACTOR = 0.2
+
+				EXPERIENCE_LOSS_FACTOR = 0.6
+			}
+		}
+		cheat_ccm_army_lv1 = {
+			picture = generic_infantry_bonus
+			available = { is_ai = no }
+			cancel_if_invalid = no
+			level = 3
+			modifier = {
+				land_reinforce_rate = 0.2
+				ARMY_ORG_FACTOR = 0.3
+				LOCAL_ORG_REGAIN = 0.2
+				ARMY_MORALE_FACTOR = 0.3
+
+				DEFENCE = 0.2
+				OFFENCE = 0.2
+				ARMY_SPEED_FACTOR = 0.1
+				ARMY_ARMOR_SPEED_FACTOR = 0.1
+
+				ATTRITION = -0.1
+
+				EXPERIENCE_LOSS_FACTOR = -0.4
+			}
+		}
+		cheat_ccm_army_lv2 = {
+			picture = generic_infantry_bonus
+			available = { is_ai = no }
+			cancel_if_invalid = no
+			level = 4
+			modifier = {
+				land_reinforce_rate = 0.5
+				NO_SUPPLY_GRACE = 240
+				ARMY_ORG_FACTOR = 0.5
+				LOCAL_ORG_REGAIN = 0.3
+				ORG_LOSS_WHEN_MOVING = -0.5
+				ARMY_MORALE_FACTOR = 0.6
+
+				DEFENCE = 0.4
+				OFFENCE = 0.4
+				ARMY_SPEED_FACTOR = 0.2
+				ARMY_ARMOR_SPEED_FACTOR = 0.2
+				TRAINING_TIME_FACTOR = -0.5
+
+				ATTRITION = -0.2
+				COMBAT_WIDTH_FACTOR = -0.2
+
+				EXPERIENCE_LOSS_FACTOR = -0.6
+			}
+		}
+	}
+}

@@ -1,0 +1,34 @@
+idea_categories = {	
+	zcheat_idea = {
+		slot = cheat_construction
+		slot = cheat_technology
+		slot = cheat_politics
+		slot = cheat_spy
+		slot = cheat_population
+		slot = cheat_menu
+
+		cost = 0
+		removal_cost = 0
+		ledger = civilian
+	}
+	zcheat_ideaarmy = {
+		slot = cheat_equipment
+		slot = cheat_land
+		slot = cheat_navy
+		slot = cheat_air
+		slot = cheat_economics
+		slot = cheat_missiles
+
+		cost = 0
+		removal_cost = 0
+		ledger = army
+	}
+}
+
+slot_ledgers = {
+	cheat_land = army
+	cheat_navy = navy
+	cheat_air = air
+
+	cheat_politics = civilian
+}

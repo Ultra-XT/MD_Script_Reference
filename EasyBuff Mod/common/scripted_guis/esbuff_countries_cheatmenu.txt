@@ -1,0 +1,616 @@
+scripted_gui = {
+	esbuff_menu_button = {
+		window_name = "esbuff_menu_button"
+		context_type = player_context
+		parent_window_name = "national_spirit_info"
+		visible = { 
+			always = yes
+		}
+
+		ai_enabled = {
+			always = no
+		}
+
+		effects = {
+			esbuff_ccm_open_click = {
+				set_country_flag = open_esbuff_countries_cheat_menu
+			}
+			esbuff_ccm_open_right_click = {
+				clr_country_flag = open_esbuff_countries_cheat_menu
+			}
+			
+		}
+
+	}
+
+	esbuff_countries_cheat_menu_window = {
+        window_name = "esbuff_ccm_background_window"
+        context_type = player_context
+		parent_window_name = "countrydiplomacyview"
+        visible = {
+			has_country_flag = open_esbuff_countries_cheat_menu
+		}
+
+		effects = {
+			esbuff_ccm_close_click = {
+				clr_country_flag = open_esbuff_countries_cheat_menu
+			}
+		}
+	}
+
+	esbuff_ccm_options_window = {
+		window_name = "esbuff_ccm_options_window"
+		context_type = selected_country_context
+		parent_window_name = "esbuff_ccm_background_window_inner"
+
+		visible = {
+			always = yes
+		}
+
+		effects = {
+			#Opinion buttons
+				ccm_option_plus1_click = {
+					add_opinion_modifier = {
+						target = ROOT
+						modifier = esb_ccm_opinion_add_modifier
+					}
+					reverse_add_opinion_modifier = {
+						target = ROOT
+						modifier = esb_ccm_opinion_add_modifier
+					}
+				}
+				ccm_option_plus1_shift_click = {
+					add_opinion_modifier = {
+						target = ROOT
+						modifier = esb_ccm_opinion_shift_add_modifier
+					}
+					reverse_add_opinion_modifier = {
+						target = ROOT
+						modifier = esb_ccm_opinion_shift_add_modifier
+					}
+				}
+				ccm_option_minus1_click = {
+					add_opinion_modifier = {
+						target = ROOT
+						modifier = esb_ccm_opinion_decr_modifier
+					}
+					reverse_add_opinion_modifier = {
+						target = ROOT
+						modifier = esb_ccm_opinion_decr_modifier
+					}
+				}
+				ccm_option_minus1_shift_click = {
+					add_opinion_modifier = {
+						target = ROOT
+						modifier = esb_ccm_opinion_shift_decr_modifier
+					}
+					reverse_add_opinion_modifier = {
+						target = ROOT
+						modifier = esb_ccm_opinion_shift_decr_modifier
+					}
+				}
+				ccm_option_plus1_alt_click = {
+					remove_opinion_modifier = {
+						target = ROOT
+						modifier = esb_ccm_opinion_add_modifier
+					}
+					remove_opinion_modifier = {
+						target = ROOT
+						modifier = esb_ccm_opinion_shift_add_modifier
+					}
+				}
+				ccm_option_minus1_alt_click = {
+					remove_opinion_modifier = {
+						target = ROOT
+						modifier = esb_ccm_opinion_decr_modifier
+					}
+					remove_opinion_modifier = {
+						target = ROOT
+						modifier = esb_ccm_opinion_shift_decr_modifier
+					}
+				}
+			#PP buttons
+				ccm_option_plus2_click = {
+					add_political_power = 50
+				}
+				ccm_option_plus2_shift_click = {
+					add_political_power = 250
+				}
+				ccm_option_plus2_alt_shift_click = {
+					add_political_power = 1000
+				}
+				ccm_option_minus2_click = {
+					add_political_power = -50
+				}
+				ccm_option_minus2_shift_click = {
+					add_political_power = -250
+				}
+				ccm_option_minus2_alt_shift_click = {
+					add_political_power = -1000
+				}
+			#Stability
+				ccm_option_plus3_click = {
+					add_stability = 0.1
+				}
+				ccm_option_plus3_shift_click = {
+					add_stability = 0.5
+				}
+				ccm_option_minus3_click = {
+					add_stability = -0.1
+				}
+				ccm_option_minus3_shift_click = {
+					add_stability = -0.5
+				}
+			#War support
+				ccm_option_plus4_click = {
+					add_war_support = 0.1
+				}
+				ccm_option_plus4_shift_click = {
+					add_war_support = 0.5
+				}
+				ccm_option_minus4_click = {
+					add_war_support = -0.1
+				}
+				ccm_option_minus4_shift_click = {
+					add_war_support = -0.5
+				}
+			#Manpower
+				ccm_option_plus5_click = {
+					add_manpower = 50000
+				}
+				ccm_option_plus5_shift_click = {
+					add_manpower = 500000
+				}
+				ccm_option_plus5_alt_shift_click = {
+					add_manpower = 2000000
+				}
+				ccm_option_minus5_click = {
+					add_manpower = -50000
+				}
+				ccm_option_minus5_shift_click = {
+					add_manpower = -500000
+				}
+				ccm_option_minus5_alt_shift_click = {
+					add_manpower = -2000000
+				}
+			#Convoys
+				ccm_option_plus6_click = {
+					add_equipment_to_stockpile = {
+						type = convoy
+						amount = 250
+					}
+				}
+				ccm_option_plus6_shift_click = {
+					add_equipment_to_stockpile = {
+						type = convoy
+						amount = 1000
+					}
+				}
+			#Resources
+				ccm_option_plus7_click = {
+					country_event = Easybuff.201
+				}
+				ccm_option_plus7_shift_click = {
+					country_event = Easybuff.202
+				}
+				ccm_option_minus7_click = {
+					country_event = Easybuff.203
+				}
+				ccm_option_minus7_shift_click = {
+					country_event = Easybuff.204
+				}
+
+				ccm_option_add_idea1_click = {
+					add_ideas = cheat_ccm_resources_lv1
+					remove_ideas = cheat_ccm_resources_lv2
+					remove_ideas = cheat_ccm_resources_decr_lv1
+					remove_ideas = cheat_ccm_resources_decr_lv2
+				}
+				ccm_option_add_idea1_shift_click = {
+					add_ideas = cheat_ccm_resources_lv2
+					remove_ideas = cheat_ccm_resources_lv1
+					remove_ideas = cheat_ccm_resources_decr_lv1
+					remove_ideas = cheat_ccm_resources_decr_lv2
+				}
+				ccm_option_remove_idea1_click = {
+					add_ideas = cheat_ccm_resources_decr_lv1
+					remove_ideas = cheat_ccm_resources_decr_lv2
+					remove_ideas = cheat_ccm_resources_lv1
+					remove_ideas = cheat_ccm_resources_lv2
+				}
+				ccm_option_remove_idea1_shift_click = {
+					add_ideas = cheat_ccm_resources_decr_lv2
+					remove_ideas = cheat_ccm_resources_decr_lv1
+					remove_ideas = cheat_ccm_resources_lv1
+					remove_ideas = cheat_ccm_resources_lv2
+				}
+				ccm_option_delete_idea1_click = {
+					remove_ideas = cheat_ccm_resources_lv1
+					remove_ideas = cheat_ccm_resources_lv2
+					remove_ideas = cheat_ccm_resources_decr_lv1
+					remove_ideas = cheat_ccm_resources_decr_lv2
+				}
+			#Factory output
+				ccm_option_add_idea2_click = {
+					add_ideas = cheat_ccm_factory_output_lv1
+					remove_ideas = cheat_ccm_factory_output_lv2
+					remove_ideas = cheat_ccm_factory_output_decr_lv1
+					remove_ideas = cheat_ccm_factory_output_decr_lv2
+				}
+				ccm_option_add_idea2_shift_click = {
+					add_ideas = cheat_ccm_factory_output_lv2
+					remove_ideas = cheat_ccm_factory_output_lv1
+					remove_ideas = cheat_ccm_factory_output_decr_lv1
+					remove_ideas = cheat_ccm_factory_output_decr_lv2
+				}
+				ccm_option_remove_idea2_click = {
+					add_ideas = cheat_ccm_factory_output_decr_lv1
+					remove_ideas = cheat_ccm_factory_output_lv1
+					remove_ideas = cheat_ccm_factory_output_lv2
+					remove_ideas = cheat_ccm_factory_output_decr_lv2
+				}
+				ccm_option_remove_idea2_shift_click = {
+					add_ideas = cheat_ccm_factory_output_decr_lv2
+					remove_ideas = cheat_ccm_factory_output_lv1
+					remove_ideas = cheat_ccm_factory_output_lv2
+					remove_ideas = cheat_ccm_factory_output_decr_lv1
+				}
+				ccm_option_delete_idea2_click = {
+					remove_ideas = cheat_ccm_factory_output_lv1
+					remove_ideas = cheat_ccm_factory_output_lv2
+					remove_ideas = cheat_ccm_factory_output_decr_lv1
+					remove_ideas = cheat_ccm_factory_output_decr_lv2
+				}
+			#Treasury
+				ccm_option_plus9_click = {
+					add_to_variable = { treasury = 25 }
+				}
+				ccm_option_plus9_shift_click = {
+					add_to_variable = { treasury = 500 }
+				}
+				ccm_option_minus9_click = {
+					add_to_variable = { treasury = -25 }
+				}
+				ccm_option_minus9_shift_click = {
+					add_to_variable = { treasury = -500 }
+				}
+			#Army, Navy, Air
+				ccm_option_add_idea3_click = {
+					add_ideas = cheat_ccm_army_lv1
+					remove_ideas = cheat_ccm_army_lv2
+					remove_ideas = cheat_ccm_army_decr_lv1
+					remove_ideas = cheat_ccm_army_decr_lv2
+				}
+				ccm_option_add_idea3_shift_click = {
+					add_ideas = cheat_ccm_army_lv2
+					remove_ideas = cheat_ccm_army_lv1
+					remove_ideas = cheat_ccm_army_decr_lv1
+					remove_ideas = cheat_ccm_army_decr_lv2
+				}
+				ccm_option_remove_idea3_click = {
+					add_ideas = cheat_ccm_army_decr_lv1
+					remove_ideas = cheat_ccm_army_lv1
+					remove_ideas = cheat_ccm_army_lv2
+					remove_ideas = cheat_ccm_army_decr_lv2
+				}
+				ccm_option_remove_idea3_shift_click = {
+					add_ideas = cheat_ccm_army_decr_lv2
+					remove_ideas = cheat_ccm_army_lv1
+					remove_ideas = cheat_ccm_army_lv2
+					remove_ideas = cheat_ccm_army_decr_lv1
+				}
+				ccm_option_delete_idea3_click = {
+					remove_ideas = cheat_ccm_army_lv1
+					remove_ideas = cheat_ccm_army_lv2
+					remove_ideas = cheat_ccm_army_decr_lv1
+					remove_ideas = cheat_ccm_army_decr_lv2
+				}
+
+				ccm_option_add_idea4_click = {
+					add_ideas = cheat_ccm_navy_lv1
+					remove_ideas = cheat_ccm_navy_lv2
+					remove_ideas = cheat_ccm_navy_decr_lv1
+					remove_ideas = cheat_ccm_navy_decr_lv2
+				}
+				ccm_option_add_idea4_shift_click = {
+					add_ideas = cheat_ccm_navy_lv2
+					remove_ideas = cheat_ccm_navy_lv1
+					remove_ideas = cheat_ccm_navy_decr_lv1
+					remove_ideas = cheat_ccm_navy_decr_lv2
+				}
+				ccm_option_remove_idea4_click = {
+					add_ideas = cheat_ccm_navy_decr_lv1
+					remove_ideas = cheat_ccm_navy_lv1
+					remove_ideas = cheat_ccm_navy_lv2
+					remove_ideas = cheat_ccm_navy_decr_lv2
+				}
+				ccm_option_remove_idea4_shift_click = {
+					add_ideas = cheat_ccm_navy_decr_lv2
+					remove_ideas = cheat_ccm_navy_lv1
+					remove_ideas = cheat_ccm_navy_lv2
+					remove_ideas = cheat_ccm_navy_decr_lv1
+				}
+				ccm_option_delete_idea4_click = {
+					remove_ideas = cheat_ccm_navy_lv1
+					remove_ideas = cheat_ccm_navy_lv2
+					remove_ideas = cheat_ccm_navy_decr_lv1
+					remove_ideas = cheat_ccm_navy_decr_lv2
+				}
+
+				ccm_option_add_idea5_click = {
+					add_ideas = cheat_ccm_air_lv1
+					remove_ideas = cheat_ccm_air_lv2
+					remove_ideas = cheat_ccm_air_decr_lv1
+					remove_ideas = cheat_ccm_air_decr_lv2
+				}
+				ccm_option_add_idea5_shift_click = {
+					add_ideas = cheat_ccm_air_lv2
+					remove_ideas = cheat_ccm_air_lv1
+					remove_ideas = cheat_ccm_air_decr_lv1
+					remove_ideas = cheat_ccm_air_decr_lv2
+				}
+				ccm_option_remove_idea5_click = {
+					add_ideas = cheat_ccm_air_decr_lv1
+					remove_ideas = cheat_ccm_air_lv1
+					remove_ideas = cheat_ccm_air_lv2
+					remove_ideas = cheat_ccm_air_decr_lv2
+				}
+				ccm_option_remove_idea5_shift_click = {
+					add_ideas = cheat_ccm_air_decr_lv2
+					remove_ideas = cheat_ccm_air_lv1
+					remove_ideas = cheat_ccm_air_lv2
+					remove_ideas = cheat_ccm_air_decr_lv1
+				}
+				ccm_option_delete_idea5_click = {
+					remove_ideas = cheat_ccm_air_lv1
+					remove_ideas = cheat_ccm_air_lv2
+					remove_ideas = cheat_ccm_air_decr_lv1
+					remove_ideas = cheat_ccm_air_decr_lv2
+				}
+			#Parties	
+				ccm_option_add_idea6_click = {
+					add_popularity = {
+						ideology = democratic
+  						popularity = 0.15
+					}
+				}
+				ccm_option_add_idea6_shift_click = {
+					add_ideas = prowestern_booster
+				}
+				ccm_option_remove_idea6_click = {
+					add_popularity = {
+						ideology = democratic
+  						popularity = -0.15
+					}
+				}
+				ccm_option_remove_idea6_shift_click = {
+					remove_ideas = prowestern_booster
+				}
+
+				ccm_option_add_idea7_click = {
+					add_popularity = {
+						ideology = communism
+  						popularity = 0.15
+					}
+				}
+				ccm_option_add_idea7_shift_click = {
+					add_ideas = communist_booster
+				}
+				ccm_option_remove_idea7_click = {
+					add_popularity = {
+						ideology = communism
+  						popularity = -0.15
+					}
+				}
+				ccm_option_remove_idea7_shift_click = {
+					remove_ideas = communist_booster
+				}
+
+				ccm_option_add_idea8_click = {
+					add_popularity = {
+						ideology = fascism
+  						popularity = 0.15
+					}
+				}
+				ccm_option_add_idea8_shift_click = {
+					add_ideas = salafism_booster
+				}
+					
+				ccm_option_remove_idea8_click = {
+					add_popularity = {
+						ideology = fascism
+  						popularity = -0.15
+					}
+				}
+				ccm_option_remove_idea8_shift_click = {
+					remove_ideas = salafism_booster
+				}
+
+				ccm_option_add_idea9_click = {
+					add_popularity = {
+						ideology = neutrality
+  						popularity = 0.15
+					}
+				}
+				ccm_option_add_idea9_shift_click = {
+					add_ideas = neutrality_booster
+				}
+				ccm_option_remove_idea9_click = {
+					add_popularity = {
+						ideology = neutrality
+  						popularity = -0.15
+					}
+				}
+				ccm_option_remove_idea9_shift_click = {
+					remove_ideas = neutrality_booster
+				}
+
+				ccm_option_add_idea10_click = {
+					add_popularity = {
+						ideology = nationalist
+  						popularity = 0.15
+					}
+				}
+				ccm_option_add_idea10_shift_click = {
+					add_ideas = nationalist_booster
+				}
+				ccm_option_remove_idea10_click = {
+					add_popularity = {
+						ideology = nationalist
+  						popularity = -0.15
+					}
+				}
+				ccm_option_remove_idea10_shift_click = {
+					remove_ideas = nationalist_booster
+				}
+			#Factories
+				ccm_option_add_idea11_click = {
+					country_event = Easybuff.205
+				}
+				ccm_option_add_idea11_shift_click = {
+					country_event = Easybuff.206
+				}
+
+				ccm_option_add_idea12_click = {
+					country_event = Easybuff.207
+				}
+				ccm_option_add_idea12_shift_click = {
+					country_event = Easybuff.208
+				}
+
+				ccm_option_add_idea13_click = {
+					country_event = Easybuff.209
+				}
+				ccm_option_add_idea13_shift_click = {
+					country_event = Easybuff.210
+				}
+
+				ccm_option_remove_idea11_click = {
+					country_event = Easybuff.211
+				}
+				ccm_option_remove_idea11_shift_click = {
+					country_event = Easybuff.212
+				}
+
+				ccm_option_remove_idea12_click = {
+					country_event = Easybuff.213					
+				}
+				ccm_option_remove_idea12_shift_click = {
+					country_event = Easybuff.214					
+				}
+
+				ccm_option_remove_idea13_click = {
+					country_event = Easybuff.215
+				}
+				ccm_option_remove_idea13_shift_click = {
+					country_event = Easybuff.216
+				}
+			#Influence&Autonomy
+				ccm_option_add_idea14_click = {
+					country_event = Easybuff.217
+				}
+				ccm_option_add_idea14_shift_click = {
+					country_event = Easybuff.218
+				}
+
+				ccm_option_add_idea15_click = {
+					country_event = Easybuff.219
+				}
+				ccm_option_add_idea15_shift_click = {
+					country_event = Easybuff.220
+				}
+				ccm_option_remove_idea15_click = {
+					country_event = Easybuff.221
+				}
+				ccm_option_remove_idea15_shift_click = {
+					country_event = Easybuff.222
+				}
+			#Faction Actions
+				esbuff_ccm_faction_actions_1_click = {
+					country_event = Easybuff.223
+				}
+				esbuff_ccm_faction_actions_2_click = {
+					country_event = Easybuff.224
+				}
+		}
+
+		triggers = {
+			idea_on_visible = {
+				has_idea = cheat_ccm_resources_lv1
+			}
+			idea_on_decr_visible = {
+				OR = {
+					has_idea = cheat_ccm_resources_decr_lv1
+					has_idea = cheat_ccm_resources_decr_lv2
+				}
+			}
+			idea_on2_visible = {
+				has_idea = cheat_ccm_resources_lv2
+			}
+			idea2_on_decr_visible = {
+				OR = {
+					has_idea = cheat_ccm_factory_output_decr_lv1
+					has_idea = cheat_ccm_factory_output_decr_lv2
+				}
+			}
+			idea2_on_visible = {
+				has_idea = cheat_ccm_factory_output_lv1
+			}
+			idea2_on2_visible = {
+				has_idea = cheat_ccm_factory_output_lv2
+			}
+			idea3_on_visible = {
+				has_idea = cheat_ccm_army_lv1
+			}
+			idea3_on_decr_visible = {
+				OR = {
+					has_idea = cheat_ccm_army_decr_lv1
+					has_idea = cheat_ccm_army_decr_lv2
+				}
+			}
+			idea3_on2_visible = {
+				has_idea = cheat_ccm_army_lv2
+			}
+			idea4_on_visible = {
+				has_idea = cheat_ccm_navy_lv1
+			}
+			idea4_on_decr_visible = {
+				OR = {
+					has_idea = cheat_ccm_navy_decr_lv1
+					has_idea = cheat_ccm_navy_decr_lv2
+				}
+			}
+			idea4_on2_visible = {
+				has_idea = cheat_ccm_navy_lv2
+			}
+			idea5_on_visible = {
+				has_idea = cheat_ccm_air_lv1
+			}
+			idea5_on_decr_visible = {
+				OR = {
+					has_idea = cheat_ccm_air_decr_lv1
+					has_idea = cheat_ccm_air_decr_lv2
+				}
+			}
+			idea5_on2_visible = {
+				has_idea = cheat_ccm_air_lv2
+			}
+			idea6_on2_visible = {
+				has_idea = prowestern_booster
+			}
+			idea7_on2_visible = {
+				has_idea = communist_booster
+			}
+			idea8_on2_visible = {
+				has_idea = salafism_booster
+			}
+			idea9_on2_visible = {
+				has_idea = neutrality_booster
+			}
+			idea10_on2_visible = {
+				has_idea = nationalist_booster
+			}
+		}
+	}
+
+}

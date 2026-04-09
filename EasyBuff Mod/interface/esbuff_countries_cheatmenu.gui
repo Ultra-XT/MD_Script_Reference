@@ -1,0 +1,2442 @@
+guiTypes = {
+	containerWindowType = { #
+		name = "esbuff_menu_button"
+		orientation = center
+		position = { x = 112 y = 19 }
+		size = { width = 160 height = 28 }
+		scale = 0.75
+		moveable = no
+		clipping = no
+
+		buttonType = {
+			name = "esbuff_ccm_open"
+			quadTextureSprite = "GFX_esbuff_open_ideas_ui_button"
+			position = { x = 0 y = 0 }
+		}
+	}
+
+	containerWindowType = { #Background container + buttons
+		name = "esbuff_ccm_background_window"
+		position = { x = 11 y = 408 }
+		size = { width = 530 height = 548 }
+		clipping = no
+		
+		containerWindowType = {
+			name = "esbuff_ccm_background_window_inner"
+			size = { width = 530 height = 548 }
+
+			background = {
+				name = "background"
+				quadTextureSprite = "GFX_tiled_window_1b_thin_border"
+			}
+		}
+
+		buttonType = {
+			name = "esbuff_ccm_close"
+			position = { x = -26 y = 5 }
+			scale = 0.63
+			quadTextureSprite = "GFX_closebutton"
+			shortcut = "ESCAPE"
+			Orientation = UPPER_RIGHT
+			clicksound = click_close
+			pdx_tooltip = "CLOSE"
+		}
+	}
+
+	containerWindowType = {
+		name = "esbuff_ccm_options_window"
+		position = { x = -1000 y = 78 }
+		show_position = { x = 7 y = 6 }
+		show_animation_type = decelerated
+		hide_animation_type = accelerated
+		animation_time = 0
+		size = { width=521 height=100%% }
+		verticalScrollbar = "right_vertical_slider"
+		margin = { top = 0 left = 0 bottom = 0 right = 0 }
+
+		background = {
+			name = "Background"
+			quadTextureSprite ="GFX_tiled_decisions_bg_small"
+		}
+
+		containerWindowType = { #Options
+			name = "esbuff_ccm_options_grid"
+			orientation = center
+			position = { x = 0 y = 0 }
+			size = { width = 100%% height = 540 }
+
+			containerWindowType = { #Opinion
+				name = "esbuff_ccm_option_1"
+
+				containerWindowType = {
+					name = "esbuff_ccm_option"
+					size = { width = 250 height = 65 }
+					orientation = center
+					position = { x = -258 y = -268 }
+					clipping = yes
+					background = {
+						name = "background"
+						quadTextureSprite = "GFX_tiled_decisions_bg_small"
+					}
+
+					containerWindowType = { #Plus button 1
+						name = "esbuff_ccm_option_button_background_1"
+						size = { width = 36 height = 36 }
+						orientation = center
+						position = { x = -124 y = -3 }
+						clipping = yes
+						background = {
+							name = "background1"
+							quadTextureSprite = "GFX_tiled_decisions_bg_small"
+						}
+						
+						buttonType = {
+							name = "ccm_option_plus1"
+							quadTextureSprite = GFX_zoom_in
+							clicksound = "open_sub_window"
+							oversound = "ui_menu_over"
+							scale = 1
+							position = { x = 18 y = 18 }
+							centerposition = yes
+							alwaystransparent = no
+							pdx_tooltip = "esbuff_ccm_button_plus_tip1"
+						}
+
+					}
+
+					containerWindowType = { #Minus button 1
+						name = "esbuff_ccm_option_button_background_2"
+						size = { width = 36 height = 36 }
+						orientation = center
+						position = { x = 89 y = -3 }
+						clipping = yes
+						background = {
+							name = "background1"
+							quadTextureSprite = "GFX_tiled_decisions_bg_small"
+						}
+						
+						buttonType = {
+							name = "ccm_option_minus1"
+							quadTextureSprite = GFX_zoom_out
+							clicksound = "open_sub_window"
+							oversound = "ui_menu_over"
+							scale = 1
+							position = { x = 18 y = 18 }
+							centerposition = yes
+							alwaystransparent = no
+							pdx_tooltip = "esbuff_ccm_button_minus_tip1"
+						}
+
+					}
+	
+					instantTextboxType = { #Text
+						name = "esbuff_ccm_option_text_1"
+						position = { x = 40 y = 10 }
+						orientation = upper_left
+						font = "hoi_18mbs"
+						text = "ccm_option_text_1"
+						maxWidth = 180
+						maxHeight = 20
+						format = center
+					}
+
+					containerWindowType = { #Opinion value
+						name = "opinion_info"
+						size = { width = 184 height = 36 }
+						orientation = center
+						position = { x = -91 y = -3 }
+						clipping = no
+							
+						background = {
+							name = "bg_opinion"
+							quadTextureSprite = "GFX_tiled_decisions_bg_small"
+						}
+
+						instantTextboxType = {
+							name = "esbuff_ccm_value"
+							position = { x = -32 y = -10 }
+							orientation = center 
+							text = "[?opinion@ROOT|+]"
+							font = "hoi_18mbs"
+							maxWidth = 65
+							maxHeight = 40
+							format = center
+						}
+					}
+
+				}
+			}
+			containerWindowType = { #Political power
+				name = "esbuff_ccm_option_2"
+
+				containerWindowType = {
+					name = "esbuff_ccm_option"
+					size = { width = 250 height = 65 }
+					orientation = center
+					position = { x = -258 y = -206 }
+					clipping = yes
+					background = {
+						name = "background"
+						quadTextureSprite = "GFX_tiled_decisions_bg_small"
+					}
+
+					containerWindowType = { #Plus button
+						name = "esbuff_ccm_option_button_background_1"
+						size = { width = 36 height = 36 }
+						orientation = center
+						position = { x = -124 y = -3 }
+						clipping = yes
+						background = {
+							name = "background1"
+							quadTextureSprite = "GFX_tiled_decisions_bg_small"
+						}
+						
+						buttonType = {
+							name = "ccm_option_plus2"
+							quadTextureSprite = GFX_zoom_in
+							clicksound = "open_sub_window"
+							oversound = "ui_menu_over"
+							scale = 1
+							position = { x = 18 y = 18 }
+							centerposition = yes
+							alwaystransparent = no
+							pdx_tooltip = "esbuff_ccm_button_plus_tip2"
+						}
+
+					}
+
+					containerWindowType = { #Minus button
+						name = "esbuff_ccm_option_button_background_2"
+						size = { width = 36 height = 36 }
+						orientation = center
+						position = { x = 89 y = -3 }
+						clipping = yes
+						background = {
+							name = "background1"
+							quadTextureSprite = "GFX_tiled_decisions_bg_small"
+						}
+						
+						buttonType = {
+							name = "ccm_option_minus2"
+							quadTextureSprite = GFX_zoom_out
+							clicksound = "open_sub_window"
+							oversound = "ui_menu_over"
+							scale = 1
+							position = { x = 18 y = 18 }
+							centerposition = yes
+							alwaystransparent = no
+							pdx_tooltip = "esbuff_ccm_button_minus_tip2"
+						}
+
+					}
+	
+					instantTextboxType = { #Text
+						name = "esbuff_ccm_option_text_2"
+						position = { x = 40 y = 10 }
+						orientation = upper_left
+						font = "hoi_18mbs"
+						text = "ccm_option_text_2"
+						maxWidth = 180
+						maxHeight = 20
+						format = center
+					}
+					iconType = {
+						name = "icon_1"
+						spriteType = "GFX_pol_power_icon"
+						position = { x = 8 y = 3 }
+						orientation = upper_left
+						scale = 1
+					}
+
+					containerWindowType = { #PP Value
+						name = "esbuff_ccm_value"
+						size = { width = 184 height = 36 }
+						orientation = center
+						position = { x = -91 y = -3 }
+						clipping = no
+							
+						background = {
+							name = "bg_opinion"
+							quadTextureSprite = "GFX_tiled_decisions_bg_small"
+						}
+
+						instantTextboxType = {
+							name = "pol_power"
+							position = { x = -32 y = -10 }
+							orientation = center 
+							text = "[?political_power|.1]"
+							font = "hoi_18mbs"
+							maxWidth = 65
+							maxHeight = 40
+							format = center
+						}
+					}
+
+				}
+			}
+			containerWindowType = { #Stability
+				name = "esbuff_ccm_option_3"
+
+				containerWindowType = {
+					name = "esbuff_ccm_option"
+					size = { width = 250 height = 65 }
+					orientation = center
+					position = { x = -258 y = -144 }
+					clipping = yes
+					background = {
+						name = "background"
+						quadTextureSprite = "GFX_tiled_decisions_bg_small"
+					}
+
+					containerWindowType = { #Plus button
+						name = "esbuff_ccm_option_button_background_1"
+						size = { width = 36 height = 36 }
+						orientation = center
+						position = { x = -124 y = -3 }
+						clipping = yes
+						background = {
+							name = "background1"
+							quadTextureSprite = "GFX_tiled_decisions_bg_small"
+						}
+						
+						buttonType = {
+							name = "ccm_option_plus3"
+							quadTextureSprite = GFX_zoom_in
+							clicksound = "open_sub_window"
+							oversound = "ui_menu_over"
+							scale = 1
+							position = { x = 18 y = 18 }
+							centerposition = yes
+							alwaystransparent = no
+							pdx_tooltip = "esbuff_ccm_button_plus_tip3"
+						}
+
+					}
+
+					containerWindowType = { #Minus button
+						name = "esbuff_ccm_option_button_background_2"
+						size = { width = 36 height = 36 }
+						orientation = center
+						position = { x = 89 y = -3 }
+						clipping = yes
+						background = {
+							name = "background1"
+							quadTextureSprite = "GFX_tiled_decisions_bg_small"
+						}
+						
+						buttonType = {
+							name = "ccm_option_minus3"
+							quadTextureSprite = GFX_zoom_out
+							clicksound = "open_sub_window"
+							oversound = "ui_menu_over"
+							scale = 1
+							position = { x = 18 y = 18 }
+							centerposition = yes
+							alwaystransparent = no
+							pdx_tooltip = "esbuff_ccm_button_minus_tip3"
+						}
+
+					}
+	
+					instantTextboxType = { #Text
+						name = "esbuff_ccm_option_text_3"
+						position = { x = 40 y = 10 }
+						orientation = upper_left
+						font = "hoi_18mbs"
+						text = "ccm_option_text_3"
+						maxWidth = 180
+						maxHeight = 20
+						format = center
+					}
+					iconType = {
+						name = "icon_2"
+						spriteType = "GFX_stability_icon"
+						position = { x = 8 y = 5 }
+						orientation = upper_left
+						scale = 1
+					}
+
+					containerWindowType = { #Stability Value
+						name = "esbuff_ccm_value"
+						size = { width = 184 height = 36 }
+						orientation = center
+						position = { x = -91 y = -3 }
+						clipping = no
+							
+						background = {
+							name = "bg_opinion"
+							quadTextureSprite = "GFX_tiled_decisions_bg_small"
+						}
+
+						instantTextboxType = {
+							name = "stability"
+							position = { x = -32 y = -10 }
+							orientation = center 
+							text = "[?stability|.1%]"
+							font = "hoi_18mbs"
+							maxWidth = 65
+							maxHeight = 40
+							format = center
+						}
+					}
+
+				}
+			}
+			containerWindowType = { #War support
+				name = "esbuff_ccm_option_4"
+
+				containerWindowType = {
+					name = "esbuff_ccm_option"
+					size = { width = 250 height = 65 }
+					orientation = center
+					position = { x = -258 y = -82 }
+					clipping = yes
+					background = {
+						name = "background"
+						quadTextureSprite = "GFX_tiled_decisions_bg_small"
+					}
+
+					containerWindowType = { #Plus button
+						name = "esbuff_ccm_option_button_background_1"
+						size = { width = 36 height = 36 }
+						orientation = center
+						position = { x = -124 y = -3 }
+						clipping = yes
+						background = {
+							name = "background1"
+							quadTextureSprite = "GFX_tiled_decisions_bg_small"
+						}
+						
+						buttonType = {
+							name = "ccm_option_plus4"
+							quadTextureSprite = GFX_zoom_in
+							clicksound = "open_sub_window"
+							oversound = "ui_menu_over"
+							scale = 1
+							position = { x = 18 y = 18 }
+							centerposition = yes
+							alwaystransparent = no
+							pdx_tooltip = "esbuff_ccm_button_plus_tip4"
+						}
+
+					}
+
+					containerWindowType = { #Minus button
+						name = "esbuff_ccm_option_button_background_2"
+						size = { width = 36 height = 36 }
+						orientation = center
+						position = { x = 89 y = -3 }
+						clipping = yes
+						background = {
+							name = "background1"
+							quadTextureSprite = "GFX_tiled_decisions_bg_small"
+						}
+						
+						buttonType = {
+							name = "ccm_option_minus4"
+							quadTextureSprite = GFX_zoom_out
+							clicksound = "open_sub_window"
+							oversound = "ui_menu_over"
+							scale = 1
+							position = { x = 18 y = 18 }
+							centerposition = yes
+							alwaystransparent = no
+							pdx_tooltip = "esbuff_ccm_button_minus_tip4"
+						}
+
+					}
+	
+					instantTextboxType = { #Text
+						name = "esbuff_ccm_option_text_4"
+						position = { x = 40 y = 10 }
+						orientation = upper_left
+						font = "hoi_18mbs"
+						text = "ccm_option_text_4"
+						maxWidth = 180
+						maxHeight = 20
+						format = center
+					}
+					iconType = {
+						name = "icon_3"
+						spriteType = "GFX_war_support_icon"
+						position = { x = 8 y = 6 }
+						orientation = upper_left
+						scale = 1
+					}
+
+					containerWindowType = { #War support Value
+						name = "esbuff_ccm_value"
+						size = { width = 184 height = 36 }
+						orientation = center
+						position = { x = -91 y = -3 }
+						clipping = no
+							
+						background = {
+							name = "bg_opinion"
+							quadTextureSprite = "GFX_tiled_decisions_bg_small"
+						}
+
+						instantTextboxType = {
+							name = "war_support_value"
+							position = { x = -32 y = -10 }
+							orientation = center 
+							text = "[?has_war_support|.1%]"
+							font = "hoi_18mbs"
+							maxWidth = 65
+							maxHeight = 40
+							format = center
+						}
+					}
+
+				}
+			}
+			containerWindowType = { #Manpower
+				name = "esbuff_ccm_option_5"
+
+				containerWindowType = {
+					name = "esbuff_ccm_option"
+					size = { width = 250 height = 65 }
+					orientation = center
+					position = { x = -258 y = -20 }
+					clipping = yes
+					background = {
+						name = "background"
+						quadTextureSprite = "GFX_tiled_decisions_bg_small"
+					}
+
+					containerWindowType = { #Plus button
+						name = "esbuff_ccm_option_button_background_1"
+						size = { width = 36 height = 36 }
+						orientation = center
+						position = { x = -124 y = -3 }
+						clipping = yes
+						background = {
+							name = "background1"
+							quadTextureSprite = "GFX_tiled_decisions_bg_small"
+						}
+						
+						buttonType = {
+							name = "ccm_option_plus5"
+							quadTextureSprite = GFX_zoom_in
+							clicksound = "open_sub_window"
+							oversound = "ui_menu_over"
+							scale = 1
+							position = { x = 18 y = 18 }
+							centerposition = yes
+							alwaystransparent = no
+							pdx_tooltip = "esbuff_ccm_button_plus_tip5"
+						}
+
+					}
+
+					containerWindowType = { #Minus button
+						name = "esbuff_ccm_option_button_background_2"
+						size = { width = 36 height = 36 }
+						orientation = center
+						position = { x = 89 y = -3 }
+						clipping = yes
+						background = {
+							name = "background1"
+							quadTextureSprite = "GFX_tiled_decisions_bg_small"
+						}
+						
+						buttonType = {
+							name = "ccm_option_minus5"
+							quadTextureSprite = GFX_zoom_out
+							clicksound = "open_sub_window"
+							oversound = "ui_menu_over"
+							scale = 1
+							position = { x = 18 y = 18 }
+							centerposition = yes
+							alwaystransparent = no
+							pdx_tooltip = "esbuff_ccm_button_minus_tip5"
+						}
+
+					}
+	
+					instantTextboxType = { #Text
+						name = "esbuff_ccm_option_text_5"
+						position = { x = 40 y = 10 }
+						orientation = upper_left
+						font = "hoi_18mbs"
+						text = "ccm_option_text_5"
+						maxWidth = 180
+						maxHeight = 20
+						format = center
+					}
+					iconType = {
+						name = "icon_4"
+						spriteType = "GFX_manpower_icon"
+						position = { x = 8 y = 2 }
+						orientation = upper_left
+						scale = 1
+					}
+				
+					containerWindowType = { #Manpower Value
+						name = "esbuff_ccm_value"
+						size = { width = 184 height = 36 }
+						orientation = center
+						position = { x = -91 y = -3 }
+						clipping = no
+							
+						background = {
+							name = "bg_opinion"
+							quadTextureSprite = "GFX_tiled_decisions_bg_small"
+						}
+
+						instantTextboxType = {
+							name = "manpower_value"
+							position = { x = -42 y = -10 }
+							orientation = center 
+							text = "[?manpower_k]K"
+							font = "hoi_18mbs"
+							maxWidth = 85
+							maxHeight = 40
+							format = center
+						}
+					}
+
+				}
+			}
+			containerWindowType = { #Convoys
+				name = "esbuff_ccm_option_6"
+
+				containerWindowType = {
+					name = "esbuff_ccm_option"
+					size = { width = 250 height = 65 }
+					orientation = center
+					position = { x = -258 y = 42 }
+					clipping = yes
+					background = {
+						name = "background"
+						quadTextureSprite = "GFX_tiled_decisions_bg_small"
+					}
+
+					containerWindowType = { #Plus button
+						name = "esbuff_ccm_option_button_background_1"
+						size = { width = 36 height = 36 }
+						orientation = center
+						position = { x = -124 y = -3 }
+						clipping = yes
+						background = {
+							name = "background1"
+							quadTextureSprite = "GFX_tiled_decisions_bg_small"
+						}
+						
+						buttonType = {
+							name = "ccm_option_plus6"
+							quadTextureSprite = GFX_zoom_in
+							clicksound = "open_sub_window"
+							oversound = "ui_menu_over"
+							scale = 1
+							position = { x = 18 y = 18 }
+							centerposition = yes
+							alwaystransparent = no
+							pdx_tooltip = "esbuff_ccm_button_plus_tip6"
+						}
+
+					}
+
+					containerWindowType = { #Minus button
+						name = "esbuff_ccm_option_button_background_2"
+						size = { width = 36 height = 36 }
+						orientation = center
+						position = { x = 89 y = -3 }
+						clipping = yes
+						background = {
+							name = "background1"
+							quadTextureSprite = "GFX_tiled_decisions_bg_small"
+						}
+						
+						buttonType = {
+							name = "ccm_option_minus6"
+							quadTextureSprite = GFX_zoom_out
+							clicksound = "open_sub_window"
+							oversound = "ui_menu_over"
+							scale = 1
+							position = { x = 18 y = 18 }
+							centerposition = yes
+							alwaystransparent = no
+							pdx_tooltip = "esbuff_ccm_button_minus_tip6"
+						}
+
+					}
+	
+					instantTextboxType = { #Text
+						name = "esbuff_ccm_option_text_6"
+						position = { x = 40 y = 10 }
+						orientation = upper_left
+						font = "hoi_18mbs"
+						text = "ccm_option_text_6"
+						maxWidth = 180
+						maxHeight = 20
+						format = center
+					}
+					iconType = {
+						name = "icon_5"
+						spriteType = "GFX_topbar_convoys"
+						position = { x = 7 y = 8 }
+						orientation = upper_left
+						scale = 1.1
+					}
+
+					containerWindowType = { #Convoys Value
+						name = "esbuff_ccm_value"
+						size = { width = 184 height = 36 }
+						orientation = center
+						position = { x = -91 y = -3 }
+						clipping = no
+							
+						background = {
+							name = "bg_opinion"
+							quadTextureSprite = "GFX_tiled_decisions_bg_small"
+						}
+
+						instantTextboxType = {
+							name = "convoys_count"
+							position = { x = -32 y = -10 }
+							orientation = center 
+							text = "[?num_equipment@convoy|.0*]"
+							font = "hoi_18mbs"
+							maxWidth = 65
+							maxHeight = 40
+							format = center
+						}
+					}
+
+				}
+			}
+			containerWindowType = { #Resources
+				name = "esbuff_ccm_option_7"
+
+				containerWindowType = {
+					name = "esbuff_ccm_option"
+					size = { width = 250 height = 161 }
+					orientation = center
+					position = { x = -258 y = 104 }
+					clipping = yes
+					background = {
+						name = "background"
+						quadTextureSprite = "GFX_tiled_decisions_bg_small"
+					}
+	
+					instantTextboxType = { #Text
+						name = "esbuff_ccm_option_text_7"
+						position = { x = 44 y = 14 }
+						orientation = upper_left
+						font = "hoi_18mbs"
+						text = "ccm_option_text_7"
+						maxWidth = 100
+						maxHeight = 20
+						format = center
+					}
+
+					iconType = { #Indicator
+						name = "idea_off"
+						spriteType = "GFX_deploy_priority"
+						frame = 1
+						position = { x = 26 y = 14 }
+						orientation = upper_left
+						scale = 1.1
+
+					}
+					iconType = { #Indicator
+						name = "idea_on_decr"
+						spriteType = "GFX_deploy_priority"
+						frame = 2
+						position = { x = 26 y = 14 }
+						orientation = upper_left
+						scale = 1.1
+
+					}
+					iconType = { #Indicator
+						name = "idea_on"
+						spriteType = "GFX_deploy_priority"
+						frame = 3
+						position = { x = 26 y = 14 }
+						orientation = upper_left
+						scale = 1.1
+
+					}
+					iconType = { #Indicator
+						name = "idea_on2"
+						spriteType = "GFX_deploy_priority"
+						frame = 4
+						position = { x = 26 y = 14 }
+						orientation = upper_left
+						scale = 1.1
+
+					}
+
+					containerWindowType = { #Idea Buttons
+						name = "esbuff_ccm_option_button_background_2"
+						size = { width = 60 height = 20 }
+						orientation = center
+						position = { x = 45 y = -65 }
+						clipping = no
+						background = {
+							name = "background1"
+							quadTextureSprite = "GFX_tiled_decisions_bg_small"
+						}
+						
+						buttonType = {
+							name = "ccm_option_remove_idea1"
+							quadTextureSprite = GFX_focus_zoom_out
+							clicksound = "open_sub_window"
+							oversound = "ui_menu_over"
+							scale = 0.8
+							position = { x = -4 y = 10 }
+							centerposition = yes
+							alwaystransparent = no
+							pdx_tooltip = "esbuff_ccm_button_minus_tip7"
+						}
+						buttonType = {
+							name = "ccm_option_add_idea1"
+							quadTextureSprite = GFX_focus_zoom_in
+							clicksound = "open_sub_window"
+							oversound = "ui_menu_over"
+							scale = 0.8
+							position = { x = 44 y = 10 }
+							centerposition = yes
+							alwaystransparent = no
+							pdx_tooltip = "esbuff_ccm_button_plus_tip7"
+						}
+						buttonType = {
+							name = "ccm_option_delete_idea1"
+							quadTextureSprite = GFX_esb_ccm_remove_idea
+							clicksound = "open_sub_window"
+							oversound = "ui_menu_over"
+							scale = 0.82
+							position = { x = 21 y = 11 }
+							centerposition = yes
+							alwaystransparent = no
+							pdx_tooltip = "esbuff_ccm_button_cross_tip7"
+						}
+					}
+
+					containerWindowType = { #Buttons
+						name = "esbuff_ccm_option_button_background_1"
+						size = { width = 29 height = 58 }
+						orientation = center
+						position = { x = -104 y = -36 }
+						clipping = yes
+						background = {
+							name = "background1"
+							quadTextureSprite = "GFX_tiled_decisions_bg_small"
+						}
+						
+						buttonType = {
+							name = "ccm_option_plus7"
+							quadTextureSprite = GFX_zoom_in
+							clicksound = "open_sub_window"
+							oversound = "ui_menu_over"
+							scale = 0.8
+							position = { x = 14 y = 18 }
+							centerposition = yes
+							alwaystransparent = no
+							pdx_tooltip = "esbuff_ccm_button_plus_tip8"
+						}
+						buttonType = {
+							name = "ccm_option_minus7"
+							quadTextureSprite = GFX_zoom_out
+							clicksound = "open_sub_window"
+							oversound = "ui_menu_over"
+							scale = 0.8
+							position = { x = 14 y = 40 }
+							centerposition = yes
+							alwaystransparent = no
+							pdx_tooltip = "esbuff_ccm_button_minus_tip8"
+						}
+					}
+
+					containerWindowType = { #Resource Value
+						name = "esbuff_ccm_value"
+						size = { width = 170 height = 58 }
+						orientation = center
+						position = { x = -65 y = -36 }
+						clipping = no
+							
+						background = {
+							name = "bg_opinion"
+							quadTextureSprite = "GFX_tiled_decisions_bg_small"
+						}
+
+						instantTextboxType = {#1
+							name = "resource1_count"
+							position = { x = -65 y = -22 }
+							orientation = center 
+							text = "[?resource_produced@oil|.0*]"
+							font = "hoi_18mbs"
+							maxWidth = 40
+							maxHeight = 40
+							format = center
+						}
+						iconType = {#1
+							name = "reource_icon1"
+							spriteType = "GFX_resources_strip"
+							frame = 1
+							position = { x = 5 y = 5 }
+							orientation = upper_left
+							scale = 0.8
+						}
+
+						instantTextboxType = {#2
+							name = "resource2_count"
+							position = { x = -13 y = -22 }
+							orientation = center 
+							text = "[?resource_produced@aluminium|.0*]"
+							font = "hoi_18mbs"
+							maxWidth = 40
+							maxHeight = 40
+							format = center
+						}
+						iconType = {#2
+							name = "reource_icon2"
+							spriteType = "GFX_resources_strip"
+							frame = 2
+							position = { x = 55 y = 5 }
+							orientation = upper_left
+							scale = 0.8
+						}
+
+						instantTextboxType = {#3
+							name = "resource3_count"
+							position = { x = 39 y = -22 }
+							orientation = center 
+							text = "[?resource_produced@rubber|.0*]"
+							font = "hoi_18mbs"
+							maxWidth = 40
+							maxHeight = 40
+							format = center
+						}
+						iconType = {#3
+							name = "reource_icon3"
+							spriteType = "GFX_resources_strip"
+							frame = 3
+							position = { x = 105 y = 5 }
+							orientation = upper_left
+							scale = 0.8
+						}
+
+						instantTextboxType = {#4
+							name = "resource4_count"
+							position = { x = -65 y = 3 }
+							orientation = center 
+							text = "[?resource_produced@chromium|.0*]"
+							font = "hoi_18mbs"
+							maxWidth = 40
+							maxHeight = 40
+							format = center
+						}
+						iconType = {#4
+							name = "reource_icon4"
+							spriteType = "GFX_resources_strip"
+							frame = 4
+							position = { x = 5 y = 30 }
+							orientation = upper_left
+							scale = 0.8
+						}
+
+						instantTextboxType = {#5
+							name = "resource5_count"
+							position = { x = -13 y = 3 }
+							orientation = center 
+							text = "[?resource_produced@steel|.0*]"
+							font = "hoi_18mbs"
+							maxWidth = 40
+							maxHeight = 40
+							format = center
+						}
+						iconType = {#5
+							name = "reource_icon5"
+							spriteType = "GFX_resources_strip"
+							frame = 5
+							position = { x = 55 y = 30 }
+							orientation = upper_left
+							scale = 0.8
+						}
+
+						instantTextboxType = {#6
+							name = "resource6_count"
+							position = { x = 39 y = 3 }
+							orientation = center 
+							text = "[?resource_produced@tungsten|.0*]"
+							font = "hoi_18mbs"
+							maxWidth = 40
+							maxHeight = 40
+							format = center
+						}
+						iconType = {#6
+							name = "reource_icon6"
+							spriteType = "GFX_resources_strip"
+							frame = 6
+							position = { x = 105 y = 30 }
+							orientation = upper_left
+							scale = 0.8
+						}
+					}
+					
+					instantTextboxType = { #Text
+						name = "esbuff_ccm_option_text_8"
+						position = { x = 40 y = 110 }
+						orientation = upper_left
+						font = "hoi_18mbs"
+						text = "ccm_option_text_8"
+						maxWidth = 100
+						maxHeight = 40
+						format = center
+					}
+
+					iconType = { #Indicator
+						name = "idea2_off"
+						spriteType = "GFX_deploy_priority"
+						frame = 1
+						position = { x = 26 y = 120 }
+						orientation = upper_left
+						scale = 1.1
+
+					}
+					iconType = { #Indicator
+						name = "idea2_on_decr"
+						spriteType = "GFX_deploy_priority"
+						frame = 2
+						position = { x = 26 y = 120 }
+						orientation = upper_left
+						scale = 1.1
+
+					}
+					iconType = { #Indicator
+						name = "idea2_on"
+						spriteType = "GFX_deploy_priority"
+						frame = 3
+						position = { x = 26 y = 120 }
+						orientation = upper_left
+						scale = 1.1
+
+					}
+					iconType = { #Indicator
+						name = "idea2_on2"
+						spriteType = "GFX_deploy_priority"
+						frame = 4
+						position = { x = 26 y = 120 }
+						orientation = upper_left
+						scale = 1.1
+
+					}
+
+					containerWindowType = { #Idea Buttons
+						name = "esbuff_ccm_option_button_background_3"
+						size = { width = 60 height = 20 }
+						orientation = center
+						position = { x = 45 y = 38 }
+						clipping = no
+						background = {
+							name = "background2"
+							quadTextureSprite = "GFX_tiled_decisions_bg_small"
+						}
+						
+						buttonType = {
+							name = "ccm_option_remove_idea2"
+							quadTextureSprite = GFX_focus_zoom_out
+							clicksound = "open_sub_window"
+							oversound = "ui_menu_over"
+							scale = 0.8
+							position = { x = -4 y = 10 }
+							centerposition = yes
+							alwaystransparent = no
+							pdx_tooltip = "esbuff_ccm_button_minus_tip9"
+						}
+						buttonType = {
+							name = "ccm_option_add_idea2"
+							quadTextureSprite = GFX_focus_zoom_in
+							clicksound = "open_sub_window"
+							oversound = "ui_menu_over"
+							scale = 0.8
+							position = { x = 44 y = 10 }
+							centerposition = yes
+							alwaystransparent = no
+							pdx_tooltip = "esbuff_ccm_button_plus_tip9"
+						}
+						buttonType = {
+							name = "ccm_option_delete_idea2"
+							quadTextureSprite = GFX_esb_ccm_remove_idea
+							clicksound = "open_sub_window"
+							oversound = "ui_menu_over"
+							scale = 0.82
+							position = { x = 21 y = 11 }
+							centerposition = yes
+							alwaystransparent = no
+							pdx_tooltip = "esbuff_ccm_button_cross_tip9"
+						}
+					}
+
+				}
+			}
+			containerWindowType = { #Treasury
+				name = "esbuff_ccm_option_9"
+
+				containerWindowType = {
+					name = "esbuff_ccm_option"
+					size = { width = 250 height = 65 }
+					orientation = center
+					position = { x = -10 y = -268 }
+					clipping = yes
+					background = {
+						name = "background"
+						quadTextureSprite = "GFX_tiled_decisions_bg_small"
+					}
+
+					containerWindowType = { #Plus button
+						name = "esbuff_ccm_option_button_background_1"
+						size = { width = 36 height = 36 }
+						orientation = center
+						position = { x = -124 y = -3 }
+						clipping = yes
+						background = {
+							name = "background1"
+							quadTextureSprite = "GFX_tiled_decisions_bg_small"
+						}
+						
+						buttonType = {
+							name = "ccm_option_plus9"
+							quadTextureSprite = GFX_zoom_in
+							clicksound = "open_sub_window"
+							oversound = "ui_menu_over"
+							scale = 1
+							position = { x = 18 y = 18 }
+							centerposition = yes
+							alwaystransparent = no
+							pdx_tooltip = "esbuff_ccm_button_plus_tip10"
+						}
+
+					}
+
+					containerWindowType = { #Minus button
+						name = "esbuff_ccm_option_button_background_2"
+						size = { width = 36 height = 36 }
+						orientation = center
+						position = { x = 89 y = -3 }
+						clipping = yes
+						background = {
+							name = "background1"
+							quadTextureSprite = "GFX_tiled_decisions_bg_small"
+						}
+						
+						buttonType = {
+							name = "ccm_option_minus9"
+							quadTextureSprite = GFX_zoom_out
+							clicksound = "open_sub_window"
+							oversound = "ui_menu_over"
+							scale = 1
+							position = { x = 18 y = 18 }
+							centerposition = yes
+							alwaystransparent = no
+							pdx_tooltip = "esbuff_ccm_button_minus_tip10"
+						}
+
+					}
+	
+					instantTextboxType = { #Text
+						name = "esbuff_ccm_option_text_9"
+						position = { x = 40 y = 10 }
+						orientation = upper_left
+						font = "hoi_18mbs"
+						text = "ccm_option_text_9"
+						maxWidth = 180
+						maxHeight = 20
+						format = center
+					}
+					iconType = {
+						name = "icon_6"
+						spriteType = "GFX_treasury"
+						position = { x = 7 y = 5 }
+						orientation = upper_left
+						scale = 1
+					}
+
+					containerWindowType = { #Treasury Value
+						name = "esbuff_ccm_value"
+						size = { width = 184 height = 36 }
+						orientation = center
+						position = { x = -91 y = -3 }
+						clipping = no
+							
+						background = {
+							name = "bg_opinion"
+							quadTextureSprite = "GFX_tiled_decisions_bg_small"
+						}
+
+						instantTextboxType = {
+							name = "treasury"
+							position = { x = -32 y = -10 }
+							orientation = center 
+							text = "[?treasury|.1*]"
+							font = "hoi_18mbs"
+							maxWidth = 65
+							maxHeight = 40
+							format = center
+						}
+					}
+
+
+				}
+			}
+			containerWindowType = { #Army
+				name = "esbuff_ccm_option_10"
+
+				containerWindowType = {
+					name = "esbuff_ccm_option"
+					size = { width = 250 height = 189 }
+					orientation = center
+					position = { x = -10 y = -206 }
+					clipping = yes
+					background = {
+						name = "background"
+						quadTextureSprite = "GFX_tiled_decisions_bg_small"
+					}
+
+					containerWindowType = { #Idea Buttons
+						name = "esbuff_ccm_option_button_background_4"
+						size = { width = 60 height = 20 }
+						orientation = center
+						position = { x = 58 y = -72 }
+						clipping = no
+						background = {
+							name = "background2"
+							quadTextureSprite = "GFX_tiled_decisions_bg_small"
+						}
+						
+						buttonType = {
+							name = "ccm_option_remove_idea3"
+							quadTextureSprite = GFX_focus_zoom_out
+							clicksound = "open_sub_window"
+							oversound = "ui_menu_over"
+							scale = 0.8
+							position = { x = -4 y = 10 }
+							centerposition = yes
+							alwaystransparent = no
+							pdx_tooltip = "esbuff_ccm_button_minus_tip11"
+						}
+						buttonType = {
+							name = "ccm_option_add_idea3"
+							quadTextureSprite = GFX_focus_zoom_in
+							clicksound = "open_sub_window"
+							oversound = "ui_menu_over"
+							scale = 0.8
+							position = { x = 44 y = 10 }
+							centerposition = yes
+							alwaystransparent = no
+							pdx_tooltip = "esbuff_ccm_button_plus_tip11"
+						}
+						buttonType = {
+							name = "ccm_option_delete_idea3"
+							quadTextureSprite = GFX_esb_ccm_remove_idea
+							clicksound = "open_sub_window"
+							oversound = "ui_menu_over"
+							scale = 0.82
+							position = { x = 21 y = 11 }
+							centerposition = yes
+							alwaystransparent = no
+							pdx_tooltip = "esbuff_ccm_button_cross_tip11"
+						}
+					}
+					instantTextboxType = { #Text1
+						name = "esbuff_ccm_option_text_10"
+						position = { x = 30 y = 20 }
+						orientation = upper_left
+						font = "hoi_18mbs"
+						text = "ccm_option_text_10"
+						maxWidth = 80
+						maxHeight = 20
+						format = center
+					}
+					iconType = { #Indicator
+						name = "idea3_off"
+						spriteType = "GFX_deploy_priority"
+						frame = 1
+						position = { x = 15 y = 20 }
+						orientation = upper_left
+						scale = 1.1
+
+					}
+					iconType = { #Indicator
+						name = "idea3_on_decr"
+						spriteType = "GFX_deploy_priority"
+						frame = 2
+						position = { x = 15 y = 20 }
+						orientation = upper_left
+						scale = 1.1
+
+					}
+					iconType = { #Indicator
+						name = "idea3_on"
+						spriteType = "GFX_deploy_priority"
+						frame = 3
+						position = { x = 15 y = 20 }
+						orientation = upper_left
+						scale = 1.1
+
+					}
+					iconType = { #Indicator
+						name = "idea3_on2"
+						spriteType = "GFX_deploy_priority"
+						frame = 4
+						position = { x = 15 y = 20 }
+						orientation = upper_left
+						scale = 1.1
+
+					}
+					iconType = {
+						name = "icon_army"
+						spriteType = "GFX_officer_corp_chief_army_icon"
+						position = { x = 96 y = 11 }
+						orientation = upper_left
+						scale = 0.6
+					}
+
+					containerWindowType = { #Idea Buttons
+						name = "esbuff_ccm_option_button_background_5"
+						size = { width = 60 height = 20 }
+						orientation = center
+						position = { x = 58 y = -8 }
+						clipping = no
+						background = {
+							name = "background2"
+							quadTextureSprite = "GFX_tiled_decisions_bg_small"
+						}
+						
+						buttonType = {
+							name = "ccm_option_remove_idea4"
+							quadTextureSprite = GFX_focus_zoom_out
+							clicksound = "open_sub_window"
+							oversound = "ui_menu_over"
+							scale = 0.8
+							position = { x = -4 y = 10 }
+							centerposition = yes
+							alwaystransparent = no
+							pdx_tooltip = "esbuff_ccm_button_minus_tip12"
+						}
+						buttonType = {
+							name = "ccm_option_add_idea4"
+							quadTextureSprite = GFX_focus_zoom_in
+							clicksound = "open_sub_window"
+							oversound = "ui_menu_over"
+							scale = 0.8
+							position = { x = 44 y = 10 }
+							centerposition = yes
+							alwaystransparent = no
+							pdx_tooltip = "esbuff_ccm_button_plus_tip12"
+						}
+						buttonType = {
+							name = "ccm_option_delete_idea4"
+							quadTextureSprite = GFX_esb_ccm_remove_idea
+							clicksound = "open_sub_window"
+							oversound = "ui_menu_over"
+							scale = 0.82
+							position = { x = 21 y = 11 }
+							centerposition = yes
+							alwaystransparent = no
+							pdx_tooltip = "esbuff_ccm_button_cross_tip12"
+						}
+					}
+					instantTextboxType = { #Text2
+						name = "esbuff_ccm_option_text_11"
+						position = { x = 30 y = 85 }
+						orientation = upper_left
+						font = "hoi_18mbs"
+						text = "ccm_option_text_11"
+						maxWidth = 80
+						maxHeight = 20
+						format = center
+					}
+					iconType = { #Indicator
+						name = "idea4_off"
+						spriteType = "GFX_deploy_priority"
+						frame = 1
+						position = { x = 15 y = 85 }
+						orientation = upper_left
+						scale = 1.1
+
+					}
+					iconType = { #Indicator
+						name = "idea4_on_decr"
+						spriteType = "GFX_deploy_priority"
+						frame = 2
+						position = { x = 15 y = 85 }
+						orientation = upper_left
+						scale = 1.1
+
+					}
+					iconType = { #Indicator
+						name = "idea4_on"
+						spriteType = "GFX_deploy_priority"
+						frame = 3
+						position = { x = 15 y = 85 }
+						orientation = upper_left
+						scale = 1.1
+
+					}
+					iconType = { #Indicator
+						name = "idea4_on2"
+						spriteType = "GFX_deploy_priority"
+						frame = 4
+						position = { x = 15 y = 85 }
+						orientation = upper_left
+						scale = 1.1
+
+					}
+					iconType = {
+						name = "icon_navy"
+						spriteType = "GFX_officer_corp_chief_naval_icon"
+						position = { x = 96 y = 74 }
+						orientation = upper_left
+						scale = 0.6
+					}
+
+					containerWindowType = { #Idea Buttons
+						name = "esbuff_ccm_option_button_background_6"
+						size = { width = 60 height = 20 }
+						orientation = center
+						position = { x = 58 y = 56 }
+						clipping = no
+						background = {
+							name = "background2"
+							quadTextureSprite = "GFX_tiled_decisions_bg_small"
+						}
+						
+						buttonType = {
+							name = "ccm_option_remove_idea5"
+							quadTextureSprite = GFX_focus_zoom_out
+							clicksound = "open_sub_window"
+							oversound = "ui_menu_over"
+							scale = 0.8
+							position = { x = -4 y = 10 }
+							centerposition = yes
+							alwaystransparent = no
+							pdx_tooltip = "esbuff_ccm_button_minus_tip13"
+						}
+						buttonType = {
+							name = "ccm_option_add_idea5"
+							quadTextureSprite = GFX_focus_zoom_in
+							clicksound = "open_sub_window"
+							oversound = "ui_menu_over"
+							scale = 0.8
+							position = { x = 44 y = 10 }
+							centerposition = yes
+							alwaystransparent = no
+							pdx_tooltip = "esbuff_ccm_button_plus_tip13"
+						}
+						buttonType = {
+							name = "ccm_option_delete_idea5"
+							quadTextureSprite = GFX_esb_ccm_remove_idea
+							clicksound = "open_sub_window"
+							oversound = "ui_menu_over"
+							scale = 0.82
+							position = { x = 21 y = 11 }
+							centerposition = yes
+							alwaystransparent = no
+							pdx_tooltip = "esbuff_ccm_button_cross_tip13"
+						}
+					}
+					instantTextboxType = { #Text3
+						name = "esbuff_ccm_option_text_12"
+						position = { x = 30 y = 150 }
+						orientation = upper_left
+						font = "hoi_18mbs"
+						text = "ccm_option_text_12"
+						maxWidth = 80
+						maxHeight = 20
+						format = center
+					}
+					iconType = { #Indicator
+						name = "idea5_off"
+						spriteType = "GFX_deploy_priority"
+						frame = 1
+						position = { x = 15 y = 151 }
+						orientation = upper_left
+						scale = 1.1
+
+					}
+					iconType = { #Indicator
+						name = "idea5_on_decr"
+						spriteType = "GFX_deploy_priority"
+						frame = 2
+						position = { x = 15 y = 151 }
+						orientation = upper_left
+						scale = 1.1
+
+					}
+					iconType = { #Indicator
+						name = "idea5_on"
+						spriteType = "GFX_deploy_priority"
+						frame = 3
+						position = { x = 15 y = 151 }
+						orientation = upper_left
+						scale = 1.1
+
+					}
+					iconType = { #Indicator
+						name = "idea5_on2"
+						spriteType = "GFX_deploy_priority"
+						frame = 4
+						position = { x = 15 y = 151 }
+						orientation = upper_left
+						scale = 1.1
+
+					}
+					iconType = {
+						name = "icon_air"
+						spriteType = "GFX_officer_corp_chief_air_icon"
+						position = { x = 96 y = 138 }
+						orientation = upper_left
+						scale = 0.6
+					}
+				}
+			}
+			containerWindowType = { #Politics
+				name = "esbuff_ccm_option_13"
+
+				containerWindowType = {
+					name = "esbuff_ccm_option"
+					size = { width = 250 height = 285 }
+					orientation = center
+					position = { x = -10 y = -20 }
+					clipping = yes
+					background = {
+						name = "background"
+						quadTextureSprite = "GFX_tiled_decisions_bg_small"
+					}
+
+	
+					instantTextboxType = { #Text1
+						name = "esbuff_ccm_option_text_13"
+						position = { x = 30 y = 12 }
+						orientation = upper_left
+						font = "hoi_18mbs"
+						text = "ccm_option_text_13"
+						maxWidth = 100
+						maxHeight = 40
+						format = center
+					}
+					iconType = { #Indicator
+						name = "idea6_off"
+						spriteType = "GFX_deploy_priority"
+						frame = 1
+						position = { x = 15 y = 22 }
+						orientation = upper_left
+						scale = 1.1
+					}
+					#iconType = { #Indicator
+					#	name = "idea6_on"
+					#	spriteType = "GFX_deploy_priority"
+					#	frame = 3
+					#	position = { x = 15 y = 22 }
+					#	orientation = upper_left
+					#	scale = 1.1
+					#}
+					iconType = { #Indicator
+						name = "idea6_on2"
+						spriteType = "GFX_deploy_priority"
+						frame = 4
+						position = { x = 15 y = 22 }
+						orientation = upper_left
+						scale = 1.1
+					}
+					iconType = {
+						name = "icon_pp1"
+						spriteType = "GFX_ideology_democratic_group"
+						position = { x = 128 y = 13 }
+						orientation = upper_left
+						scale = 0.6
+					}
+					containerWindowType = { #Idea Buttons
+						name = "esbuff_ccm_option_button_background_7"
+						size = { width = 20 height = 20 }
+						orientation = center
+						position = { x = 56 y = -106 }
+						clipping = no
+						background = {
+							name = "background2"
+							quadTextureSprite = "GFX_tiled_decisions_bg_small"
+						}
+						
+						buttonType = {
+							name = "ccm_option_remove_idea6"
+							quadTextureSprite = GFX_focus_zoom_out
+							clicksound = "open_sub_window"
+							oversound = "ui_menu_over"
+							scale = 0.7
+							position = { x = 10 y = 10 }
+							centerposition = yes
+							alwaystransparent = no
+							pdx_tooltip = "esbuff_ccm_button_minus_tip14"
+						}
+						buttonType = {
+							name = "ccm_option_add_idea6"
+							quadTextureSprite = GFX_focus_zoom_in
+							clicksound = "open_sub_window"
+							oversound = "ui_menu_over"
+							scale = 0.7
+							position = { x = 36 y = 10 }
+							centerposition = yes
+							alwaystransparent = no
+							pdx_tooltip = "esbuff_ccm_button_plus_tip14"
+						}
+					}
+
+					instantTextboxType = { #Text2
+						name = "esbuff_ccm_option_text_14"
+						position = { x = 30 y = 68 }
+						orientation = upper_left
+						font = "hoi_18mbs"
+						text = "ccm_option_text_14"
+						maxWidth = 100
+						maxHeight = 40
+						format = center
+					}
+					iconType = { #Indicator
+						name = "idea7_off"
+						spriteType = "GFX_deploy_priority"
+						frame = 1
+						position = { x = 15 y = 78 }
+						orientation = upper_left
+						scale = 1.1
+					}
+					#iconType = { #Indicator
+					#	name = "idea7_on"
+					#	spriteType = "GFX_deploy_priority"
+					#	frame = 3
+					#	position = { x = 15 y = 78 }
+					#	orientation = upper_left
+					#	scale = 1.1
+					#}
+					iconType = { #Indicator
+						name = "idea7_on2"
+						spriteType = "GFX_deploy_priority"
+						frame = 4
+						position = { x = 15 y = 78 }
+						orientation = upper_left
+						scale = 1.1
+					}
+					iconType = {
+						name = "icon_pp2"
+						spriteType = "GFX_ideology_communism_group"
+						position = { x = 128 y = 66 }
+						orientation = upper_left
+						scale = 0.6
+					}
+					containerWindowType = { #Idea Buttons
+						name = "esbuff_ccm_option_button_background_8"
+						size = { width = 20 height = 20 }
+						orientation = center
+						position = { x = 56 y = -52 }
+						clipping = no
+						background = {
+							name = "background2"
+							quadTextureSprite = "GFX_tiled_decisions_bg_small"
+						}
+						
+						buttonType = {
+							name = "ccm_option_remove_idea7"
+							quadTextureSprite = GFX_focus_zoom_out
+							clicksound = "open_sub_window"
+							oversound = "ui_menu_over"
+							scale = 0.7
+							position = { x = 10 y = 10 }
+							centerposition = yes
+							alwaystransparent = no
+							pdx_tooltip = "esbuff_ccm_button_minus_tip15"
+						}
+						buttonType = {
+							name = "ccm_option_add_idea7"
+							quadTextureSprite = GFX_focus_zoom_in
+							clicksound = "open_sub_window"
+							oversound = "ui_menu_over"
+							scale = 0.7
+							position = { x = 36 y = 10 }
+							centerposition = yes
+							alwaystransparent = no
+							pdx_tooltip = "esbuff_ccm_button_plus_tip15"
+						}
+					}
+
+					instantTextboxType = { #Text3
+						name = "esbuff_ccm_option_text_15"
+						position = { x = 30 y = 134 }
+						orientation = upper_left
+						font = "hoi_18mbs"
+						text = "ccm_option_text_15"
+						maxWidth = 100
+						maxHeight = 20
+						format = center
+					}
+					iconType = { #Indicator
+						name = "idea8_off"
+						spriteType = "GFX_deploy_priority"
+						frame = 1
+						position = { x = 15 y = 134 }
+						orientation = upper_left
+						scale = 1.1
+					}
+					#iconType = { #Indicator
+					#	name = "idea8_on"
+					#	spriteType = "GFX_deploy_priority"
+					#	frame = 3
+					#	position = { x = 15 y = 134 }
+					#	orientation = upper_left
+					#	scale = 1.1
+					#}
+					iconType = { #Indicator
+						name = "idea8_on2"
+						spriteType = "GFX_deploy_priority"
+						frame = 4
+						position = { x = 15 y = 134 }
+						orientation = upper_left
+						scale = 1.1
+					}
+					iconType = {
+						name = "icon_pp3"
+						spriteType = "GFX_ideology_fascism_group"
+						position = { x = 128 y = 126 }
+						orientation = upper_left
+						scale = 0.6
+					}
+					containerWindowType = { #Idea Buttons
+						name = "esbuff_ccm_option_button_background_9"
+						size = { width = 20 height = 20 }
+						orientation = center
+						position = { x = 56 y = 4 }
+						clipping = no
+						background = {
+							name = "background2"
+							quadTextureSprite = "GFX_tiled_decisions_bg_small"
+						}
+						
+						buttonType = {
+							name = "ccm_option_remove_idea8"
+							quadTextureSprite = GFX_focus_zoom_out
+							clicksound = "open_sub_window"
+							oversound = "ui_menu_over"
+							scale = 0.7
+							position = { x = 10 y = 10 }
+							centerposition = yes
+							alwaystransparent = no
+							pdx_tooltip = "esbuff_ccm_button_minus_tip16"
+						}
+						buttonType = {
+							name = "ccm_option_add_idea8"
+							quadTextureSprite = GFX_focus_zoom_in
+							clicksound = "open_sub_window"
+							oversound = "ui_menu_over"
+							scale = 0.7
+							position = { x = 36 y = 10 }
+							centerposition = yes
+							alwaystransparent = no
+							pdx_tooltip = "esbuff_ccm_button_plus_tip16"
+						}
+					}
+
+					instantTextboxType = { #Text4
+						name = "esbuff_ccm_option_text_16"
+						position = { x = 30 y = 187 }
+						orientation = upper_left
+						font = "hoi_18mbs"
+						text = "ccm_option_text_16"
+						maxWidth = 100
+						maxHeight = 20
+						format = center
+					}
+					iconType = { #Indicator
+						name = "idea9_off"
+						spriteType = "GFX_deploy_priority"
+						frame = 1
+						position = { x = 15 y = 187 }
+						orientation = upper_left
+						scale = 1.1
+					}
+					#iconType = { #Indicator
+					#	name = "idea9_on"
+					#	spriteType = "GFX_deploy_priority"
+					#	frame = 3
+					#	position = { x = 15 y = 187 }
+					#	orientation = upper_left
+					#	scale = 1.1
+					#}
+					iconType = { #Indicator
+						name = "idea9_on2"
+						spriteType = "GFX_deploy_priority"
+						frame = 4
+						position = { x = 15 y = 187 }
+						orientation = upper_left
+						scale = 1.1
+					}
+					iconType = {
+						name = "icon_pp4"
+						spriteType = "GFX_ideology_neutrality_group"
+						position = { x = 128 y = 176 }
+						orientation = upper_left
+						scale = 0.6
+					}
+					containerWindowType = { #Idea Buttons
+						name = "esbuff_ccm_option_button_background_10"
+						size = { width = 20 height = 20 }
+						orientation = center
+						position = { x = 56 y = 58 }
+						clipping = no
+						background = {
+							name = "background2"
+							quadTextureSprite = "GFX_tiled_decisions_bg_small"
+						}
+						
+						buttonType = {
+							name = "ccm_option_remove_idea9"
+							quadTextureSprite = GFX_focus_zoom_out
+							clicksound = "open_sub_window"
+							oversound = "ui_menu_over"
+							scale = 0.7
+							position = { x = 10 y = 10 }
+							centerposition = yes
+							alwaystransparent = no
+							pdx_tooltip = "esbuff_ccm_button_minus_tip17"
+						}
+						buttonType = {
+							name = "ccm_option_add_idea9"
+							quadTextureSprite = GFX_focus_zoom_in
+							clicksound = "open_sub_window"
+							oversound = "ui_menu_over"
+							scale = 0.7
+							position = { x = 36 y = 10 }
+							centerposition = yes
+							alwaystransparent = no
+							pdx_tooltip = "esbuff_ccm_button_plus_tip17"
+						}
+					}
+
+					instantTextboxType = { #Text5
+						name = "esbuff_ccm_option_text_17"
+						position = { x = 30 y = 244 }
+						orientation = upper_left
+						font = "hoi_18mbs"
+						text = "ccm_option_text_17"
+						maxWidth = 100
+						maxHeight = 40
+						format = center
+					}
+					iconType = { #Indicator
+						name = "idea10_off"
+						spriteType = "GFX_deploy_priority"
+						frame = 1
+						position = { x = 15 y = 244 }
+						orientation = upper_left
+						scale = 1.1
+					}
+					#iconType = { #Indicator
+					#	name = "idea10_on"
+					#	spriteType = "GFX_deploy_priority"
+					#	frame = 3
+					#	position = { x = 15 y = 244 }
+					#	orientation = upper_left
+					#	scale = 1.1
+					#}
+					iconType = { #Indicator
+						name = "idea10_on2"
+						spriteType = "GFX_deploy_priority"
+						frame = 4
+						position = { x = 15 y = 244 }
+						orientation = upper_left
+						scale = 1.1
+					}
+					iconType = {
+						name = "icon_pp5"
+						spriteType = "GFX_ideology_nationalist_group"
+						position = { x = 128 y = 236 }
+						orientation = upper_left
+						scale = 0.6
+					}
+					containerWindowType = { #Idea Buttons
+						name = "esbuff_ccm_option_button_background_11"
+						size = { width = 20 height = 20 }
+						orientation = center
+						position = { x = 56 y = 114 }
+						clipping = no
+						background = {
+							name = "background2"
+							quadTextureSprite = "GFX_tiled_decisions_bg_small"
+						}
+						
+						buttonType = {
+							name = "ccm_option_remove_idea10"
+							quadTextureSprite = GFX_focus_zoom_out
+							clicksound = "open_sub_window"
+							oversound = "ui_menu_over"
+							scale = 0.7
+							position = { x = 10 y = 10 }
+							centerposition = yes
+							alwaystransparent = no
+							pdx_tooltip = "esbuff_ccm_button_minus_tip18"
+						}
+						buttonType = {
+							name = "ccm_option_add_idea10"
+							quadTextureSprite = GFX_focus_zoom_in
+							clicksound = "open_sub_window"
+							oversound = "ui_menu_over"
+							scale = 0.7
+							position = { x = 36 y = 10 }
+							centerposition = yes
+							alwaystransparent = no
+							pdx_tooltip = "esbuff_ccm_button_plus_tip18"
+						}
+					}
+
+					containerWindowType = { #Party popularity1
+						name = "esbuff_ccm_value1"
+						size = { width = 60 height = 28 }
+						orientation = center
+						position = { x = 50 y = -134 }
+						clipping = no
+							
+						background = {
+							name = "bg_opinion"
+							quadTextureSprite = "GFX_tiled_decisions_bg_small"
+						}
+
+						instantTextboxType = {
+							name = "pp_popularity"
+							position = { x = -22 y = -8 }
+							orientation = center 
+							text = "[?party_popularity@democratic|.1%]"
+							font = "hoi_16mbs"
+							maxWidth = 44
+							maxHeight = 34
+							format = center
+							alwaystransparent = yes
+						}
+					}
+					containerWindowType = { #Party popularity2
+						name = "esbuff_ccm_value2"
+						size = { width = 60 height = 28 }
+						orientation = center
+						position = { x = 50 y = -80 }
+						clipping = no
+							
+						background = {
+							name = "bg_opinion"
+							quadTextureSprite = "GFX_tiled_decisions_bg_small"
+						}
+
+						instantTextboxType = {
+							name = "pp_popularity"
+							position = { x = -22 y = -8 }
+							orientation = center 
+							text = "[?party_popularity@communism|.1%]"
+							font = "hoi_16mbs"
+							maxWidth = 44
+							maxHeight = 40
+							format = center
+							alwaystransparent = yes
+						}
+					}
+					containerWindowType = { #Party popularity3
+						name = "esbuff_ccm_value3"
+						size = { width = 60 height = 28 }
+						orientation = center
+						position = { x = 50 y = -24 }
+						clipping = no
+							
+						background = {
+							name = "bg_opinion"
+							quadTextureSprite = "GFX_tiled_decisions_bg_small"
+						}
+
+						instantTextboxType = {
+							name = "pp_popularity"
+							position = { x = -22 y = -8 }
+							orientation = center 
+							text = "[?party_popularity@fascism|.1%]"
+							font = "hoi_16mbs"
+							maxWidth = 44
+							maxHeight = 40
+							format = center
+							alwaystransparent = yes
+						}
+					}
+					containerWindowType = { #Party popularity4
+						name = "esbuff_ccm_value4"
+						size = { width = 60 height = 28 }
+						orientation = center
+						position = { x = 50 y = 30 }
+						clipping = no
+							
+						background = {
+							name = "bg_opinion"
+							quadTextureSprite = "GFX_tiled_decisions_bg_small"
+						}
+
+						instantTextboxType = {
+							name = "pp_popularity"
+							position = { x = -22 y = -8 }
+							orientation = center 
+							text = "[?party_popularity@neutrality|.1%]"
+							font = "hoi_16mbs"
+							maxWidth = 44
+							maxHeight = 40
+							format = center
+							alwaystransparent = yes
+						}
+					}
+					containerWindowType = { #Party popularity5
+						name = "esbuff_ccm_value5"
+						size = { width = 60 height = 28 }
+						orientation = center
+						position = { x = 50 y = 86 }
+						clipping = no
+							
+						background = {
+							name = "bg_opinion"
+							quadTextureSprite = "GFX_tiled_decisions_bg_small"
+						}
+
+						instantTextboxType = {
+							name = "pp_popularity"
+							position = { x = -22 y = -8 }
+							orientation = center 
+							text = "[?party_popularity@nationalist|.1%]"
+							font = "hoi_16mbs"
+							maxWidth = 44
+							maxHeight = 40
+							format = center
+							alwaystransparent = yes
+						}
+					}
+				}
+			}
+			containerWindowType = { #Offmap factories
+				name = "esbuff_ccm_option_14"
+
+				containerWindowType = {
+					name = "esbuff_ccm_option"
+					size = { width = 250 height = 161 }
+					orientation = center
+					position = { x = -258 y = 262 }
+					clipping = yes
+					background = {
+						name = "background"
+						quadTextureSprite = "GFX_tiled_decisions_bg_small"
+					}
+					
+					iconType = { #Icon
+						name = "icon_nf1"
+						spriteType = "GFX_non_available_factory_icon"
+						position = { x = 10 y = 18 }
+						orientation = upper_left
+						scale = 1.2
+					}
+					instantTextboxType = { #Text
+						name = "esbuff_ccm_option_text_18"
+						position = { x = 46 y = 20 }
+						orientation = upper_left
+						font = "hoi_18mbs"
+						text = "ccm_option_text_18"
+						maxWidth = 130
+						maxHeight = 40
+						format = center
+					}
+					containerWindowType = { #Num of factories
+						name = "esbuff_ccm_value6"
+						size = { width = 60 height = 28 }
+						orientation = center
+						position = { x = 56 y = -74 }
+						clipping = no
+							
+						background = {
+							name = "bg_opinion"
+							quadTextureSprite = "GFX_tiled_decisions_bg_small"
+						}
+
+						instantTextboxType = {
+							name = "factories_num1"
+							position = { x = -22 y = -8 }
+							orientation = center 
+							text = "[?num_of_civilian_factories]"
+							font = "hoi_16mbs"
+							maxWidth = 44
+							maxHeight = 40
+							format = center
+							alwaystransparent = yes
+						}
+					}
+					containerWindowType = { #Idea Buttons
+						name = "esbuff_ccm_option_button_background_12"
+						size = { width = 20 height = 20 }
+						orientation = center
+						position = { x = 62 y = -46 }
+						clipping = no
+						background = {
+							name = "background2"
+							quadTextureSprite = "GFX_tiled_decisions_bg_small"
+						}
+						
+						buttonType = {
+							name = "ccm_option_remove_idea11"
+							quadTextureSprite = GFX_focus_zoom_out
+							clicksound = "open_sub_window"
+							oversound = "ui_menu_over"
+							scale = 0.7
+							position = { x = 10 y = 10 }
+							centerposition = yes
+							alwaystransparent = no
+							pdx_tooltip = "esbuff_ccm_button_minus_tip19"
+						}
+						buttonType = {
+							name = "ccm_option_add_idea11"
+							quadTextureSprite = GFX_focus_zoom_in
+							clicksound = "open_sub_window"
+							oversound = "ui_menu_over"
+							scale = 0.7
+							position = { x = 36 y = 10 }
+							centerposition = yes
+							alwaystransparent = no
+							pdx_tooltip = "esbuff_ccm_button_plus_tip19"
+						}
+					}
+
+					iconType = { #Icon
+						name = "icon_nf2"
+						spriteType = "GFX_military_factory_icon"
+						position = { x = 10 y = 68 }
+						orientation = upper_left
+						scale = 1.2
+					}
+					instantTextboxType = { #Text
+						name = "esbuff_ccm_option_text_19"
+						position = { x = 46 y = 70 }
+						orientation = upper_left
+						font = "hoi_18mbs"
+						text = "ccm_option_text_19"
+						maxWidth = 130
+						maxHeight = 40
+						format = center
+					}
+					containerWindowType = { #Num of factories
+						name = "esbuff_ccm_value7"
+						size = { width = 60 height = 28 }
+						orientation = center
+						position = { x = 56 y = -24 }
+						clipping = no
+							
+						background = {
+							name = "bg_opinion"
+							quadTextureSprite = "GFX_tiled_decisions_bg_small"
+						}
+
+						instantTextboxType = {
+							name = "factories_num2"
+							position = { x = -22 y = -8 }
+							orientation = center 
+							text = "[?num_of_military_factories]"
+							font = "hoi_16mbs"
+							maxWidth = 44
+							maxHeight = 40
+							format = center
+							alwaystransparent = yes
+						}
+					}
+					containerWindowType = { #Idea Buttons
+						name = "esbuff_ccm_option_button_background_13"
+						size = { width = 20 height = 20 }
+						orientation = center
+						position = { x = 62 y = 4 }
+						clipping = no
+						background = {
+							name = "background2"
+							quadTextureSprite = "GFX_tiled_decisions_bg_small"
+						}
+						
+						buttonType = {
+							name = "ccm_option_remove_idea12"
+							quadTextureSprite = GFX_focus_zoom_out
+							clicksound = "open_sub_window"
+							oversound = "ui_menu_over"
+							scale = 0.7
+							position = { x = 10 y = 10 }
+							centerposition = yes
+							alwaystransparent = no
+							pdx_tooltip = "esbuff_ccm_button_minus_tip20"
+						}
+						buttonType = {
+							name = "ccm_option_add_idea12"
+							quadTextureSprite = GFX_focus_zoom_in
+							clicksound = "open_sub_window"
+							oversound = "ui_menu_over"
+							scale = 0.7
+							position = { x = 36 y = 10 }
+							centerposition = yes
+							alwaystransparent = no
+							pdx_tooltip = "esbuff_ccm_button_plus_tip20"
+						}
+					}
+
+					iconType = { #Icon
+						name = "icon_nf3"
+						spriteType = "GFX_dockyard_icon"
+						position = { x = 10 y = 118 }
+						orientation = upper_left
+						scale = 1.2
+					}
+					instantTextboxType = { #Text
+						name = "esbuff_ccm_option_text_20"
+						position = { x = 46 y = 120 }
+						orientation = upper_left
+						font = "hoi_18mbs"
+						text = "ccm_option_text_20"
+						maxWidth = 130
+						maxHeight = 40
+						format = center
+					}
+					containerWindowType = { #Num of factories
+						name = "esbuff_ccm_value8"
+						size = { width = 60 height = 28 }
+						orientation = center
+						position = { x = 56 y = 26 }
+						clipping = no
+							
+						background = {
+							name = "bg_opinion"
+							quadTextureSprite = "GFX_tiled_decisions_bg_small"
+						}
+
+						instantTextboxType = {
+							name = "factories_num3"
+							position = { x = -22 y = -8 }
+							orientation = center 
+							text = "[?num_of_naval_factories]"
+							font = "hoi_16mbs"
+							maxWidth = 44
+							maxHeight = 40
+							format = center
+							alwaystransparent = yes
+						}
+					}
+					containerWindowType = { #Idea Buttons
+						name = "esbuff_ccm_option_button_background_14"
+						size = { width = 20 height = 20 }
+						orientation = center
+						position = { x = 62 y = 54 }
+						clipping = no
+						background = {
+							name = "background2"
+							quadTextureSprite = "GFX_tiled_decisions_bg_small"
+						}
+						
+						buttonType = {
+							name = "ccm_option_remove_idea13"
+							quadTextureSprite = GFX_focus_zoom_out
+							clicksound = "open_sub_window"
+							oversound = "ui_menu_over"
+							scale = 0.7
+							position = { x = 10 y = 10 }
+							centerposition = yes
+							alwaystransparent = no
+							pdx_tooltip = "esbuff_ccm_button_minus_tip21"
+						}
+						buttonType = {
+							name = "ccm_option_add_idea13"
+							quadTextureSprite = GFX_focus_zoom_in
+							clicksound = "open_sub_window"
+							oversound = "ui_menu_over"
+							scale = 0.7
+							position = { x = 36 y = 10 }
+							centerposition = yes
+							alwaystransparent = no
+							pdx_tooltip = "esbuff_ccm_button_plus_tip21"
+						}
+					}
+				}
+			}
+			containerWindowType = { #Influence&Autonomy
+				name = "esbuff_ccm_option_15"
+
+				containerWindowType = {
+					name = "esbuff_ccm_option"
+					size = { width = 250 height = 161 }
+					orientation = center
+					position = { x = -10 y = 262 }
+					clipping = yes
+					background = {
+						name = "background"
+						quadTextureSprite = "GFX_tiled_decisions_bg_small"
+					}
+
+					instantTextboxType = { #Text
+						name = "esbuff_ccm_option_text_21"
+						position = { x = 46 y = 33 }
+						orientation = upper_left
+						font = "hoi_18mbs"
+						text = "ccm_option_text_21"
+						maxWidth = 120
+						maxHeight = 20
+						format = center
+					}
+					iconType = { #Icon
+						name = "icon_7"
+						spriteType = "GFX_decisions_category_influence"
+						position = { x = 14 y = 30 }
+						orientation = upper_left
+						scale = 0.7
+					}
+					containerWindowType = { #Idea Buttons
+						name = "esbuff_ccm_option_button_background_15"
+						size = { width = 20 height = 20 }
+						orientation = center
+						position = { x = 56 y = -46 }
+						clipping = no
+						background = {
+							name = "background2"
+							quadTextureSprite = "GFX_tiled_decisions_bg_small"
+						}
+						
+						buttonType = {
+							name = "ccm_option_remove_idea14"
+							quadTextureSprite = GFX_focus_zoom_out
+							clicksound = "open_sub_window"
+							oversound = "ui_menu_over"
+							scale = 0.7
+							position = { x = 10 y = 10 }
+							centerposition = yes
+							alwaystransparent = no
+							pdx_tooltip = "esbuff_ccm_button_minus_tip22"
+						}
+						buttonType = {
+							name = "ccm_option_add_idea14"
+							quadTextureSprite = GFX_focus_zoom_in
+							clicksound = "open_sub_window"
+							oversound = "ui_menu_over"
+							scale = 0.7
+							position = { x = 36 y = 10 }
+							centerposition = yes
+							alwaystransparent = no
+							pdx_tooltip = "esbuff_ccm_button_plus_tip22"
+						}
+					}
+
+					instantTextboxType = { #Text
+						name = "esbuff_ccm_option_text_22"
+						position = { x = 46 y = 94 }
+						orientation = upper_left
+						font = "hoi_18mbs"
+						text = "ccm_option_text_22"
+						maxWidth = 120
+						maxHeight = 20
+						format = center
+					}
+					iconType = { #Icon
+						name = "icon_8"
+						spriteType = "GFX_PUPPETS_VIEW_BUTTON"
+						position = { x = 17 y = 86 }
+						orientation = upper_left
+						scale = 1.1
+						pdx_tooltip = "esbuff_ccm_autonomy_tip"
+					}
+					containerWindowType = { #Idea Buttons
+						name = "esbuff_ccm_option_button_background_16"
+						size = { width = 20 height = 20 }
+						orientation = center
+						position = { x = 56 y = 28 }
+						clipping = no
+						background = {
+							name = "background2"
+							quadTextureSprite = "GFX_tiled_decisions_bg_small"
+						}
+						
+						buttonType = {
+							name = "ccm_option_remove_idea15"
+							quadTextureSprite = GFX_focus_zoom_out
+							clicksound = "open_sub_window"
+							oversound = "ui_menu_over"
+							scale = 0.7
+							position = { x = 10 y = 10 }
+							centerposition = yes
+							alwaystransparent = no
+							pdx_tooltip = "esbuff_ccm_button_minus_tip23"
+						}
+						buttonType = {
+							name = "ccm_option_add_idea15"
+							quadTextureSprite = GFX_focus_zoom_in
+							clicksound = "open_sub_window"
+							oversound = "ui_menu_over"
+							scale = 0.7
+							position = { x = 36 y = 10 }
+							centerposition = yes
+							alwaystransparent = no
+							pdx_tooltip = "esbuff_ccm_button_plus_tip23"
+						}
+					}
+					containerWindowType = { #Autonomy
+						name = "esbuff_ccm_value9"
+						size = { width = 60 height = 28 }
+						orientation = center
+						position = { x = 50 y = 0 }
+						clipping = no
+						
+							
+						background = {
+							name = "bg_opinion"
+							quadTextureSprite = "GFX_tiled_decisions_bg_small"
+						}
+						instantTextboxType = {
+							name = "autonomy_progress"
+							position = { x = -22 y = -8 }
+							orientation = center 
+							text = "[?autonomy_ratio]"
+							font = "hoi_16mbs"
+							maxWidth = 44
+							maxHeight = 40
+							format = center
+							alwaystransparent = yes
+						}
+					}
+
+				}
+			}
+			containerWindowType = { #Faction actions
+				name = "esbuff_ccm_option_16"
+
+				containerWindowType = {
+					name = "esbuff_ccm_option"
+					size = { width = 250 height = 110 }
+					orientation = center
+					position = { x = -258 y = 420 }
+					clipping = yes
+					background = {
+						name = "background"
+						quadTextureSprite = "GFX_tiled_decisions_bg_small"
+					}
+												
+					buttonType = {
+						name = "esbuff_ccm_faction_actions_1"
+						position = { x = 50 y = 15 }
+						clicksound = click_close
+						quadTextureSprite ="GFX_button_148x34"
+						buttonFont = "hoi_18mbs"
+						Orientation = "UPPER_LEFT"
+						text = "ccm_option_text_23"
+						pdx_tooltip = "esbuff_ccm_button_tip24"
+						clicksound = click_close
+					}
+					
+					buttonType = {
+						name = "esbuff_ccm_faction_actions_2"
+						position = { x = 50 y = 60 }
+						clicksound = click_close
+						quadTextureSprite ="GFX_button_148x34"
+						buttonFont = "hoi_18mbs"
+						Orientation = "UPPER_LEFT"
+						text = "ccm_option_text_24"
+						pdx_tooltip = "esbuff_ccm_button_tip25"
+						clicksound = click_close
+					}
+				}  
+			}
+		}
+	}
+}

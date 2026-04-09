@@ -1,0 +1,4065 @@
+﻿add_namespace = Easybuff
+
+
+country_event = {
+    id = Easybuff.1
+    title = Easybuff.1.t
+    desc = Easybuff.1.desc
+    picture = GFX_report_event_german_inspect_troops
+    is_triggered_only = yes
+    
+    immediate = {
+        hidden_effect = { remove_ideas = cheat_open_easybuff }
+    }
+
+    # Close
+    option = {
+        name = Easybuffclose
+    }
+    # Next Page
+    option = {
+        name = Easybuffnext
+        country_event = Easybuff.1111
+    }
+    # Buildings
+    option = {
+        name = Easybuff.1.a
+        country_event = Easybuff.10
+    }
+    # Resources
+    option = {
+        name = Easybuff.1.b
+        country_event = Easybuff.20
+    }
+    #  Technologies
+    option = {
+        name = Easybuff.1.c
+        country_event = Easybuff.30
+    }
+    # Millenium Dawn
+    option = {
+        name = Easybuff.1.d
+        country_event = Easybuff.40
+    }
+    # Points and Exps
+    option = {
+        name = Easybuff.1.e
+        country_event = Easybuff.50
+    }
+    # Faction and Parties
+    option = {
+        name = Easybuff.1.f
+        country_event = Easybuff.60
+    }
+        
+}
+
+# Next Page
+country_event = {
+    id = Easybuff.1111
+    title = Easybuffnext
+    desc = Easybuff.1.desc
+    picture = GFX_report_event_german_inspect_troops
+    is_triggered_only = yes
+
+    # Close
+    option = {
+        name = Easybuffclose
+    }
+    # Previous Page
+    option = {
+        name = Easybuffprevious
+        country_event = Easybuff.1
+    }
+    # Cores and Domain
+    option = {
+        name = Easybuff.1.g
+        country_event = Easybuff.70
+    }
+    # Static Modifiers
+    option = {
+        name = Easybuff.1.h
+        country_event = Easybuff.80
+    }
+    # Equipment modifiers
+    option = {
+        name = Easybuff.1.j
+        country_event = Easybuff.82
+    }
+    #Leaders
+    option = {
+        name = Easybuff.1.i
+        country_event = Easybuff.90
+    }
+    
+}
+
+# Buildings 10
+country_event = {
+    id = Easybuff.10
+    title = Easybuff.10.t
+    desc = Easybuff.10.desc
+    picture = GFX_report_event_german_inspect_troops
+    is_triggered_only = yes
+    timeout_days = 5
+    
+    # Back to main
+    option = {
+        name = Easybuffback
+        country_event = Easybuff.1
+    }
+    # Next page
+    option = {
+        name = Easybuffnext
+        country_event = Easybuff.11
+    }
+    option = {
+        name = infrastructure
+        every_state = {
+            limit = { is_controlled_by = ROOT }
+            add_building_construction = {
+                type = infrastructure
+                level = 1
+                instant_build = yes
+            }
+        }
+        country_event = Easybuff.1
+    }
+    option = {
+        name = internet_station
+        every_state = {
+            limit = { is_controlled_by = ROOT }
+            add_building_construction = {
+                type = internet_station
+                level = 1
+                instant_build = yes
+            }
+        }
+        country_event = Easybuff.1
+    }
+    option = {
+        name = offices
+        every_state = {
+            limit = { is_controlled_by = ROOT }
+            add_building_construction = {
+                type = offices
+                level = 1
+                instant_build = yes
+            }
+        }
+        country_event = Easybuff.1
+    }
+    option = {
+        name = industrial_complex
+        add_offsite_building = { type = industrial_complex level = 5 }
+        country_event = Easybuff.1
+    }
+    option = {
+        name = arms_factory
+        add_offsite_building = { type = arms_factory level = 5 }
+        country_event = Easybuff.1
+    }
+    option = {
+        name = dockyard
+        add_offsite_building = { type = dockyard level = 5 }
+        country_event = Easybuff.1
+    }
+    option = {
+        name = Easybuff.10.g
+        every_state = {
+            limit = { is_controlled_by = ROOT }
+            add_extra_state_shared_building_slots = 5
+        }
+        country_event = Easybuff.1
+    }
+    option = {
+        name = fuel_silo
+        every_state = {
+            limit = { is_controlled_by = ROOT }
+            add_building_construction = {
+                type = fuel_silo
+                level = 1
+                instant_build = yes
+            }
+        }
+        country_event = Easybuff.1
+    }
+}
+    
+# Buildings 11
+country_event = {
+    id = Easybuff.11
+    title = Easybuff.11.t
+    desc = Easybuff.11.desc
+    picture = GFX_report_event_german_inspect_troops
+    is_triggered_only = yes
+    
+    option = {
+        name = Easybuffprevious
+        country_event = Easybuff.10
+    }
+    option = {
+        name = anti_air_building
+        every_state = {
+            limit = { is_controlled_by = ROOT }
+            add_building_construction = {
+                type = anti_air_building
+                level = 1
+                instant_build = yes
+            }    
+        }
+        country_event = Easybuff.1
+    }
+    option = {
+        name = rocket_site
+        every_state = {
+            limit = { is_controlled_by = ROOT }
+            add_building_construction = {
+                type = rocket_site
+                level = 1
+                instant_build = yes
+            }
+        }
+        country_event = Easybuff.1
+    }
+    option = {
+        name = radar_station
+        every_state = {
+            limit = { is_controlled_by = ROOT }
+            add_building_construction = {
+                type = radar_station
+                level = 1
+                instant_build = yes
+            }
+        }
+        country_event = Easybuff.1
+    }
+    option = {
+        name = air_base
+        every_state = {
+            limit = { is_controlled_by = ROOT }
+            add_building_construction = {
+                type = air_base
+                level = 1
+                instant_build = yes
+            }
+        }
+        country_event = Easybuff.1
+    }
+    option = {
+        name = nuclear_reactor
+        random_state = {
+            limit = { is_controlled_by = ROOT }
+            add_building_construction = {
+                type = nuclear_reactor
+                level = 3
+                instant_build = yes
+            }
+        }
+        country_event = Easybuff.1
+    }
+    option = {
+        name = synthetic_refinery
+        random_state = {
+            limit = { is_controlled_by = ROOT }
+            add_building_construction = {
+                type = synthetic_refinery
+                level = 3
+                instant_build = yes
+            }
+        }
+        country_event = Easybuff.1
+    }
+    option = {
+        name = fossil_powerplant
+        random_state = {
+            limit = { is_controlled_by = ROOT }
+            add_building_construction = {
+                type = fossil_powerplant
+                level = 3
+                instant_build = yes
+            }
+        }
+        country_event = Easybuff.1
+    }
+    option = {
+        name = Easybuff.10.l
+        random_owned_controlled_state = {
+            limit = {
+                can_construct_building = nuclear_facility
+            }
+            construct_building_in_random_province = {
+                nuclear_facility = 1
+            }
+        }
+        random_owned_controlled_state = {
+            limit = {
+                can_construct_building = air_facility
+            }
+            construct_building_in_random_province = {
+                air_facility = 1
+            }
+        }
+        random_owned_controlled_state = {
+            limit = {
+                can_construct_building = naval_facility
+            }
+            construct_building_in_random_province = {
+                naval_facility = 1
+            }
+        }
+        random_owned_controlled_state = {
+            limit = {
+                can_construct_building = land_facility
+            }
+            construct_building_in_random_province = {
+                land_facility = 1
+            }
+        }
+    }
+    option = {
+        name = agriculture_district
+        random_state = {
+            limit = { is_controlled_by = ROOT }
+            add_building_construction = {
+                type = agriculture_district
+                level = 5
+                instant_build = yes
+            }
+        }
+    }
+    #option = {
+    #    name = Easybuffback
+    #    country_event = Easybuff.1
+    #}
+}
+
+# Resources 20
+country_event = {
+    id = Easybuff.20
+    title = Easybuff.20.t
+    desc = Easybuff.20.desc
+    picture = GFX_report_event_german_inspect_troops
+    is_triggered_only = yes
+    
+    # Back to main
+    option = {
+        name = Easybuffback
+        country_event = Easybuff.1
+    }
+    # Next page
+    option = {
+        name = Easybuffnext
+        country_event = Easybuff.21
+    }
+    option = {
+        name = Easybuff.20.a
+        every_state = {
+            limit = { is_controlled_by = ROOT }
+            add_resource = {
+                type = rubber
+                amount = 8
+            }
+            add_resource = {
+                type = oil
+                amount = 8
+            }
+            add_resource = {
+                type = aluminium
+                amount = 8
+            }
+            add_resource = {
+                type = tungsten
+                amount = 8
+            }
+            add_resource = {
+                type = steel
+                amount = 8
+            }
+            add_resource = {
+                type = chromium
+                amount = 8
+            }
+        }
+        country_event = Easybuff.1
+    }
+    option = {
+        name = Easybuff.20.b
+        random_state = {
+            limit = { 
+                is_controlled_by = ROOT 
+                is_capital = yes
+            }
+            add_resource = {
+                type = rubber
+                amount = 8
+            }
+            add_resource = {
+                type = oil
+                amount = 8
+            }
+            add_resource = {
+                type = aluminium
+                amount = 8
+            }
+            add_resource = {
+                type = tungsten
+                amount = 8
+            }
+            add_resource = {
+                type = steel
+                amount = 8
+            }
+            add_resource = {
+                type = chromium
+                amount = 8
+            }
+        }
+        country_event = Easybuff.1
+    }
+    option = {
+        name = Easybuff.20.c
+        every_owned_state = {
+            add_resource = {
+                type = rubber
+                amount = 8
+            }
+            add_resource = {
+                type = oil
+                amount = 8
+            }
+            add_resource = {
+                type = aluminium
+                amount = 8
+            }
+            add_resource = {
+                type = tungsten
+                amount = 8
+            }
+            add_resource = {
+                type = steel
+                amount = 8
+            }
+            add_resource = {
+                type = chromium
+                amount = 8
+            }
+        }
+        country_event = Easybuff.1
+    }
+    option = {
+        name = Easybuff.20.j
+        every_state = {
+            add_resource = {
+                type = rubber
+                amount = 8
+            }
+            add_resource = {
+                type = oil
+                amount = 8
+            }
+            add_resource = {
+                type = aluminium
+                amount = 8
+            }
+            add_resource = {
+                type = tungsten
+                amount = 8
+            }
+            add_resource = {
+                type = steel
+                amount = 8
+            }
+            add_resource = {
+                type = chromium
+                amount = 8
+            }
+        }
+        country_event = Easybuff.1
+    }
+    option = {
+        name = Easybuff.20.k
+        every_state = {
+            add_resource = {
+                type = rubber
+                amount = 100
+            }
+            add_resource = {
+                type = oil
+                amount = 100
+            }
+            add_resource = {
+                type = aluminium
+                amount = 100
+            }
+            add_resource = {
+                type = tungsten
+                amount = 100
+            }
+            add_resource = {
+                type = steel
+                amount = 100
+            }
+            add_resource = {
+                type = chromium
+                amount = 100
+            }
+        }
+        country_event = Easybuff.1
+    }
+    option = {
+        name = country_resource_steel
+        random_state = {
+            limit = { 
+                is_controlled_by = ROOT 
+                is_capital = yes
+            }
+            add_resource = {
+                type = steel
+                amount = 8
+            }
+        }
+        country_event = Easybuff.1
+    }
+    option = {
+        name = country_resource_tungsten
+        random_state = {
+            limit = { 
+                is_controlled_by = ROOT 
+                is_capital = yes
+            }
+            add_resource = {
+                type = tungsten
+                amount = 8
+            }
+        }
+        country_event = Easybuff.1
+    }
+    option = {
+        name = country_resource_aluminium
+        random_state = {
+            limit = { 
+                is_controlled_by = ROOT 
+                is_capital = yes
+            }
+            add_resource = {
+                type = aluminium
+                amount = 8
+            }
+        }
+        country_event = Easybuff.1
+    }
+
+}
+
+# Resources 21
+country_event = {
+    id = Easybuff.21
+    title = Easybuff.21.t
+    desc = Easybuff.21.desc
+    picture = GFX_report_event_german_inspect_troops
+    is_triggered_only = yes
+    
+    # Previous page
+    option = {
+        name = Easybuffprevious
+        country_event = Easybuff.20
+    }
+    option = {
+        name = country_resource_chromium
+        random_state = {
+            limit = { 
+                is_controlled_by = ROOT 
+                is_capital = yes
+            }
+            add_resource = {
+                type = chromium
+                amount = 8
+            }
+        }
+        country_event = Easybuff.1
+    }
+    option = {
+        name = country_resource_rubber
+        random_state = {
+            limit = { 
+                is_controlled_by = ROOT 
+                is_capital = yes
+            }
+            add_resource = {
+                type = rubber
+                amount = 8
+            }
+        }
+        country_event = Easybuff.1
+    }
+    option = {
+        name = country_resource_oil
+        random_state = {
+            limit = { 
+                is_controlled_by = ROOT 
+                is_capital = yes
+            }
+            add_resource = {
+                type = oil
+                amount = 8
+            }
+        }
+        country_event = Easybuff.1
+    }
+    
+}
+
+# Technologies and Science 30
+country_event = {
+    id = Easybuff.30
+    title = Easybuff.30.t
+    desc = Easybuff.30.desc
+    picture = GFX_report_event_german_inspect_troops
+    is_triggered_only = yes
+    
+    option = {
+        name = Easybuff.30.a
+        country_event = Easybuff.31
+    }
+
+    option = {
+        name = Easybuff.30.b
+        country_event = Easybuff.32
+    }
+
+    option = {
+        name = Easybuff.30.c
+        country_event = Easybuff.33
+    }
+    
+    option = {
+        name = Easybuffback
+        country_event = Easybuff.1
+    }
+    
+}
+
+# Technologies 31
+country_event = {
+    id = Easybuff.31
+    title = Easybuff.31.t
+    desc = Easybuff.31.desc
+    picture = GFX_report_event_german_inspect_troops
+    is_triggered_only = yes
+    
+    #Air
+    option = {
+        name = Easybuff.31.a
+        set_technology = { 
+            early_airframe_designs = 1
+            gen_3_light = 1
+            gen_3_medium = 1
+            gen_3_large = 1
+            gen_4_light = 1
+            gen_4_medium = 1
+            gen_4_large = 1
+            gen_5_light = 1
+            gen_5_medium = 1
+            gen_5_large = 1
+            gen_6_light = 1
+            gen_6_medium = 1
+            gen_6_large = 1
+
+            avionics_1 = 1
+            avionics_2 = 1
+            avionics_3 = 1
+            awacs_1 = 1
+            awacs_2 = 1
+            awacs_3 = 1
+            drone_1 = 1
+            drone_2 = 1
+            drone_3 = 1
+            drone_4 = 1
+            suicide_drone_1 = 1
+            suicide_drone_2 = 1
+            suicide_drone_3 = 1
+            suicide_drone_4 = 1
+
+            flying_wing_design = 1
+            redundant_1 = 1
+            redundant_2 = 1
+            variable_wing_design = 1
+            delta_wing_design = 1
+            fwdswept_wing_design = 1
+            diamond_wing_design = 1
+            stealth_tech_1 = 1
+            stealth_tech_2 = 1
+            internal_weapons_1 = 1
+            internal_weapons_2 = 1
+            internal_weapons_3 = 1
+            future_wingform_designs = 1
+
+            engines_2 = 1
+            refueling_1 = 1
+            refueling_2 = 1
+            nuclear_engines = 1
+            engines_3 = 1
+            solar_engines_1 = 1
+            solar_engines_2 = 1
+            engines_4 = 1
+            engines_5 = 1
+
+            early_weapons = 1
+            air_weapons_1 = 1
+            air_weapons_2 = 1
+            air_weapons_3 = 1
+            air_weapons_4 = 1
+            countermeasures_1 = 1
+            countermeasures_2 = 1
+            countermeasures_3 = 1
+            countermeasures_4 = 1
+            naval_weapons_1 = 1
+            naval_weapons_2 = 1
+            naval_weapons_3 = 1
+            naval_weapons_4 = 1
+            special_mad_1 = 1
+            special_mad_2 = 1
+            special_mad_3 = 1
+            ag_weapons_1 = 1
+            ag_weapons_2 = 1
+            ag_weapons_3 = 1
+            ag_weapons_4 = 1
+            gunship_1 = 1
+            gunship_2 = 1
+            rapid_dragon = 1
+            tgp_recon_1 = 1
+            tgp_recon_2 = 1
+            tgp_recon_3 = 1
+
+            nsb_attack_helicopter_tech_1 = 1
+            nsb_attack_helicopter_tech_2 = 1
+            nsb_attack_helicopter_tech_3 = 1
+            nsb_attack_helicopter_tech_4 = 1
+            nsb_attack_helicopter_tech_5 = 1
+
+            #early_helicopter = 1
+            attack_helicopter1 = 1
+            attack_helicopter2 = 1 
+            attack_helicopter3 = 1 
+            attack_helicopter4 = 1 
+            attack_helicopter5 = 1 
+            transport_helicopter1 = 1
+            transport_helicopter2 = 1 
+            transport_helicopter3 = 1 
+            transport_helicopter4 = 1 
+            transport_helicopter5 = 1 
+
+            early_fighter = 1 
+            AS_Fighter1 = 1 
+            AS_Fighter2 = 1 
+            AS_Fighter3 = 1 
+            AS_Fighter4 = 1 
+            AS_Fighter5 = 1 
+            AS_Fighter6 = 1 
+            AS_Fighter7 = 1 
+            AS_upgrade_1 = 1 
+            AS_upgrade_2 = 1 
+            AS_upgrade_3 = 1 
+            MR_Fighter1 = 1
+            MR_Fighter2 = 1
+            MR_Fighter3 = 1 
+            MR_Fighter4 = 1 
+            MR_Fighter5 = 1 
+            MR_Fighter6 = 1 
+            MR_Fighter7 = 1 
+            CV_MR_Fighter1 = 1 
+            CV_MR_Fighter2 = 1 
+            CV_MR_Fighter3 = 1 
+            CV_MR_Fighter4 = 1
+            CV_MR_Fighter5 = 1 
+            CV_MR_Fighter6 = 1 
+            CV_MR_Fighter7 = 1 
+            MR_upgrade_1 = 1 
+            MR_upgrade_2 = 1 
+            MR_upgrade_3 = 1 
+            Strike_fighter1 = 1 
+            Strike_fighter2 = 1
+            Strike_fighter3 = 1 
+            Strike_fighter4 = 1
+            Strike_fighter5 = 1 
+            Strike_fighter6 = 1 
+            Strike_fighter7 = 1 
+            Strike_upgrade_1 = 1
+            Strike_upgrade_2 = 1 
+            Strike_upgrade_3 = 1 
+            L_Strike_fighter1 = 1
+            L_Strike_fighter2 = 1
+            L_Strike_fighter3 = 1 
+            L_Strike_fighter4 = 1 
+            L_Strike_fighter5 = 1 
+            CV_L_Strike_fighter1 = 1 
+            CV_L_Strike_fighter2 = 1
+            CV_L_Strike_fighter3 = 1 
+            CV_L_Strike_fighter4 = 1
+            CV_L_Strike_fighter5 = 1 
+            Air_UAV1 = 1 
+            Air_UAV2 = 1
+            Air_UAV3 = 1 
+            Air_UAV4 = 1 
+            Air_Kamikaze1 = 1 
+            Air_Kamikaze2 = 1 
+            Air_Kamikaze3 = 1 
+            Air_Kamikaze4 = 1 
+
+            early_bomber = 1 
+            strategic_bomber1 = 1 
+            strategic_bomber2 = 1 
+            strategic_bomber3 = 1 
+            strategic_bomber4 = 1 
+            strategic_bomber5 = 1 
+            strategic_bomber6 = 1 
+            transport_plane1 = 1 
+            transport_plane2 = 1 
+            transport_plane3 = 1 
+            transport_plane4 = 1 
+            transport_plane5 = 1 
+            transport_plane6 = 1 
+            naval_plane1 = 1 
+            naval_plane2 = 1 
+            naval_plane3 = 1 
+            naval_plane4 = 1 
+            naval_plane5 = 1 
+            naval_plane6 = 1 
+            cas1 = 1 
+            cas2 = 1 
+            cas3 = 1 
+            cas4 = 1
+            cas5 = 1 
+            awacs_plane1 = 1 
+            awacs_plane2 = 1 
+            cv_awacs_plane1 = 1 
+            cv_awacs_plane2 = 1 
+            popup = no
+        }
+        country_event = Easybuff.1
+    }
+
+    #Tank
+    option = {
+        name = Easybuff.31.b
+        set_technology = { 
+            #Early_APC = 1 
+            #fake_Cat_ARMOR = 1
+            #MBT_1 = 1
+            #MBT_2 = 1
+            #MBT_3 = 1
+            #MBT_4 = 1
+            #MBT_5 = 1
+            #MBT_6 = 1
+            #MBT_7 = 1
+            #MBT_8 = 1
+            #APC_1 = 1
+            #APC_2 = 1
+            #APC_3 = 1
+            #APC_4 = 1
+            #APC_5 = 1
+            #APC_6 = 1
+            #APC_7 = 1
+            #APC_8 = 1
+            #IFV_1 = 1
+            #IFV_2 = 1
+            #IFV_3 = 1
+            #IFV_4 = 1
+            #IFV_5 = 1
+            #IFV_6 = 1
+            #IFV_7 = 1
+            #IFV_8 = 1
+            #Rec_tank_0 = 1
+            #Rec_tank_1 = 1
+            #Rec_tank_2 = 1
+            #Rec_tank_3 = 1
+            #Rec_tank_4 = 1
+            #Rec_tank_5 = 1
+            
+            mbt_tech_ops = 1
+            mbt_tech = 1
+            mbt_tech_1 = 1
+            mbt_tech_2 = 1
+            mbt_tech_3 = 1
+            mbt_tech_4 = 1
+            tank_components_tech = 1
+            tank_components_tech_2 = 1
+            tank_components_tech_3 = 1
+            tank_components_tech_4 = 1
+            tank_components_tech_5 = 1
+            era_tech = 1
+            era_tech_2 = 1
+            era_tech_3 = 1
+            era_tech_4 = 1
+            defensive_systems = 1
+            defensive_systems_2 = 1
+            defensive_systems_3 = 1
+            defensive_systems_4 = 1
+            defensive_systems_5 = 1
+            armor_tech = 1
+            armor_tech_2 = 1
+            armor_tech_3 = 1
+            armor_tech_4 = 1
+            nera_armor_tech_1 = 1
+            nera_armor_tech_2 = 1
+            nera_armor_tech_3 = 1
+            early_cold_war_ammo = 1
+            cold_war_ammo = 1
+            modern_ammo = 1
+            near_future_ammo = 1
+            future_ammo = 1
+            diesel_engine_tech = 1
+            diesel_engine_tech_2 = 1
+            diesel_engine_tech_3 = 1
+            diesel_engine_tech_4 = 1
+            diesel_engine_tech_5 = 1
+            diesel_engine_tech_6 = 1
+            diesel_engine_tech_7 = 1
+            turbine_engine_tech = 1
+            turbine_engine_tech_2 = 1
+            turbine_engine_tech_3 = 1
+            turbine_engine_tech_4 = 1
+            turbine_engine_tech_5 = 1
+            turbine_engine_tech_6 = 1
+            electric_engine_tech_1 = 1
+            electric_engine_tech_2 = 1
+            electric_engine_tech_3 = 1
+            electric_engine_tech_4 = 1
+            small_medium_gun_tech = 1
+            small_medium_gun_tech_2 = 1
+            small_medium_gun_tech_3 = 1
+            small_medium_gun_tech_4 = 1
+            medium_gun_tech = 1
+            medium_gun_tech_2 = 1
+            medium_gun_tech_3 = 1
+            medium_gun_tech_4 = 1
+            large_gun_tech = 1
+            large_gun_tech_2 = 1
+            large_gun_tech_3 = 1
+            #very_large_gun_tech = 1
+            #very_large_gun_tech_2 = 1
+            #very_large_gun_tech_3 = 1
+            #afv_tech = 1
+            #afv_tech_1 = 1
+            #afv_tech_2 = 1
+            #afv_tech_3 = 1
+            #afv_tech_4 = 1
+            #light_tank_tech = 1 
+            #light_tank_tech_1 = 1
+            #light_tank_tech_2 = 1
+            #light_tank_tech_3 = 1
+            #light_tank_tech_4 = 1
+            small_autocannon_tech = 1
+            small_autocannon_tech_2 = 1
+            small_autocannon_tech_3 = 1
+            small_autocannon_tech_4 = 1
+            big_autocannon_tech = 1
+            big_autocannon_tech_2 = 1
+            big_autocannon_tech_3 = 1
+            big_autocannon_tech_4 = 1
+            assault_gun_tech = 1
+            assault_gun_tech_2 = 1
+            assault_gun_tech_3 = 1
+            assault_gun_tech_4 = 1
+
+            nsb_artillery_ammo_1 = 1
+            nsb_artillery_ammo_2 = 1
+            nsb_artillery_ammo_3 = 1
+            nsb_artillery_ammo_4 = 1
+            nsb_artillery_ammo_5 = 1
+            nsb_special_ammo_0 = 1
+            nsb_special_ammo_1 = 1
+            nsb_special_ammo_2 = 1
+            nsb_special_ammo_3 = 1
+            nsb_gun_technology_1 = 1
+            nsb_gun_technology_2 = 1
+            nsb_gun_technology_3 = 1
+            nsb_gun_technology_4 = 1
+            nsb_gun_technology_5 = 1
+            nsb_barrel_conversions = 1
+            nsb_fire_modes_1 = 1
+            nsb_fire_modes_2 = 1
+            nsb_fire_modes_3 = 1
+            nsb_artillery_0 = 1
+            nsb_artillery_1 = 1
+            nsb_artillery_2 = 1
+            nsb_artillery_3 = 1
+            nsb_artillery_4 = 1
+            nsb_Arty_upgrade_1 = 1
+            nsb_Arty_upgrade_2 = 1
+            nsb_Arty_upgrade_3 = 1
+            nsb_Arty_upgrade_4 = 1
+            nsb_Arty_upgrade_5 = 1
+            #nsb_SP_arty_1 = 1
+            #nsb_SP_arty_2 = 1
+            #nsb_SP_arty_3 = 1
+            #nsb_SP_arty_4 = 1
+
+            Anti_Air_0 = 1
+            Anti_Air_1 = 1
+            Anti_Air_2 = 1
+            Anti_Air_3 = 1
+            Anti_Air_4 = 1
+            AA_upgrade_1 = 1
+            AA_upgrade_2 = 1
+            AA_upgrade_3 = 1
+            AA_upgrade_4 = 1
+            SP_Anti_Air_0 = 1
+            SP_Anti_Air_1 = 1
+            SP_Anti_Air_2 = 1
+            SP_Anti_Air_3 = 1
+            SP_Anti_Air_4 = 1
+            Anti_tank_0 = 1
+            Anti_tank_1 = 1
+            Anti_tank_2 = 1
+            Anti_tank_3 = 1
+            Anti_tank_4 = 1
+            Heavy_Anti_tank_0 = 1
+            Heavy_Anti_tank_1 = 1
+            Heavy_Anti_tank_2 = 1
+            Heavy_Anti_tank_3 = 1
+            Heavy_Anti_tank_4 = 1
+            AT_upgrade_1 = 1
+            AT_upgrade_2 = 1
+            AT_upgrade_3 = 1
+            AT_upgrade_4 = 1
+
+            nsb_SHORAD_missile_0 = 1
+            nsb_SHORAD_missile_1 = 1
+            nsb_SHORAD_missile_2 = 1
+            nsb_SHORAD_missile_3 = 1
+            nsb_SHORAD_missile_4 = 1
+            nsb_dual_role_missile_0 = 1
+            nsb_dual_role_missile_1 = 1
+            nsb_dual_role_missile_2 = 1
+            nsb_dual_role_missile_3 = 1
+            nsb_dual_role_missile_4 = 1
+            nsb_AA_autocannon_0 = 1
+            nsb_AA_autocannon_1 = 1
+            nsb_AA_autocannon_2 = 1
+            nsb_AA_autocannon_3 = 1
+            nsb_AA_autocannon_4 = 1
+            nsb_Anti_Air_0 = 1
+            #nsb_SP_Anti_Air_0 = 1
+            nsb_AA_upgrade_1 = 1
+            nsb_Anti_Air_1 = 1
+            #nsb_SP_Anti_Air_1 = 1
+            nsb_AA_upgrade_2 = 1
+            nsb_Anti_Air_2 = 1
+            #nsb_SP_Anti_Air_2 = 1
+            nsb_AA_upgrade_3 = 1
+            nsb_Anti_Air_3 = 1
+            #nsb_SP_Anti_Air_3 = 1
+            nsb_AA_upgrade_4 = 1
+            nsb_Anti_Air_4 = 1
+            #nsb_SP_Anti_Air_4 = 1
+            
+            popup = no
+        }
+        country_event = Easybuff.1
+    }
+
+    #Infantry
+    option = {
+        name = Easybuff.31.c 
+        set_technology = {
+            infantry_weapons = 1
+            infantry_weapons1 = 1
+            infantry_weapons2 = 1
+            infantry_weapons3 = 1
+            infantry_weapons4 = 1
+            infantry_weapons5 = 1
+            infantry_weapons6 = 1
+            infantry_weapons7 = 1
+
+            util_vehicle_0 = 1
+            util_vehicle_1 = 1
+            util_vehicle_2 = 1
+            util_vehicle_3 = 1
+            util_vehicle_4 = 1
+            util_vehicle_5 = 1
+            util_vehicle_6 = 1
+            util_vehicle_7 = 1
+
+            combat_eng_equipment = 1
+
+            night_vision_1 = 1
+            night_vision_2 = 1
+            night_vision_3 = 1
+            night_vision_4 = 1
+            augmented_vision_1 = 1
+            augmented_vision_2 = 1
+
+            command_control_equipment = 1
+            command_control_equipment1 = 1
+            command_control_equipment2 = 1
+            command_control_equipment3 = 1
+            command_control_equipment4 = 1
+            command_control_equipment5 = 1
+            command_control_equipment6 = 1
+
+            land_Drone_equipment = 1
+            land_Drone_equipment1 = 1
+            land_Drone_equipment2 = 1
+            land_Drone_equipment3 = 1
+            land_Drone_equipment4 = 1
+            land_Drone_equipment5 = 1
+
+            body_armor_1980 = 1
+            body_armor_2000 = 1
+            body_armor_2010 = 1
+            body_armor_2030 = 1
+
+            exoskeleton_1 = 1
+            exoskeleton_2 = 1
+
+            camouflage = 1
+            camouflage2 = 1
+            camouflage3 = 1
+            camouflage4 = 1
+            camouflage5 = 1
+
+            support_weapons = 1
+            squad_automatic_weapon = 1
+            tandem_charge_warheads = 1
+            support_weapons2 = 1
+            support_weapons3 = 1
+            support_weapons4 = 1
+            support_weapons5 = 1
+            rc_fire_support_drone = 1
+            autonomous_fire_support_drone = 1
+
+            special_forces = 1
+            special_forces2 = 1
+            special_forces3 = 1
+            special_forces4 = 1
+            special_forces5 = 1
+            special_forces6 = 1
+
+            
+            popup = no
+        }
+        country_event = Easybuff.1
+    }
+
+    #Naval
+    option = {
+        name = Easybuff.31.d 
+        set_technology = {
+            corvette_hull_1 = 1
+            corvette_hull_2 = 1
+            corvette_hull_3 = 1
+            corvette_hull_4 = 1
+            corvette_hull_5 = 1
+            corvette_hull_6 = 1
+            stealth_corvette_hull_1 = 1
+            stealth_corvette_hull_2 = 1
+            stealth_corvette_hull_3 = 1
+            frigate_hull_1 = 1
+            frigate_hull_2 = 1
+            frigate_hull_3 = 1
+            frigate_hull_4 = 1
+            frigate_hull_5 = 1
+            frigate_hull_6 = 1
+            stealth_frigate_hull_1 = 1
+            stealth_frigate_hull_2 = 1
+            stealth_frigate_hull_3 = 1
+            destroyer_hull_1 = 1
+            destroyer_hull_2 = 1
+            destroyer_hull_3 = 1
+            destroyer_hull_4 = 1
+            destroyer_hull_5 = 1
+            stealth_destroyer_hull_1 = 1
+            stealth_destroyer_hull_2 = 1 
+            stealth_destroyer_hull_3 = 1
+            cruiser_hull_1 = 1
+            cruiser_hull_2 = 1
+            cruiser_hull_3 = 1
+            cruiser_hull_4 = 1
+            cruiser_hull_5 = 1
+            #tech_battleship_hull_1 = 1
+            battleship_hull_2 = 1
+            battleship_hull_3 = 1
+            aircraft_carrier_engineering = 1
+            aircraft_heli_engineering_1 = 1
+            aircraft_heli_engineering_2 = 1
+            aircraft_heli_engineering_3 = 1
+            helicopter_operator_hull_1 = 1
+            helicopter_operator_hull_2 = 1
+            helicopter_operator_hull_3 = 1
+            helicopter_operator_hull_4 = 1
+            carrier_hull_1 = 1
+            carrier_hull_2 = 1
+            carrier_hull_3 = 1
+            carrier_hull_4 = 1
+            carrier_hull_5 = 1
+            tech_submarine_engineering = 1
+            tech_submarine_engineering_1 = 1
+            tech_submarine_engineering_2 = 1
+            tech_submarine_engineering_3 = 1
+            tech_submarine_engineering_4 = 1
+            attack_submarine_hull_1 = 1
+            attack_submarine_hull_2 = 1
+            attack_submarine_hull_3 = 1
+            attack_submarine_hull_4 = 1
+            attack_submarine_hull_5 = 1
+            attack_submarine_hull_6 = 1
+            missile_submarine_hull_1 = 1
+            missile_submarine_hull_2 = 1
+            missile_submarine_hull_3 = 1
+            missile_submarine_hull_4 = 1
+            missile_submarine_hull_5 = 1
+            missile_submarine_hull_6 = 1
+
+            tech_naval_systems_engineering = 1
+            tech_power_systems = 1
+            tech_power_systems_1 = 1
+            tech_power_systems_2 = 1
+            tech_power_systems_3 = 1
+            tech_nuclear_power_systems = 1
+            tech_nuclear_power_systems_1 = 1
+            tech_nuclear_power_systems_2 = 1
+            tech_nuclear_power_systems_3 = 1
+            tech_combat_support_systems = 1
+            tech_fire_control = 1
+            tech_fire_control_1 = 1
+            tech_fire_control_2 = 1
+            tech_fire_control_3 = 1
+            tech_combat_radar = 1
+            tech_combat_radar_1 = 1
+            tech_combat_radar_2 = 1
+            tech_combat_radar_3 = 1
+            tech_combat_radar_4 = 1
+            tech_combat_radar_5 = 1
+            tech_combat_sonar = 1
+            tech_combat_sonar_1 = 1
+            tech_combat_sonar_2 = 1
+            tech_combat_sonar_3 = 1
+            tech_combat_sonar_4 = 1
+            tech_combat_sonar_5 = 1
+            tech_early_naval_weapon_systems = 1
+            tech_naval_weapon_systems = 1
+            tech_light_guns = 1
+            tech_light_guns_1 = 1
+            tech_light_guns_2 = 1
+            tech_light_guns_3 = 1
+            tech_rail_guns = 1
+            tech_rail_guns_1 = 1
+            tech_rail_guns_2 = 1
+            tech_rail_guns_3 = 1
+            #tech_127mm_guns = 1
+            #tech_127mm_guns_1 = 1
+            #tech_127mm_guns_2 = 1
+            #tech_127mm_guns_3 = 1
+            tech_point_defense_system = 1
+            tech_point_defense_system_1 = 1
+            tech_point_defense_system_2 = 1
+            tech_point_defense_system_3 = 1
+            tech_point_defense_system_4 = 1
+            tech_point_defense_system_5 = 1
+            tech_point_defense_system_6 = 1
+            #tech_missile_systems = 1
+            tech_turret_missiles_surface = 1
+            tech_turret_missiles_surface_1 = 1
+            tech_turret_missiles_surface_2 = 1
+            tech_turret_missiles_surface_3 = 1
+            tech_turret_missiles_surface_4 = 1
+            tech_turret_missiles_surface_5 = 1
+            tech_turret_missiles_aa = 1
+            tech_turret_missiles_aa_1 = 1
+            tech_turret_missiles_aa_2 = 1
+            tech_turret_missiles_aa_3 = 1
+            tech_turret_missiles_aa_4 = 1
+            tech_turret_missiles_aa_5 = 1
+            tech_vls_surface = 1
+            tech_vls_surface_1 = 1
+            tech_vls_surface_2 = 1
+            tech_vls_surface_3 = 1
+            tech_vls_surface_4 = 1
+            tech_vls_surface_5 = 1
+            tech_vls_aa = 1
+            tech_vls_aa_1 = 1
+            tech_vls_aa_2 = 1
+            tech_vls_aa_3 = 1
+            tech_vls_aa_4 = 1
+            tech_vls_aa_5 = 1
+            tech_torpedoes = 1
+            tech_torpedoes_1 = 1
+            tech_torpedoes_2 = 1
+            tech_torpedoes_3 = 1
+            tech_torpedoes_4 = 1
+            tech_torpedoes_5 = 1
+
+            tech_mtg_landing_craft = 1
+            tech_mtg_amphibious_assault_ship = 1
+            tech_mtg_air_cushioned_landing_craft = 1
+            tech_mtg_modern_landing_craft = 1
+            tech_mtg_specialized_protective_equipment = 1
+            tech_mtg_advanced_landing_craft = 1
+            tech_mtg_landing_craft_ai_systems = 1
+            tech_mtg_smart_landing_craft = 1
+
+            popup = no
+        }
+        country_event = Easybuff.1
+    }
+
+    #Missiles
+    option = {
+        name = Easybuff.31.e 
+        set_technology = {
+            GNSS1 = 1
+            GNSS2 = 1
+            GNSS3 = 1
+            GNSS4 = 1
+            GNSS5 = 1
+            GNSS6 = 1
+            GNSS7 = 1
+            GNSS8 = 1
+            COMSAT1 = 1
+            COMSAT2 = 1
+            COMSAT3 = 1
+            COMSAT4 = 1
+            COMSAT5 = 1
+            COMSAT6 = 1
+            COMSAT7 = 1
+            COMSAT8 = 1
+            SPYSAT1 = 1
+            SPYSAT2 = 1
+            SPYSAT3 = 1
+            SPYSAT4 = 1
+            SPYSAT5 = 1
+            SPYSAT6 = 1
+            SPYSAT7 = 1
+            SPYSAT8 = 1
+            KILLSAT1 = 1
+            KILLSAT2 = 1
+            KILLSAT3 = 1
+            KILLSAT4 = 1
+            KILLSAT5 = 1
+            KILLSAT6 = 1
+            OLV1 = 1
+            OLV2 = 1
+            OLV3 = 1
+            OLV4 = 1
+            OLV5 = 1
+            OLV6 = 1
+            part_reusable_OLV6 = 1
+            OLV7 = 1
+            full_reusable_OLV7 = 1
+            OLV8 = 1
+            full_reusable_OLV8 = 1
+
+            air_defense = 1
+            SAM = 1
+            SAM0 = 1
+            SAM1 = 1
+            SAM2 = 1
+            SAM3 = 1
+            SAM4 = 1
+            SAM5 = 1
+            SAM6 = 1
+            SAM7 = 1
+
+            ballistic_missile = 1
+            ICBM = 1
+            ICBM1 = 1
+            ICBM2 = 1
+            ICBM3 = 1
+            ICBM4 = 1
+            ICBM5 = 1
+            ICBM6 = 1
+            ICBM7 = 1
+            ICBM8 = 1
+            IRBM = 1
+            IRBM1 = 1
+            IRBM2 = 1
+            IRBM3 = 1
+            IRBM4 = 1
+            IRBM5 = 1
+            IRBM6 = 1
+            IRBM7 = 1
+            IRBM8 = 1
+            NIRBM1 = 1
+            NIRBM2 = 1
+            NIRBM3 = 1
+            NIRBM4 = 1
+            NIRBM5 = 1
+            NIRBM6 = 1
+            NIRBM7 = 1
+
+            cruise_missile = 1
+            HSCM = 1
+            HSCM1 = 1
+            HSCM2 = 1
+            GLCM = 1
+            TEL_launched_missiles = 1
+            TEL_3 = 1
+            TEL_4 = 1
+            TEL_5 = 1
+            TEL_6 = 1
+            TEL_7 = 1
+            GLCM1 = 1
+            GLCM2 = 1
+            GLCM3 = 1
+            GLCM4 = 1
+            GLCM5 = 1
+            GLCM6 = 1
+            GLCM7 = 1
+            GLCM8 = 1
+            hid_tech_missile_1 = 1
+            hid_tech_missile_2 = 1
+            hid_tech_missile_3 = 1
+            hid_tech_missile_4 = 1
+            hid_tech_missile_5 = 1
+            hid_tech_missile_6 = 1
+            hid_tech_missile_7 = 1
+            hid_tech_missile_8 = 1
+            hid_tech_missile_9 = 1
+            hid_tech_missile_10 = 1
+
+            popup = no
+        }
+        country_event = Easybuff.1
+    }
+
+    #Industry
+    option = {
+        name = Easybuff.31.f 
+        set_technology = {
+            industrial_electrospun_polymeric_nanofibers = 1
+            multiwalled_carbon_nanotubes = 1
+            modern_electrospinning = 1
+            inorganic_fibers_fabrication = 1
+            industrial_production_of_nanofibers = 1
+            nanofibers_in_medicine = 1
+
+            stereolitography = 1
+            early_3D_printers = 1
+            t3D_wax_printer = 1
+            large_scale_3D_printing = 1
+            self-replicated_3D_printer = 1
+            commercial_nanomanufacturing = 1
+            modern_3D_printing = 1
+            centrifugal_spinning = 1
+            t3D_printed_nanofibers = 1
+            large_scale_nanocellulose_manufacturing = 1
+            nanocellulose_in_medicine = 1
+
+            DNA_fingerprinting = 1
+            modern_gmo = 1
+            gene_therapy = 1
+            genetically_modified_crops = 1
+            gene_targeting_pesticides = 1
+            synthetic_life = 1
+            safe_cloning = 1
+            crispr_treatment = 1
+            crispr_gene_edited_crops = 1
+            human_crispr_experiments = 1
+            genetically_modified_humans = 1
+            human_genome_project = 1
+            crispr = 1
+            cas9_gene_editing = 1
+            tracrrna = 1
+            crispr_treatment_experimentation = 1
+
+            fuel_silos = 1
+            electrification_1 = 1
+            electrification_2 = 1
+            electrification_3 = 1
+            electrification_4 = 1
+            electrification_5 = 1
+            electrification_6 = 1
+            electrification_7 = 1
+            electrification_8 = 1
+            electrification_9 = 1
+            electrification_10 = 1
+            utility_scale_battery_storage = 1
+            utility_scale_battery_storage2 = 1
+            utility_scale_battery_storage3 = 1
+            utility_scale_battery_storage4 = 1
+            utility_scale_battery_storage5 = 1
+            fuel_efficiency = 1
+            fuel_efficiency2 = 1
+            fuel_efficiency3 = 1
+            fuel_efficiency4 = 1
+            fuel_efficiency5 = 1
+            fuel_efficiency6 = 1
+            energy_efficiency = 1
+            energy_efficiency2 = 1
+            energy_efficiency3 = 1
+            energy_efficiency4 = 1
+            energy_efficiency5 = 1
+            energy_efficiency6 = 1
+            energy_efficiency7 = 1
+            energy_efficiency8 = 1
+            energy_efficiency9 = 1
+            fuel_refining = 1
+            fuel_refining2 = 1
+            fuel_refining3 = 1
+            fuel_refining4 = 1
+            fuel_refining5 = 1
+            fuel_refining6 = 1
+            futuristic_oil_refining = 1
+            early_renewables = 1
+            renewables = 1
+            improved_renewables = 1
+            advanced_renewables = 1
+            modern_renewables = 1
+            improved_modern_renewables = 1
+            advanced_modern_renewables = 1
+            early_futuristic_renewables = 1
+            futuristic_renewables = 1
+
+            nuclear_technology = 1
+            reactor1 = 1
+            reactor2 = 1
+            reactor3 = 1
+            reactor4 = 1
+            reactor5 = 1
+            reactor6 = 1
+            reactor7 = 1
+            reactor8 = 1
+            reactor9 = 1
+            reactor10 = 1
+
+            construction1 = 1
+            excavation1 = 1
+            land_fort_building_1 = 1
+            stronghold_building_1 = 1
+            construction2 = 1
+            excavation2 = 1
+            construction3 = 1
+            excavation3 = 1
+            land_fort_building_2 = 1
+            construction4 = 1
+            excavation4 = 1
+            construction5 = 1
+            excavation5 = 1
+            land_fort_building_3 = 1
+            construction6 = 1
+            excavation6 = 1
+            land_fort_building_4 = 1
+            construction7 = 1
+            excavation7 = 1
+            construction8 = 1
+            excavation8 = 1
+            construction9 = 1
+            excavation9 = 1
+
+            integrated_transportation_system = 1
+            post_conventional_rail = 1
+            early_freight_locomotive = 1
+            early_high_speed_rail = 1
+            high_speed_rail = 1
+            modern_high_speed_rail = 1
+            freight_locomotive = 1
+            early_maglev_rail = 1
+            standardised_maglev_rail = 1
+            modern_freight_locomotive = 1
+
+            gps_agricultural_applications = 1
+            automated_irrigation_systems = 1
+            farming_data_analytic_softwares = 1
+            limited_automated_harvesting_software = 1
+            satellite_based_agricultural_planning = 1
+            programmable_harvesters = 1
+            improved_harvesting_automation = 1
+            robotic_harvesters = 1
+            agi_maintained_agricultural_developments = 1
+
+            popup = no
+        }
+        country_event = Easybuff.1
+    }
+
+    #Electronics
+    option = {
+        name = Easybuff.31.g 
+        set_technology = {
+            neural_networks_revival = 1
+            data_mining = 1
+            machine_learning = 1
+            sociable_machines = 1
+            early_ai_robotics = 1
+            humanoid_robot = 1
+            advanced_industrial_robotics = 1
+            smart_drones = 1
+            fully_automated_drones = 1
+            advanced_ai = 1
+            modern_deep_learning = 1
+            human_imitation_ai = 1
+            nanorobotics = 1
+            medical_nanorobots = 1
+
+            basic_computing = 1
+            integrated_circuit = 1
+            computing1 = 1
+            decryption1 = 1
+            encryption1 = 1
+            microprocessors = 1
+            computing2 = 1
+            decryption2 = 1
+            encryption2 = 1
+            computing3 = 1
+            decryption3 = 1
+            encryption3 = 1
+            computing4 = 1
+            decryption4 = 1
+            encryption4 = 1
+            computing5 = 1
+            decryption5 = 1
+            encryption5 = 1
+            computing6 = 1
+
+            radar = 1
+            internet1 = 1
+            internet2 = 1
+            gprs = 1
+            edge = 1
+            internet3 = 1
+            umts = 1
+            wifi = 1
+            internet4 = 1
+            hsupa = 1
+            lte = 1
+            wimax = 1
+            internet5 = 1
+            lifi = 1
+            internet6 = 1
+            modern_satelite_internet = 1
+
+            popup = no
+        }
+        country_event = Easybuff.1
+    }
+
+    option = {
+        name = Easybuffback
+        country_event = Easybuff.30
+    }
+}
+
+# Breakthrough points 32
+country_event = {
+    id = Easybuff.32
+    title = Easybuff.32.t
+    desc = Easybuff.32.desc
+    picture = GFX_report_event_german_inspect_troops
+    is_triggered_only = yes
+    
+    option = {
+        name = Easybuff.32.a
+        add_breakthrough_points = {
+            specialization = specialization_nuclear
+            value = 5
+        }
+        country_event = Easybuff.30
+    }
+    option = {
+        name = Easybuff.32.b
+        add_breakthrough_points = {
+            specialization = specialization_air
+            value = 5
+        }
+        country_event = Easybuff.30
+    }
+    option = {
+        name = Easybuff.32.c
+        add_breakthrough_points = {
+            specialization = specialization_naval
+            value = 5
+        }
+        country_event = Easybuff.30
+    }
+    option = {
+        name = Easybuff.32.d
+        add_breakthrough_points = {
+            specialization = specialization_land
+            value = 5
+        }
+        country_event = Easybuff.30
+    }
+
+    option = {
+        name = Easybuffback
+        country_event = Easybuff.30
+    }
+}
+
+# Science facilities 33
+country_event = {
+    id = Easybuff.33
+    title = Easybuff.33.t
+    desc = Easybuff.33.desc
+    picture = GFX_report_event_german_inspect_troops
+    is_triggered_only = yes
+    
+    option = {
+        name = nuclear_facility
+        random_owned_controlled_state = {
+            limit = {
+                can_construct_building = nuclear_facility
+            }
+            construct_building_in_random_province = {
+                nuclear_facility = 1
+            }
+        }
+        country_event = Easybuff.30
+    }
+    option = {
+        name = air_facility
+        random_owned_controlled_state = {
+            limit = {
+                can_construct_building = air_facility
+            }
+            construct_building_in_random_province = {
+                air_facility = 1
+            }
+        }
+        country_event = Easybuff.30
+    }
+    option = {
+        name = land_facility
+        random_owned_controlled_state = {
+            limit = {
+                can_construct_building = land_facility
+            }
+            construct_building_in_random_province = {
+                land_facility = 1
+            }
+        }
+        country_event = Easybuff.30
+    }
+    option = {
+        name = naval_facility
+        random_owned_controlled_state = {
+            limit = {
+                can_construct_building = naval_facility
+            }
+            construct_building_in_random_province = {
+                naval_facility = 1
+            }
+        }
+        country_event = Easybuff.30
+    }
+
+    option = {
+        name = Easybuffback
+        country_event = Easybuff.30
+    }
+}
+
+# Millenium Dawn 40
+country_event = {
+    id = Easybuff.40
+    title = Easybuff.40.t
+    desc = Easybuff.40.desc
+    picture = GFX_report_event_german_inspect_troops
+    is_triggered_only = yes
+    
+    option = {
+        name = Easybuffback
+        country_event = Easybuff.1
+    }
+    # Print money
+    option = {
+        name = Easybuff.40.a
+        country_event = Easybuff.41
+    }
+    # Missiles
+    option = {
+        name = Easybuff.40.b
+        country_event = Easybuff.42
+    }
+    # Euroscepticism
+    option = {
+        name = Easybuff.40.c
+        country_event = Easybuff.43
+    }
+    # Radiation
+    option = {
+        name = Easybuff.40.d
+        country_event = Easybuff.44
+    }
+    # Internal Factions
+    option = {
+        name = Easybuff.40.e
+        country_event = Easybuff.45
+    }
+    # Combat foreign influence
+    option = {
+        name = Easybuff.40.f
+        set_temp_variable = { percent_change = 100 }
+		change_domestic_influence_percentage = yes
+    }
+    # Remove Major Non-NATO Ally idea
+    option = {
+        name = Easybuff.40.g
+        if = {
+            limit = {
+                has_idea = Major_Non_NATO_Ally
+            }
+            remove_ideas = Major_Non_NATO_Ally
+        }
+    }
+    #Pro-Western parties booster
+    option = { 
+        name = Easybuff.40.h
+        every_country = {
+            limit = {
+                OR = {
+                    is_in_faction_with = USA
+                    has_idea = EU_member
+                    has_idea = prowestern_booster
+                }
+            }
+            if = {
+                limit = {
+                    has_idea = prowestern_booster
+                }
+                remove_ideas = prowestern_booster
+            }
+            else = {
+                add_ideas = prowestern_booster
+            }
+        }        
+    }
+    
+}
+
+# Print Money 41
+country_event = {
+    id = Easybuff.41
+    title = Easybuff.41.t
+    desc = Easybuff.41.desc
+    picture = GFX_report_event_german_inspect_troops
+    is_triggered_only = yes
+        
+    option = {
+        name = Easybuff.41.a
+        add_to_variable = { treasury = 10 }
+        country_event = Easybuff.40
+    }
+    option = {
+        name = Easybuff.41.b
+        add_to_variable = { treasury = 25 }
+        country_event = Easybuff.40
+    }
+    option = {
+        name = Easybuff.41.c
+        add_to_variable = { treasury = 50 }
+        country_event = Easybuff.40
+    }
+    option = {
+        name = Easybuff.41.d
+        add_to_variable = { treasury = 100 }
+        country_event = Easybuff.40
+    }
+    option = {
+        name = Easybuff.41.e
+        add_to_variable = { treasury = 1000 }
+        country_event = Easybuff.40
+    }
+    option = {
+        name = Easybuff.41.f
+        add_to_variable = { treasury = 10000 }
+        country_event = Easybuff.40
+    }
+    option = {
+        name = Easybuff.41.g
+        set_variable = { treasury = 1000 }
+        set_variable = { debt = 1000 }
+        set_variable = { int_investments = 10}
+    }
+    option = {
+        name = Easybuffback
+        country_event = Easybuff.40
+    }
+}
+
+# Missiles 42
+country_event = {
+    id = Easybuff.42
+    title = Easybuff.42.t
+    desc = Easybuff.42.desc
+    picture = GFX_report_event_german_inspect_troops
+    is_triggered_only = yes
+    
+    #Ballistic
+    option = { 
+        name = Easybuff.42.a 
+       
+        #add_equipment_to_stockpile = { 
+        #    type = ballistic_missile_equipment
+        #    amount = 10000
+        #}
+        #add_equipment_to_stockpile = { 
+        #    type = ballistic_missile_equipment_0
+        #    amount = 10000
+        #}
+        add_equipment_to_stockpile = { 
+            type = ballistic_missile_equipment_1
+            amount = 10000
+        }
+        add_equipment_to_stockpile = { 
+            type = ballistic_missile_equipment_2
+            amount = 10000
+        }
+        add_equipment_to_stockpile = {
+            type = ballistic_missile_equipment_3
+            amount = 10000
+        }
+        add_equipment_to_stockpile = {
+            type = ballistic_missile_equipment_4
+            amount = 10000
+        }
+        add_equipment_to_stockpile = {
+            type = ballistic_missile_equipment_5
+            amount = 10000
+        }
+        add_equipment_to_stockpile = {
+            type = ballistic_missile_equipment_6
+            amount = 10000
+        }
+        add_equipment_to_stockpile = {
+            type = ballistic_missile_equipment_7
+            amount = 10000
+        }
+        add_equipment_to_stockpile = {
+            type = ballistic_missile_equipment_8
+            amount = 10000
+        }
+        #add_equipment_to_stockpile = {
+        #    type = nuclear_ballistic_missile_equipment
+        #    amount = 10000
+        #}
+        #add_equipment_to_stockpile = {
+        #    type = nuclear_ballistic_missile_equipment_0
+        #    amount = 10000
+        #}
+        add_equipment_to_stockpile = {
+            type = nuclear_ballistic_missile_equipment_1
+            amount = 10000
+        }
+        add_equipment_to_stockpile = { 
+            type = nuclear_ballistic_missile_equipment_2
+            amount = 10000
+        }
+        add_equipment_to_stockpile = { 
+            type = nuclear_ballistic_missile_equipment_3
+            amount = 10000
+        }
+        add_equipment_to_stockpile = { 
+            type = nuclear_ballistic_missile_equipment_4
+            amount = 10000
+        }
+        add_equipment_to_stockpile = { 
+            type = nuclear_ballistic_missile_equipment_5
+            amount = 10000
+        }
+        add_equipment_to_stockpile = { 
+            type = nuclear_ballistic_missile_equipment_6
+            amount = 10000
+        }
+        add_equipment_to_stockpile = { 
+            type = nuclear_ballistic_missile_equipment_7
+            amount = 10000
+        }
+        #add_equipment_to_stockpile = { 
+        #    type = SLBM_missile_equipment
+        #    amount = 10000
+        #}
+        #add_equipment_to_stockpile = { 
+        #    type = SLBM_missile_equipment_1
+        #    amount = 10000
+        #}
+        #add_equipment_to_stockpile = { 
+        #    type = nuclear_missile_equipment
+        #    amount = 10000
+        #}
+        #add_equipment_to_stockpile = { 
+        #    type = nuclear_missile_equipment_0
+        #    amount = 10000
+        #}
+        add_equipment_to_stockpile = { 
+            type = nuclear_missile_equipment_1
+            amount = 10000
+        }
+        add_equipment_to_stockpile = { 
+            type = nuclear_missile_equipment_2
+            amount = 10000
+        }
+        add_equipment_to_stockpile = { 
+            type = nuclear_missile_equipment_3
+            amount = 10000
+        }
+        add_equipment_to_stockpile = { 
+            type = nuclear_missile_equipment_4
+            amount = 10000
+        }
+        add_equipment_to_stockpile = { 
+            type = nuclear_missile_equipment_5
+            amount = 10000
+        }
+        add_equipment_to_stockpile = { 
+            type = nuclear_missile_equipment_6
+            amount = 10000
+        }
+        add_equipment_to_stockpile = { 
+            type = nuclear_missile_equipment_7
+            amount = 10000
+        }
+        add_equipment_to_stockpile = { 
+            type = nuclear_missile_equipment_8
+            amount = 10000
+        }
+
+        country_event = Easybuff.40
+    }
+    #Cruise
+    option = { 
+        name = Easybuff.42.b 
+
+        #add_equipment_to_stockpile = { 
+        #    type = guided_missile_equipment
+        #    amount = 10000
+        #}
+        #add_equipment_to_stockpile = { 
+        #    type = guided_missile_equipment_0
+        #    amount = 10000
+        #}
+        add_equipment_to_stockpile = { 
+            type = guided_missile_equipment_1 
+            amount = 10000
+        }
+        add_equipment_to_stockpile = { 
+            type = guided_missile_equipment_2
+            amount = 10000
+        }
+        add_equipment_to_stockpile = { 
+            type = guided_missile_equipment_3 
+            amount = 10000
+        }
+        add_equipment_to_stockpile = { 
+            type = guided_missile_equipment_4
+            amount = 10000
+        }
+        add_equipment_to_stockpile = { 
+            type = guided_missile_equipment_5
+            amount = 10000
+        }
+        add_equipment_to_stockpile = { 
+            type = guided_missile_equipment_6
+            amount = 10000
+        }
+        add_equipment_to_stockpile = { 
+            type = guided_missile_equipment_7 
+            amount = 10000
+        }
+        add_equipment_to_stockpile = { 
+            type = guided_missile_equipment_8 
+            amount = 10000
+        }
+        #add_equipment_to_stockpile = { 
+        #    type = hypersonic_missile_equipment
+        #    amount = 10000
+        #}
+        add_equipment_to_stockpile = { 
+            type = hypersonic_missile_equipment_1
+            amount = 10000
+        }
+        add_equipment_to_stockpile = { 
+            type = hypersonic_missile_equipment_2
+            amount = 10000
+        }
+        
+        country_event = Easybuff.40
+    }
+    #AA and !ABM
+    option = { 
+        name = Easybuff.42.c 
+        
+        #add_equipment_to_stockpile = { 
+        #    type = sam_missile_equipment
+        #    amount = 10000
+        #}
+        add_equipment_to_stockpile = { 
+            type = sam_missile_equipment_1
+            amount = 10000
+        }
+        add_equipment_to_stockpile = { 
+            type = sam_missile_equipment_2
+            amount = 10000
+        }
+        add_equipment_to_stockpile = { 
+            type = sam_missile_equipment_3
+            amount = 10000
+        }
+        add_equipment_to_stockpile = { 
+            type = sam_missile_equipment_4
+            amount = 10000
+        }
+        add_equipment_to_stockpile = { 
+            type = sam_missile_equipment_5
+            amount = 10000
+        }
+        add_equipment_to_stockpile = { 
+            type = sam_missile_equipment_6
+            amount = 10000
+        }
+        add_equipment_to_stockpile = { 
+            type = sam_missile_equipment_7
+            amount = 10000
+        }
+        add_equipment_to_stockpile = { 
+            type = sam_missile_equipment_8
+            amount = 10000
+        }
+
+        country_event = Easybuff.40
+    }
+    #OLV and Satellites
+    option = { 
+        name = Easybuff.42.d 
+        #OLV
+        add_to_variable = { missile_inventory_array^101 = 1000 }
+		add_to_variable = { missile_inventory_array^102 = 1000 }
+		add_to_variable = { missile_inventory_array^103 = 1000 }
+		add_to_variable = { missile_inventory_array^104 = 1000 }
+		add_to_variable = { missile_inventory_array^105 = 1000 }
+		add_to_variable = { missile_inventory_array^106 = 1000 }
+		add_to_variable = { missile_inventory_array^107 = 1000 }
+		add_to_variable = { missile_inventory_array^108 = 1000 }
+        #Satellites
+            #GNSS
+            add_to_variable = { missile_inventory_array^111 = 100 }
+            add_to_variable = { missile_inventory_array^112 = 100 }
+            add_to_variable = { missile_inventory_array^113 = 100 }
+            add_to_variable = { missile_inventory_array^114 = 100 }
+            add_to_variable = { missile_inventory_array^115 = 100 }
+            add_to_variable = { missile_inventory_array^116 = 100 }
+            add_to_variable = { missile_inventory_array^117 = 100 }
+            add_to_variable = { missile_inventory_array^118 = 100 }
+
+            #COMSAT
+            add_to_variable = { missile_inventory_array^121 = 100 }
+            add_to_variable = { missile_inventory_array^122 = 100 }
+            add_to_variable = { missile_inventory_array^123 = 100 }
+            add_to_variable = { missile_inventory_array^124 = 100 }
+            add_to_variable = { missile_inventory_array^125 = 100 }
+            add_to_variable = { missile_inventory_array^126 = 100 }
+            add_to_variable = { missile_inventory_array^127 = 100 }
+            add_to_variable = { missile_inventory_array^128 = 100 }
+
+            #SPYSAT
+            add_to_variable = { missile_inventory_array^131 = 100 }
+            add_to_variable = { missile_inventory_array^132 = 100 }
+            add_to_variable = { missile_inventory_array^133 = 100 }
+            add_to_variable = { missile_inventory_array^134 = 100 }
+            add_to_variable = { missile_inventory_array^135 = 100 }
+            add_to_variable = { missile_inventory_array^136 = 100 }
+            add_to_variable = { missile_inventory_array^137 = 100 }
+            add_to_variable = { missile_inventory_array^138 = 100 }
+
+            #KILLSAT
+            add_to_variable = { missile_inventory_array^141 = 100 }
+            add_to_variable = { missile_inventory_array^142 = 100 }
+            add_to_variable = { missile_inventory_array^143 = 100 }
+            add_to_variable = { missile_inventory_array^144 = 100 }
+            add_to_variable = { missile_inventory_array^145 = 100 }
+            add_to_variable = { missile_inventory_array^146 = 100 }
+
+        country_event = Easybuff.40
+    }
+    #Nuclear Warheads
+    #option = { 
+    #    name = Easybuff.42.e 
+    #
+    #    country_event = Easybuff.40
+    #}
+    #Fix Missiles
+    option = { 
+        name = Easybuff.42.f
+        #Ballistic
+        
+        #Cruise
+        
+        #AA and ABM
+        
+        #OLV
+        set_variable = { missile_inventory_array^101 = 10 }
+        set_variable = { missile_inventory_array^102 = 10 }
+        set_variable = { missile_inventory_array^103 = 10 }
+        set_variable = { missile_inventory_array^104 = 10 }
+        set_variable = { missile_inventory_array^105 = 10 }
+        set_variable = { missile_inventory_array^106 = 10 }
+        set_variable = { missile_inventory_array^107 = 10 }
+        set_variable = { missile_inventory_array^108 = 10 }
+        #Satellites
+            #GNSS
+            add_to_variable = { missile_inventory_array^111 = 10 }
+            add_to_variable = { missile_inventory_array^112 = 10 }
+            add_to_variable = { missile_inventory_array^113 = 10 }
+            add_to_variable = { missile_inventory_array^114 = 10 }
+            add_to_variable = { missile_inventory_array^115 = 10 }
+            add_to_variable = { missile_inventory_array^116 = 10 }
+            add_to_variable = { missile_inventory_array^117 = 10 }
+            add_to_variable = { missile_inventory_array^118 = 10 }
+
+            #COMSAT
+            add_to_variable = { missile_inventory_array^121 = 10 }
+            add_to_variable = { missile_inventory_array^122 = 10 }
+            add_to_variable = { missile_inventory_array^123 = 10 }
+            add_to_variable = { missile_inventory_array^124 = 10 }
+            add_to_variable = { missile_inventory_array^125 = 10 }
+            add_to_variable = { missile_inventory_array^126 = 10 }
+            add_to_variable = { missile_inventory_array^127 = 10 }
+            add_to_variable = { missile_inventory_array^128 = 10 }
+
+            #SPYSAT
+            add_to_variable = { missile_inventory_array^131 = 10 }
+            add_to_variable = { missile_inventory_array^132 = 10 }
+            add_to_variable = { missile_inventory_array^133 = 10 }
+            add_to_variable = { missile_inventory_array^134 = 10 }
+            add_to_variable = { missile_inventory_array^135 = 10 }
+            add_to_variable = { missile_inventory_array^136 = 10 }
+            add_to_variable = { missile_inventory_array^137 = 10 }
+            add_to_variable = { missile_inventory_array^138 = 10 }
+
+            #KILLSAT
+            add_to_variable = { missile_inventory_array^141 = 10 }
+            add_to_variable = { missile_inventory_array^142 = 10 }
+            add_to_variable = { missile_inventory_array^143 = 10 }
+            add_to_variable = { missile_inventory_array^144 = 10 }
+            add_to_variable = { missile_inventory_array^145 = 10 }
+            add_to_variable = { missile_inventory_array^146 = 10 }
+        
+        country_event = Easybuff.40
+    }
+    #Fix Material
+    option = { 
+        name = Easybuff.42.g
+        set_variable = { var_reactor_material_stockpile = 20000 }
+        set_variable = { var_nuclear_material_stockpile = 20000 }
+        country_event = Easybuff.40
+    }
+    option = {
+        name = Easybuffback
+        country_event = Easybuff.40
+    }
+}
+
+# Euroscepticism 43
+country_event = {
+    id = Easybuff.43
+    title = Easybuff.43.t
+    desc = Easybuff.43.desc
+    picture = GFX_report_event_german_inspect_troops
+    is_triggered_only = yes
+    
+    option = {
+        name = Easybuff.43.a
+        if = {
+            limit = {
+                has_idea = EU_member
+            }
+            set_temp_variable = { modify_eurosceptic = 0.5 }
+            set_temp_variable = { modify_eurosceptic_target = ROOT }
+            eurosceptic_change = yes
+        }
+        country_event = Easybuff.40
+    }
+    option = {
+        name = Easybuff.43.b
+        if = {
+            limit = {
+                has_idea = EU_member
+            }
+            set_temp_variable = { modify_eurosceptic = -0.5 }
+		    set_temp_variable = { modify_eurosceptic_target = ROOT }
+		    eurosceptic_change = yes
+        }
+        country_event = Easybuff.40
+    }
+    option = {
+        name = Easybuff.43.c
+        set_temp_variable = { modify_eurosceptic = 0.5 }
+        EU_eurosceptic_change = yes
+        every_country = {
+            limit = {
+                has_idea = EU_member
+             }
+        }
+        country_event = Easybuff.40
+    }
+    option = {
+        name = Easybuff.43.d
+        set_temp_variable = { modify_eurosceptic = -0.5 }
+		EU_eurosceptic_change = yes
+		every_country = {
+			limit = {
+				has_idea = EU_member
+			}
+		}
+        country_event = Easybuff.40
+    }
+   
+    option = {
+        name = Easybuffback
+        country_event = Easybuff.40
+    }
+}
+
+# Radiation 44
+country_event = {
+    id = Easybuff.44
+    title = Easybuff.44.t
+    desc = Easybuff.44.desc
+    picture = GFX_report_event_german_inspect_troops
+    is_triggered_only = yes
+    
+    option = {
+        name = Easybuff.44.a
+        every_controlled_state = {
+            limit = { has_dynamic_modifier = {modifier = nuclear_fallout}}
+            remove_dynamic_modifier = { modifier = nuclear_fallout }
+        }
+        country_event = Easybuff.40
+    }
+    option = {
+        name = Easybuff.44.b
+            every_country = {
+                every_state = {
+                    limit = { has_dynamic_modifier = {modifier = nuclear_fallout}}
+                    remove_dynamic_modifier = { modifier = nuclear_fallout }                
+                }
+            }
+            country_event = Easybuff.40
+    }
+    option = {
+        name = Easybuffback
+        country_event = Easybuff.40
+    }
+}
+
+# Internal Factions 45
+country_event = {
+    id = Easybuff.45
+    title = Easybuff.45.t
+    desc = Easybuff.45.desc
+    picture = GFX_report_event_german_inspect_troops
+    is_triggered_only = yes
+    
+    option = {
+        name = Easybuff.45.a
+        if = {
+            limit = {
+                has_country_flag = internal_factions_EB_booster
+            }
+            clr_country_flag = internal_factions_EB_booster
+        }
+        else = {
+            set_country_flag = internal_factions_EB_booster
+        }
+    }
+    option = {
+        name = small_medium_business_owners
+        trigger = {
+            has_idea = small_medium_business_owners
+        }
+        set_temp_variable = { temp_opinion = 100 }
+		change_small_medium_business_owners_opinion = yes
+        country_event = Easybuff.40
+    }
+    option = {
+        name = international_bankers
+        trigger = {
+            has_idea = international_bankers
+        }
+        set_temp_variable = { temp_opinion = 100 }
+		change_international_bankers_opinion = yes
+        country_event = Easybuff.40
+    }
+    option = {
+        name = fossil_fuel_industry
+        trigger = {
+            has_idea = fossil_fuel_industry
+        }
+        set_temp_variable = { temp_opinion = 100 }
+		change_fossil_fuel_industry_opinion = yes
+        country_event = Easybuff.40
+    }
+    option = {
+        name = industrial_conglomerates
+        trigger = {
+            has_idea = industrial_conglomerates
+        }
+        set_temp_variable = { temp_opinion = 100 }
+		change_industrial_conglomerates_opinion = yes
+        country_event = Easybuff.40
+    }
+    option = {
+        name = oligarchs
+        trigger = {
+            has_idea = oligarchs
+        }
+        set_temp_variable = { temp_opinion = 100 }
+		change_oligarchs_opinion = yes
+        country_event = Easybuff.40
+    }
+    option = {
+        name = maritime_industry
+        trigger = {
+            has_idea = maritime_industry
+        }
+        set_temp_variable = { temp_opinion = 100 }
+		change_maritime_industry_opinion = yes
+        country_event = Easybuff.40
+    }
+    option = {
+        name = intelligence_community
+        trigger = {
+            has_idea = intelligence_community
+        }
+        set_temp_variable = { temp_opinion = 100 }
+		change_intelligence_community_opinion = yes
+        country_event = Easybuff.40
+    }
+    option = {
+        name = the_military
+        trigger = {
+            has_idea = the_military
+        }
+        set_temp_variable = { temp_opinion = 100 }
+		change_the_military_opinion = yes
+        country_event = Easybuff.40
+    }
+    option = {
+        name = defense_industry
+        trigger = {
+            has_idea = defense_industry
+        }
+        set_temp_variable = { temp_opinion = 100 }
+		change_defense_industry_opinion = yes
+        country_event = Easybuff.40
+    }
+    option = {
+        name = wahabi_ulema
+        trigger = {
+            has_idea = wahabi_ulema
+        }
+        set_temp_variable = { temp_opinion = 100 }
+		change_the_wahabi_ulema_opinion = yes
+        country_event = Easybuff.40
+    }
+    option = {
+        name = the_priesthood
+        trigger = {
+            has_idea = the_priesthood
+        }
+        set_temp_variable = { temp_opinion = 100 }
+		change_the_priesthood_opinion = yes
+        country_event = Easybuff.40
+    }
+    option = {
+        name = the_ulema
+        trigger = {
+            has_idea = the_ulema
+        }
+        set_temp_variable = { temp_opinion = 100 }
+		change_the_ulema_opinion = yes
+        country_event = Easybuff.40
+    }
+    option = {
+        name = the_clergy
+        trigger = {
+            has_idea = the_clergy
+        }
+        set_temp_variable = { temp_opinion = 100 }
+		change_the_clergy_opinion = yes
+        country_event = Easybuff.40
+    }
+    option = {
+        name = communist_cadres
+        trigger = {
+            has_idea = communist_cadres
+        }
+        set_temp_variable = { temp_opinion = 100 }
+		change_communist_cadres_opinion = yes
+        country_event = Easybuff.40
+    }
+    option = {
+        name = farmers
+        trigger = {
+            has_idea = farmers
+        }
+        set_temp_variable = { temp_opinion = 100 }
+		change_farmers_opinion = yes
+        country_event = Easybuff.40
+    }
+    option = {
+        name = landowners
+        trigger = {
+            has_idea = landowners
+        }
+        set_temp_variable = { temp_opinion = 100 }
+		change_landowners_opinion = yes
+        country_event = Easybuff.40
+    }
+    option = {
+        name = labour_unions
+        trigger = {
+            has_idea = labour_unions
+        }
+        set_temp_variable = { temp_opinion = 100 }
+		change_labour_unions_opinion = yes
+        country_event = Easybuff.40
+    }
+    #option = {
+        #name = Easybuff.45.18
+        #trigger = {
+        #    has_idea = irgc
+        #}
+        #set_temp_variable = { temp_opinion = 100 }
+		#change_irgc_opinion = yes
+        #country_event = Easybuff.40
+    #}
+    option = {
+        name = foreign_jihadis
+        trigger = {
+            has_idea = foreign_jihadis
+        }
+        set_temp_variable = { temp_opinion = 100 }
+		change_foreign_jihadis_opinion = yes
+        country_event = Easybuff.40
+    }
+    option = {
+        name = iranian_quds_force
+        trigger = {
+            has_idea = iranian_quds_force
+        }
+        set_temp_variable = { temp_opinion = 100 }
+		change_iranian_quds_force_opinion = yes
+        country_event = Easybuff.40
+    }
+    option = {
+        name = saudi_royal_family
+        trigger = {
+            has_idea = saudi_royal_family
+        }
+        set_temp_variable = { temp_opinion = 100 }
+		change_saudi_royal_family_opinion = yes
+        country_event = Easybuff.40
+    }
+    #option = {
+        #name = Easybuff.45.22
+        #trigger = {
+        #    has_idea = vevak
+        #}
+        #set_temp_variable = { temp_opinion = 100 }
+		#change_vevak_opinion = yes
+        #country_event = Easybuff.40
+    #}
+    #option = {
+        #     name = Easybuff.45.23
+        #     trigger = {
+        #         has_idea = isi_pakistan
+        #     }
+        #     set_temp_variable = { temp_opinion = 100 }
+        #	change_isi_pakistan_opinion = yes
+        #     country_event = Easybuff.40
+    #}
+    option = {
+        name = chaebols
+        trigger = {
+            has_idea = chaebols
+        }
+        set_temp_variable = { temp_opinion = 100 }
+		change_chaebols_opinion = yes
+        country_event = Easybuff.40
+    }
+    option = {
+        name = wall_street
+        trigger = {
+            has_idea = wall_street
+        }
+        set_temp_variable = { temp_opinion = 100 }
+		change_wall_street_opinion = yes
+        country_event = Easybuff.40
+    }
+    option = {
+        name = the_donju
+        trigger = {
+            has_idea = the_donju
+        }
+        set_temp_variable = { temp_opinion = 100 }
+		change_the_donju_opinion = yes
+        country_event = Easybuff.40
+    }
+    #option = {
+        #name = Easybuff.45.27
+        #trigger = {
+        #    has_idea = the_bazaar
+        #}
+        #set_temp_variable = { temp_opinion = 100 }
+		#change_the_bazaar_opinion = yes
+        #country_event = Easybuff.40
+    #}
+    option = {
+        name = Easybuffback
+        country_event = Easybuff.40
+    }
+}
+
+# Points and Exps 50
+country_event = {
+    id = Easybuff.50
+    title = Easybuff.50.t
+    desc = Easybuff.50.desc
+    picture = GFX_report_event_german_inspect_troops
+    is_triggered_only = yes
+    
+    option = {
+        name = Easybuffback
+        country_event = Easybuff.1
+    }
+    option = {
+        name = ARMY_EXPERIENCE
+        army_experience = 250
+        country_event = Easybuff.1
+    }
+    option = {
+        name = NAVY_EXPERIENCE
+        navy_experience = 250
+        country_event = Easybuff.1
+    }
+    option = {
+        name = AIR_EXPERIENCE
+        air_experience = 250
+        country_event = Easybuff.1
+    }
+    option = {
+        name = POLITICAL_POWER
+        add_political_power = 500
+        country_event = Easybuff.1
+    }
+    option = {
+        name = MANPOWER
+        add_manpower = 700000
+        country_event = Easybuff.1
+    }
+    option = {
+        name = COMMAND_POWER
+        add_command_power = 100
+        country_event = Easybuff.1
+    }
+    option = {
+        name = STABILITY
+        add_stability = 0.1
+        country_event = Easybuff.1
+    }
+    option = {
+        name = WAR_SUPPORT
+        add_war_support = 0.1
+        country_event = Easybuff.1
+    }
+    option = {
+        name = Easybuff.50.i
+        add_named_threat = { threat = 25 }
+        country_event = Easybuff.1
+    }
+    option = {
+        name = Easybuff.50.j
+        add_named_threat = { threat = -25 }
+        country_event = Easybuff.1
+    }
+}
+
+# Faction and Parties 60
+country_event = {
+    id = Easybuff.60
+    title = Easybuff.60.t
+    desc = Easybuff.60.desc
+    picture = GFX_report_event_german_inspect_troops
+    is_triggered_only = yes
+    
+   
+    option = {
+        name = Easybuff.60.b
+        country_event = Easybuff.61
+    }
+    option = {
+        name = Easybuff.60.a
+        if = {
+		    limit = { has_idea = NATO_member }
+            NATO_leave = yes
+        }
+        else_if = {
+            limit = { has_idea = CSTO_member }
+            CSTO_leave = yes
+        }
+        else = {
+            if = {
+                limit = { has_idea = faction_resistance_axis_member }
+                remove_ideas = faction_resistance_axis_member
+            }
+            else_if = {
+                limit = { has_idea = sco_member }
+                remove_ideas = sco_member
+            }
+
+            random_country = {
+                limit = {
+                    AND = {
+                        is_in_faction_with = ROOT
+                        is_faction_leader = yes
+                    }
+                }
+                remove_from_faction = ROOT
+            }
+        }
+
+        country_event = Easybuff.1
+    }
+    option = {
+        name = Easybuff.60.c
+        every_country = {
+            limit = { 
+                AND = { 
+                    has_war_with = ROOT
+                    is_in_faction = yes
+                    is_faction_leader = no
+                }
+            }
+            random_country = {
+                limit = {
+                    AND = {
+                        is_in_faction_with = PREV
+                        is_faction_leader = yes
+                    }
+                }
+                remove_from_faction = PREV
+            }
+        }
+        country_event = Easybuff.1
+    }
+    option = {
+        name = Easybuff.60.d
+        country_event = Easybuff.62
+    }
+    option = {
+        name = Easybuff.60.e
+        country_event = Easybuff.63
+    }
+  
+    option = {
+        name = Easybuffback
+        country_event = Easybuff.1
+    }
+}
+
+# Join Faction 61
+country_event = {
+    id = Easybuff.61
+    title = Easybuff.61.t
+    desc = Easybuff.61.desc
+    picture = GFX_report_event_german_inspect_troops
+    is_triggered_only = yes
+    
+    option = {
+        name = Easybuff.61.b
+        NATO_join = yes
+        country_event = Easybuff.60
+    }
+    option = {
+        name = Easybuff.61.a
+        CSTO_join = yes
+        country_event = Easybuff.60
+    }
+    option = {
+        name = Easybuff.61.c
+        random_country = {
+            limit = {
+                AND = {
+                    is_in_faction_with = CHI
+                    is_faction_leader = yes
+                }
+            }
+            add_to_faction = ROOT
+        }
+        ROOT = {
+            add_ideas = sco_member
+        }
+        country_event = Easybuff.60
+    }
+    option = {
+        name = Easybuff.61.d
+        random_country = {
+            limit = {
+                AND = {
+                    is_in_faction_with = PER
+                    is_faction_leader = yes
+                }
+            }
+            add_to_faction = ROOT
+        }
+        ROOT = {
+            add_ideas = faction_resistance_axis_member
+        }
+        country_event = Easybuff.60
+    }
+    # option = {
+    #    name = Easybuff.61.c
+    #    random_country = {
+    #        limit = {
+    #            AND = {
+    #                is_in_faction_with = GER
+    #                is_faction_leader = yes
+    #            }
+    #         }
+    #        add_to_faction = ROOT
+    #    }
+    #    country_event = Easybuff.60
+    #}
+    option = {
+        name = Easybuffback
+        country_event = Easybuff.60
+    }
+}
+
+# Disband Faction 62
+country_event = {
+    id = Easybuff.62
+    title = Easybuff.62.t
+    desc = Easybuff.62.desc
+    picture = GFX_report_event_german_inspect_troops
+    is_triggered_only = yes
+    
+    option = {
+        name = Easybuff.62.d
+        random_country = {
+            limit = {
+                has_idea = NATO_member
+                is_faction_leader = yes
+            }
+            dismantle_faction = yes
+        }
+        every_country = {
+            if = {
+                limit = { has_idea = NATO_member }
+                remove_ideas = NATO_member
+            }
+        }
+        country_event = Easybuff.40
+
+    }
+    option = {
+        name = Easybuff.62.e
+        		SOV = { dismantle_faction = yes }
+         country_event = Easybuff.40
+    }
+    option = {
+        name = Easybuff.62.a
+        random_country = {
+            limit = {
+                AND = {
+                    has_war_with = ROOT
+                    is_faction_leader = yes
+                }
+            }
+            dismantle_faction = yes
+        }
+        country_event = Easybuff.60
+    }
+    option = {
+        name = Easybuff.62.b
+        every_country = {
+            limit = {
+                is_faction_leader = yes
+            }
+            dismantle_faction = yes
+        }
+        country_event = Easybuff.60
+    }
+    #option = {
+    #    name = Easybuff.62.c
+    #    random_country = {
+    #        limit = {
+    #            AND = {
+    #                is_faction_leader = yes
+    #                is_ai=yes
+    #            }
+    #        }
+    #        dismantle_faction = yes
+    #    }
+    #    country_event = Easybuff.60
+    #}
+    option = {
+        name = Easybuffback
+        country_event = Easybuff.60
+    }
+}
+
+# Re-Group party 63
+country_event = {
+    id = Easybuff.63
+    title = Easybuff.63.t
+    desc = Easybuff.63.desc
+    picture = GFX_report_event_german_inspect_troops
+    is_triggered_only = yes
+    
+    option = {
+        name = Easybuff.63.a
+        country_event = Easybuff.64
+    }
+    option = {
+        name = Easybuff.63.c
+        country_event = Easybuff.65
+    }
+    option = {
+        name = Easybuff.63.b
+        country_event = Easybuff.66
+    }
+    option = {
+        name = Easybuff.63.d
+        country_event = Easybuff.67
+    }
+    option = {
+        name = Easybuff.63.e
+        country_event = Easybuff.68
+    }
+    option = {
+        name = Easybuffback
+        country_event = Easybuff.60
+    }
+}
+
+# Western party
+country_event = {
+    id = Easybuff.64
+    title = Easybuff.64.t
+    desc = Easybuff.64.desc
+    picture = GFX_report_event_german_inspect_troops
+    is_triggered_only = yes
+    
+    #Autocracy
+    option = {
+        name = Easybuff.64.a
+        set_temp_variable = { rul_party_temp = 0 }
+			change_ruling_party_effect = yes
+			set_politics = {
+				ruling_party = democratic
+				elections_allowed = yes
+			}
+			set_temp_variable = { party_index = 0 }
+			set_temp_variable = { party_popularity_increase = 0.50 }
+			set_temp_variable = { temp_outlook_increase = 0.50 }
+			add_relative_party_popularity = yes
+            country_event = Easybuff.1
+    }
+    #Conservatism
+    option = {
+        name = Easybuff.64.b
+        set_temp_variable = { rul_party_temp = 1 }
+			change_ruling_party_effect = yes
+			set_politics = {
+				ruling_party = democratic
+				elections_allowed = yes
+			}
+			set_temp_variable = { party_index = 1 }
+			set_temp_variable = { party_popularity_increase = 0.50 }
+			set_temp_variable = { temp_outlook_increase = 0.50 }
+			add_relative_party_popularity = yes
+            country_event = Easybuff.1
+    }
+    #Liberalism
+    option = {
+        name = Easybuff.64.c
+        set_temp_variable = { rul_party_temp = 2 }
+			change_ruling_party_effect = yes
+			set_politics = {
+				ruling_party = democratic
+				elections_allowed = yes
+			}
+			set_temp_variable = { party_index = 2 }
+			set_temp_variable = { party_popularity_increase = 0.50 }
+			set_temp_variable = { temp_outlook_increase = 0.50 }
+			add_relative_party_popularity = yes
+            country_event = Easybuff.1
+    }
+    #Socialism
+    option = {
+        name = Easybuff.64.d
+        set_temp_variable = { rul_party_temp = 3 }
+			change_ruling_party_effect = yes
+			set_politics = {
+				ruling_party = democratic
+				elections_allowed = yes
+			}
+			set_temp_variable = { party_index = 3 }
+			set_temp_variable = { party_popularity_increase = 0.50 }
+			set_temp_variable = { temp_outlook_increase = 0.50 }
+			add_relative_party_popularity = yes
+            country_event = Easybuff.1
+    }
+    option = {
+        name = Easybuffback
+        country_event = Easybuff.63
+    }
+}
+
+# Emerging party
+country_event = {
+    id = Easybuff.65
+    title = Easybuff.65.t
+    desc = Easybuff.65.desc
+    picture = GFX_report_event_german_inspect_troops
+    is_triggered_only = yes
+    
+    #Communist State
+    option = {
+        name = Easybuff.65.a
+        set_temp_variable = { rul_party_temp = 4 }
+			change_ruling_party_effect = yes
+			set_politics = {
+				ruling_party = communism
+				elections_allowed = yes
+			}
+			set_temp_variable = { party_index = 4 }
+			set_temp_variable = { party_popularity_increase = 0.50 }
+			set_temp_variable = { temp_outlook_increase = 0.50 }
+			add_relative_party_popularity = yes    
+            country_event = Easybuff.1        
+    }
+    #Anarchist communism
+    option = {
+        name = Easybuff.65.b
+        set_temp_variable = { rul_party_temp = 5 }
+            change_ruling_party_effect = yes
+            set_politics = {
+                ruling_party = communism
+                elections_allowed = yes
+           }
+           set_temp_variable = { party_index = 5 }
+           set_temp_variable = { party_popularity_increase = 0.50 }
+           set_temp_variable = { temp_outlook_increase = 0.50 }
+           add_relative_party_popularity = yes
+           country_event = Easybuff.1
+    }
+    #Conservative
+    option = {
+        name = Easybuff.65.c
+        set_temp_variable = { rul_party_temp = 6 }
+			change_ruling_party_effect = yes
+			set_politics = {
+				ruling_party = communism
+				elections_allowed = yes
+			}
+			set_temp_variable = { party_index = 6 }
+			set_temp_variable = { party_popularity_increase = 0.50 }
+			set_temp_variable = { temp_outlook_increase = 0.50 }
+			add_relative_party_popularity = yes
+            country_event = Easybuff.1
+    }
+    #Autocracy
+    option = {
+        name = Easybuff.65.d
+        set_temp_variable = { rul_party_temp = 7 }
+			change_ruling_party_effect = yes
+			set_politics = {
+				ruling_party = communism
+				elections_allowed = yes
+			}
+			set_temp_variable = { party_index = 7 }
+			set_temp_variable = { party_popularity_increase = 0.50 }
+			set_temp_variable = { temp_outlook_increase = 0.50 }
+			add_relative_party_popularity = yes
+            country_event = Easybuff.1
+    }
+    #Mod_Vilayat_e_Faqih
+    option = {
+        name = Easybuff.65.e
+        set_temp_variable = { rul_party_temp = 8 }
+            change_ruling_party_effect = yes
+            set_politics = {
+                ruling_party = communism
+                elections_allowed = yes
+            }
+            set_temp_variable = { party_index = 8 }
+            set_temp_variable = { party_popularity_increase = 0.50 }
+            set_temp_variable = { temp_outlook_increase = 0.50 }
+            add_relative_party_popularity = yes
+            country_event = Easybuff.1
+    }
+    #Vilayat_e_Faqih
+    option = {
+        name = Easybuff.65.f
+        set_temp_variable = { rul_party_temp = 9 }
+			change_ruling_party_effect = yes
+			set_politics = {
+				ruling_party = communism
+				elections_allowed = yes
+			}
+			set_temp_variable = { party_index = 9 }
+			set_temp_variable = { party_popularity_increase = 0.50 }
+			set_temp_variable = { temp_outlook_increase = 0.50 }
+			add_relative_party_popularity = yes
+            country_event = Easybuff.1
+    }
+    option = {
+        name = Easybuffback
+        country_event = Easybuff.63
+    }
+
+}
+
+# Salafist 
+country_event = {
+    id = Easybuff.66
+    title = Easybuff.66.t
+    desc = Easybuff.66.desc
+    picture = GFX_report_event_german_inspect_troops
+    is_triggered_only = yes
+    
+        #Kingdom
+        option = {
+            name = Easybuff.66.a
+            Set_temp_variable = { rul_party_temp = 10 }
+			change_ruling_party_effect = yes
+			set_politics = {
+				ruling_party = fascism
+				elections_allowed = yes
+			}
+			set_temp_variable = { party_index = 10 }
+			set_temp_variable = { party_popularity_increase = 0.50 }
+			set_temp_variable = { temp_outlook_increase = 0.50 }
+			add_relative_party_popularity = yes
+            country_event = Easybuff.1
+        }
+        #Caliphate
+        option = {
+            name = Easybuff.66.b
+            set_temp_variable = { rul_party_temp = 11 }
+			change_ruling_party_effect = yes
+			set_politics = {
+				ruling_party = fascism
+				elections_allowed = yes
+			}
+			set_temp_variable = { party_index = 11 }
+			set_temp_variable = { party_popularity_increase = 0.50 }
+			set_temp_variable = { temp_outlook_increase = 0.50 }
+			add_relative_party_popularity = yes
+            country_event = Easybuff.1
+        }
+        option = {
+            name = Easybuffback
+            country_event = Easybuff.63
+        }
+
+}
+
+# Non-aligned
+country_event = {
+    id = Easybuff.67
+    title = Easybuff.67.t
+    desc = Easybuff.67.desc
+    picture = GFX_report_event_german_inspect_troops
+    is_triggered_only = yes
+    
+    #Muslim Brotherhood
+    option = {
+        name = Easybuff.67.a
+        set_temp_variable = { rul_party_temp = 12 }
+            change_ruling_party_effect = yes
+            set_politics = {
+                ruling_party = neutrality
+                elections_allowed = yes
+            }
+            set_temp_variable = { party_index = 12 }
+            set_temp_variable = { party_popularity_increase = 0.50 }
+            set_temp_variable = { temp_outlook_increase = 0.50 }
+            add_relative_party_popularity = yes
+            country_event = Easybuff.1 
+    }
+    #Autocracy
+    option = {
+        name = Easybuff.67.b
+        set_temp_variable = { rul_party_temp = 13 }
+			change_ruling_party_effect = yes
+			set_politics = {
+				ruling_party = neutrality
+				elections_allowed = yes
+			}
+			set_temp_variable = { party_index = 13 }
+			set_temp_variable = { party_popularity_increase = 0.50 }
+			set_temp_variable = { temp_outlook_increase = 0.50 }
+			add_relative_party_popularity = yes
+            country_event = Easybuff.1
+    }
+    #Conservatism
+    option = {
+        name = Easybuff.67.c
+        set_temp_variable = { rul_party_temp = 14 }
+			change_ruling_party_effect = yes
+			set_politics = {
+				ruling_party = neutrality
+				elections_allowed = yes
+			}
+			set_temp_variable = { party_index = 14 }
+			set_temp_variable = { party_popularity_increase = 0.50 }
+			set_temp_variable = { temp_outlook_increase = 0.50 }
+			add_relative_party_popularity = yes
+            country_event = Easybuff.1
+    }
+    #Oligarchism
+    option = {
+        name = Easybuff.67.d
+        set_temp_variable = { rul_party_temp = 15 }
+			change_ruling_party_effect = yes
+			set_politics = {
+				ruling_party = neutrality
+				elections_allowed = yes
+			}
+			set_temp_variable = { party_index = 15 }
+			set_temp_variable = { party_popularity_increase = 0.50 }
+			set_temp_variable = { temp_outlook_increase = 0.50 }
+			add_relative_party_popularity = yes
+            country_event = Easybuff.1
+    }
+    #Libertarian
+    option = {
+        name = Easybuff.67.e
+        set_temp_variable = { rul_party_temp = 16 }
+			change_ruling_party_effect = yes
+			set_politics = {
+				ruling_party = neutrality
+				elections_allowed = yes
+			}
+			set_temp_variable = { party_index = 16 }
+			set_temp_variable = { party_popularity_increase = 0.50 }
+			set_temp_variable = { temp_outlook_increase = 0.50 }
+			add_relative_party_popularity = yes
+            country_event = Easybuff.1
+    }
+    #Green
+    option = {
+        name = Easybuff.67.f
+        set_temp_variable = { rul_party_temp = 17 }
+			change_ruling_party_effect = yes
+			set_politics = {
+				ruling_party = neutrality
+				elections_allowed = yes
+			}
+			set_temp_variable = { party_index = 17 }
+			set_temp_variable = { party_popularity_increase = 0.50 }
+			set_temp_variable = { temp_outlook_increase = 0.50 }
+			add_relative_party_popularity = yes
+            country_event = Easybuff.1
+    }
+    #Social
+    option = {
+        name = Easybuff.67.g
+        set_temp_variable = { rul_party_temp = 18 }
+			change_ruling_party_effect = yes
+			set_politics = {
+				ruling_party = neutrality
+				elections_allowed = yes
+			}
+			set_temp_variable = { party_index = 18 }
+			set_temp_variable = { party_popularity_increase = 0.50 }
+			set_temp_variable = { temp_outlook_increase = 0.50 }
+			add_relative_party_popularity = yes
+            country_event = Easybuff.1
+    }   
+    #Communism
+    option = {
+        name = Easybuff.67.h
+        set_temp_variable = { rul_party_temp = 19 }
+			change_ruling_party_effect = yes
+			set_politics = {
+				ruling_party = neutrality
+				elections_allowed = yes
+			}
+			set_temp_variable = { party_index = 19 }
+			set_temp_variable = { party_popularity_increase = 0.50 }
+			set_temp_variable = { temp_outlook_increase = 0.50 }
+			add_relative_party_popularity = yes
+            country_event = Easybuff.1 
+    }    
+    option = {
+        name = Easybuffback
+        country_event = Easybuff.63
+    }
+
+}
+
+# Nationalist
+country_event = {
+    id = Easybuff.68
+    title = Easybuff.68.t
+    desc = Easybuff.68.desc
+    picture = GFX_report_event_german_inspect_troops
+    is_triggered_only = yes
+    
+    #Populism
+    option = {
+        name = Easybuff.67.h
+        set_temp_variable = { rul_party_temp = 20 }
+			change_ruling_party_effect = yes
+			set_politics = {
+				ruling_party = nationalist
+				elections_allowed = yes
+			}
+			set_temp_variable = { party_index = 20 }
+			set_temp_variable = { party_popularity_increase = 0.50 }
+			set_temp_variable = { temp_outlook_increase = 0.50 }
+			add_relative_party_popularity = yes
+            country_event = Easybuff.1 
+    }    
+    #Fascism
+    option = {
+        name = Easybuff.68.b
+        set_temp_variable = { rul_party_temp = 21 }
+			change_ruling_party_effect = yes
+			set_politics = {
+				ruling_party = nationalist
+				elections_allowed = yes
+			}
+			set_temp_variable = { party_index = 21 }
+			set_temp_variable = { party_popularity_increase = 0.50 }
+			set_temp_variable = { temp_outlook_increase = 0.50 }
+			add_relative_party_popularity = yes
+            country_event = Easybuff.1
+    }
+    #Autocracy
+    option = {
+        name = Easybuff.68.c
+        set_temp_variable = { rul_party_temp = 22 }
+			change_ruling_party_effect = yes
+			set_politics = {
+				ruling_party = nationalist
+				elections_allowed = yes
+			}
+			set_temp_variable = { party_index = 22 }
+			set_temp_variable = { party_popularity_increase = 0.50 }
+			set_temp_variable = { temp_outlook_increase = 0.50 }
+			add_relative_party_popularity = yes
+            country_event = Easybuff.1
+    }
+    #Monarchist
+    option = {
+        name = Easybuff.68.d
+        set_temp_variable = { rul_party_temp = 23 }
+			change_ruling_party_effect = yes
+			set_politics = {
+				ruling_party = nationalist
+				elections_allowed = yes
+			}
+			set_temp_variable = { party_index = 23 }
+			set_temp_variable = { party_popularity_increase = 0.50 }
+			set_temp_variable = { temp_outlook_increase = 0.50 }
+			add_relative_party_popularity = yes
+            country_event = Easybuff.1
+    }
+    option = {
+        name = Easybuffback
+        country_event = Easybuff.63
+    }
+
+}
+
+# Cores and Domain 70
+country_event = {
+    id = Easybuff.70
+    title = Easybuff.70.t
+    desc = Easybuff.70.desc
+    picture = GFX_report_event_german_inspect_troops
+    is_triggered_only = yes
+    
+    immediate = {
+        hidden_effect = {
+            every_state = {
+                limit= {
+                    is_core_of = ROOT
+                }
+                set_state_flag = player_state
+            }
+            set_country_flag = player_country
+        }
+    }
+
+    option = {
+        name = Easybuff.70.a
+        every_state = {
+            limit = {
+                is_core_of = ROOT
+                is_controlled_by = ROOT
+                is_owned_by = ROOT
+            }
+            every_country = {
+                limit = {
+                    NOT = { has_country_flag = player_country }
+                }
+                remove_state_core = PREV
+                remove_state_claim = PREV
+            }
+        }
+        country_event = Easybuff.1
+    }
+    option = {
+        name = Easybuff.70.b
+        country_event = Easybuff.71
+    }
+    option = {
+        name = Easybuff.70.c
+        every_state = {
+            limit = {
+                NOT = { is_controlled_by = ROOT }
+                AND = { is_core_of = ROOT }
+            }
+            remove_core_of = ROOT
+        }
+        country_event = Easybuff.1
+    }
+    option = {
+        name = Easybuff.70.d
+        country_event = Easybuff.72
+    }
+    option = {
+        name = Easybuff.70.e
+        country_event = Easybuff.73
+    }
+    option = {
+        name = Easybuff.70.f
+        country_event = Easybuff.74
+    }
+    option = {
+        name = Easybuff.70.g
+        country_event = Easybuff.75
+    }
+    option = {
+        name = Easybuff.70.h
+        every_country = {
+            limit = {
+                has_war_with = ROOT
+            }
+            white_peace = ROOT
+        } 
+        country_event = Easybuff.1
+    }
+    option = {
+        name = Easybuffback
+        country_event = Easybuff.1
+    }
+}
+
+# Make Controlled to Cores 71
+country_event = {
+    id = Easybuff.71
+    title = Easybuff.71.t
+    desc = Easybuff.71.desc
+    picture = GFX_report_event_german_inspect_troops
+    is_triggered_only = yes
+    
+    option = {
+        name = Easybuff.71.a
+        random_state = {
+            limit = {
+                AND = {
+                    any_neighbor_state = { owner = { tag = ROOT } }
+                    NOT = { is_core_of = ROOT }
+                }
+            }
+            add_core_of = ROOT
+        }
+        country_event = Easybuff.70
+    }
+    option = {
+        name = Easybuff.71.b
+        every_state = {
+            limit = {
+                AND = {
+                    is_controlled_by = ROOT
+                    NOT = { is_core_of = ROOT }
+                }
+            }
+            add_core_of = ROOT
+        }
+        country_event = Easybuff.70
+    }
+    option = {
+        name = Easybuff.71.c
+        every_state = {
+            limit = {
+                AND = {
+                    is_claimed_by = ROOT
+                    NOT = { is_core_of = ROOT }
+                }
+            }
+            add_core_of = ROOT
+        }
+        country_event = Easybuff.70
+    }
+    option = {
+        name = Easybuffback
+        country_event = Easybuff.70
+    }
+}
+
+# Get Control of Core States 72
+country_event = {
+    id = Easybuff.72
+    title = Easybuff.72.t
+    desc = Easybuff.72.desc
+    picture = GFX_report_event_german_inspect_troops
+    is_triggered_only = yes
+    
+    immediate = {
+        hidden_effect = {
+            random_state = {
+                limit = {
+                    AND = {
+                        is_core_of = ROOT
+                        NOT = { is_controlled_by = ROOT }
+                    }
+                }
+                save_event_target_as = ROOT_state
+            }
+        }
+    }
+    option = {
+        name = Easybuff.72.a
+        random_state = {
+            limit = {
+                AND = {
+                    is_core_of = ROOT
+                    NOT = { is_controlled_by = ROOT }
+                }
+            }
+            ROOT = {
+                transfer_state = PREV
+            }
+        }
+        country_event = Easybuff.70
+    }
+
+    option = {
+        name = Easybuff.72.b
+        every_state = {
+            limit = {
+                AND = {
+                    is_core_of = ROOT
+                    NOT = { is_controlled_by = ROOT }
+                }
+            }
+            ROOT = {
+                transfer_state = PREV
+            }
+        }
+        country_event = Easybuff.70
+    }
+    option = {
+        name = Easybuffback
+        country_event = Easybuff.70
+    }
+}
+
+# Get Control of Neighbor States 73
+country_event = {
+    id = Easybuff.73
+    title = Easybuff.73.t
+    desc = Easybuff.73.desc
+    picture = GFX_report_event_german_inspect_troops
+    is_triggered_only = yes
+    
+    option = {
+        name = Easybuff.73.a
+        random_state = {
+            limit = {
+                AND = {
+                    any_neighbor_state = { owner = { tag = ROOT } }
+                    NOT = { is_controlled_by = ROOT }
+                    owner = { has_war_with = ROOT }
+                }
+            }
+            ROOT = {
+                transfer_state = PREV
+            }
+        }
+        country_event = Easybuff.70
+    }
+
+    option = {
+        name = Easybuff.73.b
+        random_state = {
+            limit = {
+                AND = {
+                    any_neighbor_state = { owner = { tag = ROOT } }
+                    NOT = { is_controlled_by = ROOT }
+                }
+            }
+            ROOT = {
+                transfer_state = PREV
+            }
+        }
+        country_event = Easybuff.70
+    }
+
+    option = {
+        name = Easybuff.73.c
+        random_state = {
+            limit = {
+                AND = {
+                    any_neighbor_state = { 
+                        is_owned_by = ROOT 
+                        ROOT = {
+                            divisions_in_state = {
+                                state = PREV
+                                size > 20
+                            }
+                        }
+                    }
+                    
+                    NOT = { is_controlled_by = ROOT }
+                }
+            }
+            ROOT = {
+                transfer_state = PREV
+            }
+        }
+        country_event = Easybuff.70
+    }
+    option = {
+        name = Easybuffback
+        country_event = Easybuff.70
+    }
+}
+
+# Puppet Country 74
+country_event = {
+    id = Easybuff.74
+    title = Easybuff.74.t
+    desc = Easybuff.74.desc
+    picture = GFX_report_event_german_inspect_troops
+    is_triggered_only = yes
+    
+    option = {
+        name = Easybuff.74.a
+        random_country = {
+            limit = {
+                AND = {
+                    is_ai = yes
+                    NOT = { is_puppet_of = ROOT }
+                }
+            }
+            ROOT = { puppet = PREV }
+        }
+        country_event = Easybuff.70
+    }
+
+    option = {
+        name = Easybuff.74.b
+        random_country = {
+            limit = {
+                AND = {
+                    is_neighbor_of = ROOT
+                    NOT = { is_puppet_of = ROOT }
+                }
+            }
+            ROOT = { puppet = PREV }
+        }
+        country_event = Easybuff.70
+    }
+
+    option = {
+        name = Easybuff.74.c
+        random_country = {
+            limit = {
+                AND = {
+                    has_war_with = ROOT
+                    NOT = { is_puppet_of = ROOT }
+                }
+            }
+            ROOT = { puppet = PREV }
+        }
+        country_event = Easybuff.70
+    }
+
+    option = {
+        name = Easybuffback
+        country_event = Easybuff.70
+    }
+}
+
+# Set Capital 75
+country_event = {
+    id = Easybuff.75
+    title = Easybuff.75.t
+    desc = Easybuff.75.d
+    picture = GFX_report_event_german_inspect_troops
+    is_triggered_only = yes
+    
+    immediate = {
+        hidden_effect = { 
+            random_owned_state = {
+                limit = {
+                    AND = {
+                        is_owned_by = ROOT
+                        ROOT = {
+                            divisions_in_state = {
+                                state = PREV
+                                size > 10
+                            }
+                        }
+                    }
+                }
+                save_event_target_as = cap_state          
+            }
+            random_owned_state = {
+                limit = {
+                    AND = {
+                        is_owned_by = ROOT
+                        ROOT = {
+                            divisions_in_state = {
+                                state = PREV
+                                size > 20
+                            }
+                        }
+                    }
+                }
+                save_event_target_as = cap_states         
+            }
+            random_owned_state = {
+                save_event_target_as = cap_statess         
+            }
+        }
+    }
+
+    option = {
+        name = Easybuff.75.a
+        set_capital = { state = event_target:cap_state }
+        country_event = Easybuff.70
+    }
+    option = {
+        name = Easybuff.75.b
+        set_capital = { state = event_target:cap_states }
+        country_event = Easybuff.70
+    }
+    option = {
+        name = Easybuff.75.c
+        set_capital = { state = event_target:cap_statess }
+        country_event = Easybuff.70
+    }
+    option = {
+        name = Easybuffback
+        country_event = Easybuff.70
+    }
+}
+
+# Static Modifiers 80
+country_event = {
+    id = Easybuff.80
+    title = Easybuff.80.t
+    desc = Easybuff.80.d
+    picture = GFX_report_event_german_inspect_troops
+    is_triggered_only = yes
+    
+    # Back to main
+    option = {
+        name = Easybuffback
+        country_event = Easybuff.1
+    }
+    # Next Page
+    option = {
+        name = Easybuffnext
+        country_event = Easybuff.81
+    }
+    # Army exp buff
+    option = {
+        name = Easybuff.80.h
+        if = {
+            limit = { has_idea = army_exp_buffs }
+            remove_ideas = army_exp_buffs
+            else = { add_ideas = army_exp_buffs }
+        }
+        country_event = Easybuff.1
+    }
+    # Auto-influence cap
+    option = {
+        name = Easybuff.80.i
+        if = {
+            limit = { has_idea = auto_influence_cap }
+            remove_ideas = auto_influence_cap
+            else = { add_ideas = auto_influence_cap }
+        }
+        country_event = Easybuff.1
+    }
+    # Scientist buff
+    option = {
+        name = Easybuff.80.j
+        if = {
+            limit = { has_idea = scientist_sp_buff }
+            remove_ideas = scientist_sp_buff
+            else = { add_ideas = scientist_sp_buff }
+        }
+
+        every_scientist = {
+            add_scientist_trait = scientist_eb_buff 
+        }
+        #add_scientist_trait = scientist_trait_genius
+        #add_scientist_trait = scientist_trait_brilliant_theorist
+        #add_scientist_trait = scientist_trait_gifted_engineer
+        #add_scientist_trait = scientist_trait_bright
+        #add_scientist_trait = scientist_trait_fast_learner
+        #add_scientist_trait = scientist_trait_resourceful
+        country_event = Easybuff.1
+    }
+    # Ideology drift defense buff
+    option = {
+        name = Easybuff.80.k
+        if = {
+            limit = { has_idea = ideol_drift_def_buff }
+            remove_ideas = ideol_drift_def_buff
+            else = { add_ideas = ideol_drift_def_buff }
+        }
+        if = {
+            limit = { has_dynamic_modifier = { modifier = neighbor_effect_modifiers } }
+            remove_dynamic_modifier = { modifier = neighbor_effect_modifiers }
+            else = { add_dynamic_modifier = { modifier = neighbor_effect_modifiers } }
+        }
+        country_event = Easybuff.1
+    }
+    # Research slots
+    option = {
+        name = Easybuff.80.l
+        add_research_slot = 2
+        country_event = Easybuff.1
+    }
+    # Internal factions cost reduction
+    option = {
+        name = Easybuff.80.m
+        if = {
+            limit = { has_idea = internal_factions_price_reduction }
+            remove_ideas = internal_factions_price_reduction
+            else = { add_ideas = internal_factions_price_reduction }
+        }
+        country_event = Easybuff.1
+    }
+    # Infrastructure construction speed buff
+    option = {
+        name = Easybuff.80.n
+        if = {
+            limit = { has_idea = infrastructure_construction_speed_buff }
+            remove_ideas = infrastructure_construction_speed_buff
+            else = { add_ideas = infrastructure_construction_speed_buff }
+        }
+        country_event = Easybuff.1
+    }
+}
+
+# Static Modifiers 81
+country_event = {
+    id = Easybuff.81
+    title = Easybuff.80.t
+    desc = Easybuff.80.d
+    picture = GFX_report_event_german_inspect_troops
+    is_triggered_only = yes
+    
+    # Back to main
+    option = {
+        name = Easybuffback
+        country_event = Easybuff.1
+    }
+    # Previous Page
+    option = {
+        name = Easybuffprevious
+        country_event = Easybuff.80
+    }
+    # Combat width
+    option = {
+        name = Easybuff.80.a
+        if = {
+            limit = { has_idea = de_combat_width }
+            remove_ideas = de_combat_width
+            else = { add_ideas = de_combat_width }
+        }
+        country_event = Easybuff.1
+    }
+    # More organization
+    option = {
+        name = Easybuff.80.b
+        if = {
+            limit = { has_idea = more_org }
+            remove_ideas = more_org
+            else = { add_ideas = more_org }
+        }
+        country_event = Easybuff.1
+    }
+    # More special forces
+    option = {
+        name = Easybuff.80.c
+        if = {
+            limit = { has_idea = more_special }
+            remove_ideas = more_special
+            else = { add_ideas = more_special }
+        }
+        country_event = Easybuff.1
+    }
+    # More speed
+    option = {
+        name = Easybuff.80.e
+        if = {
+            limit = { has_idea = more_speed }
+            remove_ideas = more_speed
+            else = { add_ideas = more_speed }
+        }
+        country_event = Easybuff.1
+    }
+    # General modifiers
+    option = {
+        name = Easybuff.80.f
+        if = {
+            limit = { has_idea = gen_mods }
+            remove_ideas = gen_mods
+            else = { add_ideas = gen_mods }
+        }
+        country_event = Easybuff.1
+    }
+    
+}
+
+# Equipment Modifiers 82
+country_event = {
+    id = Easybuff.82
+    title = Easybuff.82.t
+    desc = Easybuff.82.d
+    picture = GFX_report_event_german_inspect_troops
+    is_triggered_only = yes
+    
+    # Back to main
+    option = {
+        name = Easybuffback
+        country_event = Easybuff.1
+    }
+
+    # Equipment speed buffs lv.1
+    option = {
+        name = Easybuff.82.a
+        if = {
+            limit = { has_idea = speed_eqs }
+            remove_ideas = speed_eqs
+            else = { add_ideas = speed_eqs }
+        }
+        country_event = Easybuff.1
+    }
+
+    # Equipment speed buffs lv.2
+    option = {
+        name = Easybuff.82.b
+        if = {
+            limit = { has_idea = speed_eqs2 }
+            remove_ideas = speed_eqs2
+            else = { add_ideas = speed_eqs2 }
+        }
+        country_event = Easybuff.1
+    }
+
+    # Equipment speed buffs lv.3
+    option = {
+        name = Easybuff.82.c
+        if = {
+            limit = { has_idea = speed_eqs3 }
+            remove_ideas = speed_eqs3
+            else = { add_ideas = speed_eqs3 }
+        }
+        country_event = Easybuff.1
+    }
+
+    # Reliability buff lv.1
+    option = {
+        name = Easybuff.80.d
+        if = {
+            limit = { has_idea = safety_eqs }
+            remove_ideas = safety_eqs
+            else = { add_ideas = safety_eqs }
+        }
+        country_event = Easybuff.1
+    }
+    # Reliability buff lv.2
+    option = {
+        name = Easybuff.80.g
+        if = {
+            limit = { has_idea = safety_eqs2 }
+            remove_ideas = safety_eqs2
+            else = { add_ideas = safety_eqs2 }
+        }
+        country_event = Easybuff.1
+    }
+    # Air attack buff
+    option = {
+        name = Easybuff.82.d
+        if = {
+            limit = { has_idea = air_attack_buff }
+            remove_ideas = air_attack_buff
+            else = { add_ideas = air_attack_buff }
+        }
+        country_event = Easybuff.1
+    }
+    # Recon buff
+    option = {
+        name = Easybuff.82.e
+        if = {
+            limit = { has_idea = recon_buff }
+            remove_ideas = recon_buff
+            else = { add_ideas = recon_buff }
+        }
+        country_event = Easybuff.1
+    }
+    # Entrenchment buff
+    option = {
+        name = Easybuff.82.f
+        if = {
+            limit = { has_idea = entrenchment_buff }
+            remove_ideas = entrenchment_buff
+            else = { add_ideas = entrenchment_buff }
+        }
+        country_event = Easybuff.1
+    }
+}
+
+# Leaders 90
+country_event = {
+    id = Easybuff.90
+    title = Easybuff.90.t
+    desc = Easybuff.90.d
+    picture = GFX_report_event_german_inspect_troops
+    is_triggered_only = yes
+    
+    option = {
+        name = Easybuff.90.a
+        every_army_leader = {
+			add_unit_leader_trait = expert_improviser
+		}
+        country_event = Easybuff.1
+    }
+    option = {
+        name = Easybuff.90.b
+        every_army_leader = {
+            add_unit_leader_trait = lt_all_ability
+        }
+        country_event = Easybuff.1
+    }
+    option = {
+        name = Easybuff.90.c
+        every_army_leader = {
+            add_unit_leader_trait = ctrl_more_troops
+        }
+        country_event = Easybuff.1
+    }
+    option = {
+        name = Easybuffback
+        country_event = Easybuff.1
+    }
+}

@@ -1,0 +1,91 @@
+ideas = {
+	cheat_missiles = {
+		cheat_missiles_lvl1 = {
+			picture = generic_pp_unity_bonus
+			available = { is_ai = no }
+			cancel_if_invalid = no
+			level = 1
+			modifier = {
+				olv_production_speed_modifier = 0.05
+				gnss_production_speed_modifier = 0.05
+				comsat_production_speed_modifier = 0.05
+				spysat_production_speed_modifier = 0.05
+				killsat_production_speed_modifier = 0.05
+				rods_production_speed_modifier = 0.05
+				
+				nuclear_reactor_fuel_production = 0.05
+			}
+		}
+		cheat_missiles_lvl2 = {
+			picture = generic_pp_unity_bonus
+			available = { is_ai = no }
+			cancel_if_invalid = no
+			level = 2
+			modifier = {
+				olv_production_speed_modifier = 0.15
+				gnss_production_speed_modifier = 0.15
+				comsat_production_speed_modifier = 0.15
+				spysat_production_speed_modifier = 0.15
+				killsat_production_speed_modifier = 0.15
+				rods_production_speed_modifier = 0.15
+
+				nuclear_reactor_fuel_production = 0.15
+			}
+		}
+		cheat_missiles_lvl3 = {
+			picture = generic_pp_unity_bonus
+			available = { is_ai = no }
+			cancel_if_invalid = no
+			level = 3
+			modifier = {
+				olv_production_speed_modifier = 0.3
+				gnss_production_speed_modifier = 0.3
+				comsat_production_speed_modifier = 0.3
+				spysat_production_speed_modifier = 0.3
+				killsat_production_speed_modifier = 0.3
+				rods_production_speed_modifier = 0.3
+
+				nuclear_reactor_fuel_production = 0.5
+
+			}
+		}
+		cheat_missiles_lvl4 = {
+			picture = generic_pp_unity_bonus
+			available = { is_ai = no }
+			cancel_if_invalid = no
+			level = 4
+			modifier = {
+				olv_production_speed_modifier = 0.6
+				gnss_production_speed_modifier = 0.6
+				comsat_production_speed_modifier = 0.6
+				spysat_production_speed_modifier = 0.6
+				killsat_production_speed_modifier = 0.6
+				rods_production_speed_modifier = 0.6
+
+				nuclear_reactor_fuel_production = 1
+			}
+		}
+		cheat_missiles_insane = {
+			picture = generic_pp_unity_bonus
+			available = { is_ai = no }
+			cancel_if_invalid = no
+			level = 8
+			modifier = {
+				olv_production_speed_modifier = 1
+				gnss_production_speed_modifier = 1
+				comsat_production_speed_modifier = 1
+				spysat_production_speed_modifier = 1
+				killsat_production_speed_modifier = 1
+				rods_production_speed_modifier = 1
+
+				nuclear_reactor_fuel_production = 10
+			}
+		}
+		cheat_nothingmissiles={
+			picture = generic_pp_unity_bonus
+			available = { is_ai = no }
+			cancel_if_invalid = no
+			level = 9
+		}
+	}
+}

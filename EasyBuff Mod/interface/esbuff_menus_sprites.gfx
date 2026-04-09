@@ -1,0 +1,15 @@
+spriteTypes = {
+	frameAnimatedSpriteType = {
+		name = "GFX_esbuff_open_ideas_ui_button"
+		textureFile = "gfx/interface/esbuff_open_ideas_ui_button_v3.dds"
+		noOfFrames = 1
+		effectFile = "gfx/FX/buttonstate_blendframes.lua"
+		animation_rate_fps = 1
+		looping = yes
+		play_on_show = yes
+	}
+	spriteType = {
+		name = "GFX_esb_ccm_remove_idea"
+		textureFile = "gfx/interface/esbuff_idea_remove.dds"
+	}
+}

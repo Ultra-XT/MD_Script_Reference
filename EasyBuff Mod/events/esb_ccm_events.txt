@@ -1,0 +1,388 @@
+add_namespace = Easybuff
+
+country_event = { #Resources add
+	id = Easybuff.201
+	hidden = yes
+    is_triggered_only = yes
+	timeout_days = 0
+
+	immediate = {
+		random_state = {
+            limit = { 
+                is_controlled_by = ROOT
+            }
+            add_resource = {
+                type = rubber
+                amount = 8
+            }
+            add_resource = {
+                type = oil
+                amount = 8
+            }
+            add_resource = {
+                type = aluminium
+                amount = 8
+            }
+            add_resource = {
+                type = tungsten
+                amount = 8
+            }
+            add_resource = {
+                type = steel
+                amount = 8
+            }
+            add_resource = {
+                type = chromium
+                amount = 8
+            }
+        }
+	}
+}
+country_event = { #Resources add
+	id = Easybuff.202
+	hidden = yes
+    is_triggered_only = yes
+	timeout_days = 0
+
+	immediate = {
+		random_state = {
+            limit = { 
+                is_controlled_by = ROOT
+            }
+            add_resource = {
+                type = rubber
+                amount = 50
+            }
+            add_resource = {
+                type = oil
+                amount = 50
+            }
+            add_resource = {
+                type = aluminium
+                amount = 50
+            }
+            add_resource = {
+                type = tungsten
+                amount = 50
+            }
+            add_resource = {
+                type = steel
+                amount = 50
+            }
+            add_resource = {
+                type = chromium
+                amount = 50
+            }
+        }
+	}
+}
+
+country_event = { #Resources remove
+	id = Easybuff.203
+	hidden = yes
+    is_triggered_only = yes
+	timeout_days = 0
+
+	immediate = {
+		random_state = {
+            limit = { 
+                is_controlled_by = ROOT
+            }
+            add_resource = {
+                type = rubber
+                amount = -8
+            }
+            add_resource = {
+                type = oil
+                amount = -8
+            }
+            add_resource = {
+                type = aluminium
+                amount = -8
+            }
+            add_resource = {
+                type = tungsten
+                amount = -8
+            }
+            add_resource = {
+                type = steel
+                amount = -8
+            }
+            add_resource = {
+                type = chromium
+                amount = -8
+            }
+        }
+	}
+}
+country_event = { #Resources remove
+	id = Easybuff.204
+	hidden = yes
+    is_triggered_only = yes
+	timeout_days = 0
+
+	immediate = {
+		random_state = {
+            limit = { 
+                is_controlled_by = ROOT
+            }
+            add_resource = {
+                type = rubber
+                amount = -50
+            }
+            add_resource = {
+                type = oil
+                amount = -50
+            }
+            add_resource = {
+                type = aluminium
+                amount = -50
+            }
+            add_resource = {
+                type = tungsten
+                amount = -50
+            }
+            add_resource = {
+                type = steel
+                amount = -50
+            }
+            add_resource = {
+                type = chromium
+                amount = -50
+            }
+        }
+	}
+}
+
+country_event = { #Civil factory add
+	id = Easybuff.205
+	hidden = yes
+    is_triggered_only = yes
+	timeout_days = 0
+
+	immediate = {
+        add_offsite_building = { type = industrial_complex level = 5 }
+	}
+}
+country_event = { #Civil factory add2
+	id = Easybuff.206
+	hidden = yes
+    is_triggered_only = yes
+	timeout_days = 0
+
+	immediate = {
+        add_offsite_building = { type = industrial_complex level = 30 }
+	}
+}
+
+country_event = { #Mil factory add
+	id = Easybuff.207
+	hidden = yes
+    is_triggered_only = yes
+	timeout_days = 0
+
+	immediate = {
+        add_offsite_building = { type = arms_factory level = 5 }
+	}
+}
+country_event = { #Mil factory add2
+	id = Easybuff.208
+	hidden = yes
+    is_triggered_only = yes
+	timeout_days = 0
+
+	immediate = {
+        add_offsite_building = { type = arms_factory level = 30 }
+	}
+}
+
+country_event = { #Nav factory add
+	id = Easybuff.209
+	hidden = yes
+    is_triggered_only = yes
+	timeout_days = 0
+
+	immediate = {
+        add_offsite_building = { type = dockyard level = 5 }
+	}
+}
+country_event = { #Nav factory add2
+	id = Easybuff.210
+	hidden = yes
+    is_triggered_only = yes
+	timeout_days = 0
+
+	immediate = {
+        add_offsite_building = { type = dockyard level = 30 }
+	}
+}
+
+country_event = { #Civil factory rem
+	id = Easybuff.211
+	hidden = yes
+    is_triggered_only = yes
+	timeout_days = 0
+
+	immediate = {
+        add_offsite_building = { type = industrial_complex level = -5 }
+	}
+}
+country_event = { #Civil factory rem2
+	id = Easybuff.212
+	hidden = yes
+    is_triggered_only = yes
+	timeout_days = 0
+
+	immediate = {
+        add_offsite_building = { type = industrial_complex level = -30 }
+	}
+}
+
+country_event = { #Mil factory rem
+	id = Easybuff.213
+	hidden = yes
+    is_triggered_only = yes
+	timeout_days = 0
+
+	immediate = {
+        add_offsite_building = { type = arms_factory level = -5 }
+	}
+}
+country_event = { #Mil factory rem2
+	id = Easybuff.214
+	hidden = yes
+    is_triggered_only = yes
+	timeout_days = 0
+
+	immediate = {
+        add_offsite_building = { type = arms_factory level = -30 }
+	}
+}
+
+country_event = { #Nav factory rem
+	id = Easybuff.215
+	hidden = yes
+    is_triggered_only = yes
+	timeout_days = 0
+
+	immediate = {
+        add_offsite_building = { type = dockyard level = -5 }
+	}
+}
+country_event = { #Nav factory rem2
+	id = Easybuff.216
+	hidden = yes
+    is_triggered_only = yes
+	timeout_days = 0
+
+	immediate = {
+        add_offsite_building = { type = dockyard level = -30 }
+	}
+}
+
+country_event = { #Influence
+	id = Easybuff.217
+	hidden = yes
+    is_triggered_only = yes
+	timeout_days = 0
+
+	immediate = {
+        set_temp_variable = { percent_change = 5 }
+		set_temp_variable = { tag_index = FROM }
+		set_temp_variable = { influence_target = THIS }
+		change_influence_percentage = yes
+	}
+}
+country_event = { #Influence2
+	id = Easybuff.218
+	hidden = yes
+    is_triggered_only = yes
+	timeout_days = 0
+
+	immediate = {
+        set_temp_variable = { percent_change = 25 }
+		set_temp_variable = { tag_index = FROM }
+		set_temp_variable = { influence_target = THIS }
+		change_influence_percentage = yes
+	}
+}
+
+country_event = { #Autonomy
+	id = Easybuff.219
+	hidden = yes
+    is_triggered_only = yes
+	timeout_days = 0
+
+	immediate = {
+        add_autonomy_score = {
+            value = 250
+        }
+	}
+}
+country_event = { #Autonomy2
+	id = Easybuff.220
+	hidden = yes
+    is_triggered_only = yes
+	timeout_days = 0
+
+	immediate = {
+        add_autonomy_score = {
+            value = 1250
+        }
+	}
+}
+
+country_event = { #Autonomy
+	id = Easybuff.221
+	hidden = yes
+    is_triggered_only = yes
+	timeout_days = 0
+
+	immediate = {
+        add_autonomy_score = {
+            value = -250
+        }
+	}
+}
+country_event = { #Autonomy2
+	id = Easybuff.222
+	hidden = yes
+    is_triggered_only = yes
+	timeout_days = 0
+
+	immediate = {
+        add_autonomy_score = {
+            value = -1250
+        }
+	}
+}
+
+country_event = { #Leave faction
+    id = Easybuff.223
+    hidden = yes
+    is_triggered_only = yes
+    timeout_days = 0
+    immediate = {
+        random_country = {
+            limit = {
+                AND = {
+                    is_in_faction_with = ROOT
+                    is_faction_leader = yes
+                }
+            }
+            remove_from_faction = ROOT
+        }
+    }
+}
+country_event = { #Disband faction
+    id = Easybuff.224
+    hidden = yes
+    is_triggered_only = yes
+    timeout_days = 0
+    immediate = {
+        THIS = { dismantle_faction = yes }
+    }
+}
+
+
+

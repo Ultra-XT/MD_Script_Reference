@@ -1,0 +1,76 @@
+ideas = {
+	country = {
+		cheat_ccm_air_decr_lv1 = {
+			picture = generic_air_bonus
+			available = { is_ai = no }
+			cancel_if_invalid = no
+			level = 1
+			modifier = {
+				AIR_DETECTION = -1
+				NAVAL_DETECTION = -1
+
+				AIR_ACCIDENTS_FACTOR = 0.3
+
+				AIR_ATTACK_FACTOR = -0.2
+				AIR_DEFENCE_FACTOR = -0.2
+				AIR_BOMBING_TARGETTING = -0.3
+				AIR_RANGE_FACTOR = -0.5
+			}
+		}
+		cheat_ccm_air_decr_lv2 = {
+			picture = generic_air_bonus
+			available = { is_ai = no }
+			cancel_if_invalid = no
+			level = 2
+			modifier = {
+				AIR_DETECTION = -4
+				NAVAL_DETECTION = -4
+				air_superiority_efficiency = -0.4
+
+				AIR_ACCIDENTS_FACTOR = 0.7
+
+				AIR_ATTACK_FACTOR = -0.4
+				AIR_DEFENCE_FACTOR = -0.4
+				AIR_BOMBING_TARGETTING = -0.5
+				AIR_RANGE_FACTOR = -1
+				air_intercept_efficiency = -0.4
+			}
+		}
+		cheat_ccm_air_lv1 = {
+			picture = generic_air_bonus
+			available = { is_ai = no }
+			cancel_if_invalid = no
+			level = 3
+			modifier = {
+				AIR_DETECTION = 1
+				NAVAL_DETECTION = 1
+
+				AIR_ACCIDENTS_FACTOR = -0.3
+
+				AIR_ATTACK_FACTOR = 0.2
+				AIR_DEFENCE_FACTOR = 0.2
+				AIR_BOMBING_TARGETTING = 0.3
+				AIR_RANGE_FACTOR = 0.5
+			}
+		}
+		cheat_ccm_air_lv2 = {
+			picture = generic_air_bonus
+			available = { is_ai = no }
+			cancel_if_invalid = no
+			level = 4
+			modifier = {
+				AIR_DETECTION = 4
+				NAVAL_DETECTION = 4
+				air_superiority_efficiency = 0.4
+
+				AIR_ACCIDENTS_FACTOR = -0.7
+
+				AIR_ATTACK_FACTOR = 0.4
+				AIR_DEFENCE_FACTOR = 0.4
+				AIR_BOMBING_TARGETTING = 0.5
+				AIR_RANGE_FACTOR = 1
+				air_intercept_efficiency = 0.4
+			}
+		}
+	}
+}

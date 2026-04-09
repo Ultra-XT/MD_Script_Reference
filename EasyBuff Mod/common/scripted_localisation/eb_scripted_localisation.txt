@@ -1,0 +1,16 @@
+# Change the button color if 
+defined_text = {
+	name = EB_factions_booster_status
+
+	text = { 
+		trigger = { has_country_flag = internal_factions_EB_booster }
+		localization_key = EB_factions_booster_on
+	}
+
+	text = {
+		trigger = { 
+			NOT = { has_country_flag = internal_factions_EB_booster } 
+		} 
+		localization_key = EB_factions_booster_off
+	}
+}

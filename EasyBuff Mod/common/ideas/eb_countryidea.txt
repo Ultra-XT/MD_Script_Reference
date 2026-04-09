@@ -1,0 +1,350 @@
+ideas = {
+	country = {
+		de_combat_width = {
+			name = de_combat_width
+			picture = generic_infantry_bonus
+			allowed = { is_ai = no }
+			removal_cost = -1
+			modifier = {
+				COMBAT_WIDTH_FACTOR = -0.5
+			}
+		}
+		gen_mods = {
+			name = gen_mods
+			picture = generic_infantry_bonus
+			allowed = { is_ai = no }
+			removal_cost = -1
+			modifier = {
+				ARMY_SPEED_FACTOR = 5
+				army_defence_factor = 0.5
+				ARMY_ORG = 100
+				army_org_regain = 0.4
+				NO_SUPPLY_GRACE = 4800
+				COMBAT_WIDTH_FACTOR = -0.25
+				supply_consumption_factor = -0.2
+				#fuel_consumption_factor = -0.2
+				AIR_RANGE_FACTOR = 1
+				air_accidents = -1
+				air_detection = 2
+				air_maximum_speed_factor = 2
+				NAVY_ORG = 40
+				naval_detection = 5
+				naval_speed_factor = 3
+				decryption = 4
+
+				POLITICAL_POWER_GAIN = 3
+				max_command_power = 500
+				JUSTIFY_WAR_GOAL_TIME = -0.9
+				industry_repair_factor = 1000
+				industry_free_repair_factor = 1000
+				repair_speed_factor = 1
+				refit_speed = 1
+				production_speed_buildings_factor = 15
+				global_building_slots_factor = 0.6
+				production_factory_max_efficiency_factor = 0.3
+				industrial_capacity_factory = 10
+				industrial_capacity_dockyard = 10
+				industry_air_damage_factor = -0.7
+				fuel_gain_factor = 0.2
+			}
+			equipment_bonus = {
+				infantry = { reliability = 2 instant = yes }
+				motorized = { reliability = 2 instant = yes }
+				mechanized = { reliability = 2 instant = yes }
+				armor = { reliability = 2 instant = yes }
+				artillery = { reliability = 2 instant = yes }
+				air_transport = { reliability = 2 instant = yes }
+				fighter = { reliability = 2 instant = yes }
+				tactical_bomber = { reliability = 2 instant = yes }
+				naval_bomber = { reliability = 2 instant = yes }
+				strategic_bomber = { reliability = 2 instant = yes }
+				
+				submarine = {
+					reliability = 2
+					surface_detection = 20
+					sub_detection = 20
+					max_strength = 0.5
+					instant = yes 
+				}
+				screen_ship = {
+					reliability = 2
+					max_strength = 1
+					instant = yes 
+				}
+				carrier = {
+					build_cost_ic = -0.3
+					reliability = 2
+					max_strength = 7
+					instant = yes 
+				}
+			}
+		}
+		more_org = {
+			name = more_org
+			picture = generic_infantry_bonus
+			allowed = { is_ai = no }
+			removal_cost = -1
+			modifier = {
+				ARMY_ORG = 30
+				NAVY_ORG = 30
+			}
+		}
+		more_speed = {
+			name = more_speed
+			picture = generic_infantry_bonus
+			allowed = { is_ai = no }
+			removal_cost = -1
+			modifier = {
+				ARMY_SPEED_FACTOR = 2
+			}
+		}
+		more_special = {
+			name = more_special
+			picture = generic_infantry_bonus
+			allowed = { is_ai = no }
+			removal_cost = -1
+			modifier = {
+				special_forces_cap = 5
+			}
+		}
+		safety_eqs = {
+			name = safety_eqs
+			picture = generic_infantry_bonus
+			allowed = { is_ai = no }
+			removal_cost = -1
+			modifier = {
+				air_accidents_factor = -2
+			}
+			equipment_bonus = {
+				convoy = { reliability = 2 instant = yes }
+				train = { reliability = 2 instant = yes }
+				floating_harbor = { reliability = 2 instant = yes }
+				railway_gun = { reliability = 2 instant = yes }
+				armor = { reliability = 2 instant = yes }
+				motorized = { reliability = 2 instant = yes }
+				mechanized = { reliability = 2 instant = yes }
+				infantry = { reliability = 2 instant = yes }
+				capital_ship = { reliability = 2 instant = yes }
+				submarine = { reliability = 2 instant = yes }
+				screen_ship = { reliability = 2 instant = yes }
+				fighter = { reliability = 2 instant = yes }
+				heavy_fighter = { reliability = 2 instant = yes }
+				interceptor = { reliability = 2 instant = yes }
+				tactical_bomber = { reliability = 2 instant = yes }
+				strategic_bomber = { reliability = 2 instant = yes }
+				cas = { reliability = 2 instant = yes }
+				naval_bomber = { reliability = 2 instant = yes }
+				missile = { reliability = 2 instant = yes }
+				suicide = { reliability = 2 instant = yes }
+				scout_plane = { reliability = 2 instant = yes }
+				maritime_patrol_plane = { reliability = 2 instant = yes }
+				air_transport = { reliability = 2 instant = yes }
+				carrier = { reliability = 2 instant = yes }
+				support = { reliability = 2 instant = yes }
+				amphibious = { reliability = 2 instant = yes }
+				anti_air = { reliability = 2 instant = yes }
+				artillery = { reliability = 2 instant = yes }
+				anti_tank = { reliability = 2 instant = yes }
+				rocket = { reliability = 2 instant = yes }
+				flame = { reliability = 2 instant = yes }
+			}
+		}
+
+		safety_eqs2 = {
+			name = safety_eqs2
+			picture = generic_infantry_bonus
+			allowed = { is_ai = no }
+			removal_cost = -1
+			modifier = {
+				air_accidents_factor = -5
+			}
+			equipment_bonus = {
+				convoy = { reliability = 5 instant = yes }
+				train = { reliability = 5 instant = yes }
+				floating_harbor = { reliability = 5 instant = yes }
+				railway_gun = { reliability = 5 instant = yes }
+				armor = { reliability = 5 instant = yes }
+				motorized = { reliability = 5 instant = yes }
+				mechanized = { reliability = 5 instant = yes }
+				infantry = { reliability = 5 instant = yes }
+				capital_ship = { reliability = 5 instant = yes }
+				submarine = { reliability = 5 instant = yes }
+				screen_ship = { reliability = 5 instant = yes }
+				fighter = { reliability = 5 instant = yes }
+				heavy_fighter = { reliability = 5 instant = yes }
+				interceptor = { reliability = 5 instant = yes }
+				tactical_bomber = { reliability = 5 instant = yes }
+				strategic_bomber = { reliability = 5 instant = yes }
+				cas = { reliability = 5 instant = yes }
+				naval_bomber = { reliability = 5 instant = yes }
+				missile = { reliability = 5 instant = yes }
+				suicide = { reliability = 5 instant = yes }
+				scout_plane = { reliability = 5 instant = yes }
+				maritime_patrol_plane = { reliability = 5 instant = yes }
+				air_transport = { reliability = 5 instant = yes }
+				carrier = { reliability = 5 instant = yes }
+				support = { reliability = 5 instant = yes }
+				amphibious = { reliability = 5 instant = yes }
+				anti_air = { reliability = 5 instant = yes }
+				artillery = { reliability = 5 instant = yes }
+				anti_tank = { reliability = 5 instant = yes }
+				rocket = { reliability = 5 instant = yes }
+				flame = { reliability = 5 instant = yes }
+			}
+		}
+
+		speed_eqs = {
+			name = speed_eqs
+			picture = generic_infantry_bonus
+			allowed = { is_ai = no }
+			removal_cost = -1
+			equipment_bonus = {
+				armor = { maximum_speed = 0.35 instant = yes }
+				motorized = { maximum_speed = 0.35 instant = yes }
+				mechanized = { maximum_speed = 0.35 instant = yes }			
+			}
+		}
+
+		speed_eqs2 = {
+			name = speed_eqs2
+			picture = generic_infantry_bonus
+			allowed = { is_ai = no }
+			removal_cost = -1
+			equipment_bonus = {
+				armor = { maximum_speed = 1 instant = yes }
+				motorized = { maximum_speed = 1 instant = yes }
+				mechanized = { maximum_speed = 1 instant = yes }			
+			}
+		}
+
+		speed_eqs3 = {
+			name = speed_eqs3
+			picture = generic_infantry_bonus
+			allowed = { is_ai = no }
+			removal_cost = -1
+			equipment_bonus = {
+				armor = { maximum_speed = 5 instant = yes }
+				motorized = { maximum_speed = 5 instant = yes }
+				mechanized = { maximum_speed = 5 instant = yes }			
+			}
+		}
+
+		air_attack_buff = {
+			name = air_attack_buff
+			picture = generic_infantry_bonus
+			allowed = { is_ai = no }
+			removal_cost = -1
+			equipment_bonus = {
+				armor = { air_attack = 3 instant = yes }
+				motorized = { air_attack = 3 instant = yes }
+				mechanized = { air_attack = 3 instant = yes }
+				capital_ship = { air_attack = 3 instant = yes }
+				screen_ship = { air_attack = 3 instant = yes }
+				fighter = { air_attack = 3 instant = yes }
+				heavy_fighter = { air_attack = 3 instant = yes }
+				interceptor = { air_attack = 3 instant = yes }
+				tactical_bomber = { air_attack = 3 instant = yes }
+				strategic_bomber = { air_attack = 3 instant = yes }
+				cas = { air_attack = 3 instant = yes }
+				naval_bomber = { air_attack = 3 instant = yes }
+				carrier = { air_attack = 3 instant = yes }
+				support = { air_attack = 3 instant = yes }
+				anti_air = { air_attack = 3 instant = yes }
+			}
+		}
+
+		recon_buff = {
+			name = recon_buff
+			picture = generic_infantry_bonus
+			allowed = { is_ai = no }
+			removal_cost = -1
+			equipment_bonus = {
+				armor = { recon = 3 instant = yes }
+				motorized = { recon = 3 instant = yes }
+				mechanized = { recon = 3 instant = yes }
+				infantry = { recon = 3 instant = yes }
+				support = { recon = 3 instant = yes }
+			}
+		}
+
+		entrenchment_buff = {
+			name = entrenchment_buff
+			picture = generic_infantry_bonus
+			allowed = { is_ai = no }
+			removal_cost = -1
+			equipment_bonus = {
+				armor = { entrenchment = 5 instant = yes }
+				motorized = { entrenchment = 5 instant = yes }
+				mechanized = { entrenchment = 5 instant = yes }
+				infantry = { entrenchment = 5 instant = yes }
+				support = { entrenchment = 5 instant = yes }
+			}
+		}
+
+		army_exp_buffs = {
+			name = army_exp_buffs
+			picture = generic_infantry_bonus
+			allowed = { is_ai = no }
+			removal_cost = -1
+			modifier = {
+				experience_gain_army_factor = 2
+				experience_gain_navy_factor	= 2
+				experience_gain_air_factor = 2
+				experience_gain_army_unit_factor = 5
+				experience_gain_navy_unit_factor = 5
+				air_mission_xp_gain_factor = 5
+				air_training_xp_gain_factor = 5
+				experience_gain_factor = 2.5
+			}
+		}
+
+		auto_influence_cap = {
+			name = auto_influence_cap
+			picture = generic_infantry_bonus
+			allowed = { is_ai = no }
+			removal_cost = -1
+			modifier = {
+				foreign_influence_auto_influence_cap_modifier = 99
+			}
+		}
+
+		scientist_sp_buff = {
+			name = scientist_sp_buff
+			picture = generic_infantry_bonus
+			allowed = { is_ai = no }
+			removal_cost = -1
+			modifier = {
+				special_project_speed_factor = 200
+			}
+		}
+		ideol_drift_def_buff = {
+			name = ideol_drift_def_buff
+			picture = generic_infantry_bonus
+			allowed = { is_ai = no }
+			removal_cost = -1
+			modifier = {
+				drift_defence_factor = 10
+			}
+		}
+		internal_factions_price_reduction = {
+			name = internal_factions_price_reduction
+			picture = generic_infantry_bonus
+			allowed = { is_ai = no }
+			removal_cost = -1
+			modifier = {
+				internal_factions_cost_factor = -0.99
+			}
+		}
+		infrastructure_construction_speed_buff = {
+			name = infrastructure_construction_speed_buff
+			picture = generic_infantry_bonus
+			allowed = { is_ai = no }
+			removal_cost = -1
+			modifier = {
+				production_speed_infrastructure_factor = 20
+				production_speed_rail_way_factor = 20
+				production_speed_supply_node_factor = 20
+			}
+		}
+    }
+}

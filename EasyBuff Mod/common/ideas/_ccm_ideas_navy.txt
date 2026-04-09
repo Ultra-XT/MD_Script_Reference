@@ -1,0 +1,90 @@
+ideas = {
+	country = {
+		cheat_ccm_navy_decr_lv1 = {
+			picture = generic_naval_manufacturer_1
+			available = { is_ai = no }
+			cancel_if_invalid = no
+			level = 1
+			modifier = {
+				AIR_DETECTION = -1
+				NAVAL_DETECTION = -1
+				NAVAL_COORDINATION = -0.3
+				POSITIONING = -0.3
+				NAVAL_MORALE_FACTOR = -0.3
+				naval_accidents_chance = 0.2
+
+				NAVY_ORG_FACTOR = -0.2
+				NAVAL_STRIKE = -0.3
+				NAVAL_HIT_CHANCE = -0.2
+				CARRIER_TRAFFIC = -0.5
+				NAVAL_SPEED_FACTOR = -0.5
+				NAVY_MAX_RANGE_FACTOR = -0.5
+			}
+		}
+		cheat_ccm_navy_decr_lv2 = {
+			picture = generic_naval_manufacturer_1
+			available = { is_ai = no }
+			cancel_if_invalid = no
+			level = 2
+			modifier = {
+				AIR_DETECTION = -4
+				NAVAL_DETECTION = -4
+				NAVAL_COORDINATION = -0.5
+				POSITIONING = -0.5
+				NAVAL_MORALE_FACTOR = -0.5
+				naval_accidents_chance = 0.55
+
+				NAVY_ORG_FACTOR = -0.3
+				NAVAL_STRIKE = -0.3
+				NAVAL_HIT_CHANCE = -0.2
+				CARRIER_TRAFFIC = -0.5
+				NAVAL_SPEED_FACTOR = -0.8
+				SUBMARINE_ATTACK = -5
+				NAVY_MAX_RANGE_FACTOR = -1	
+			}
+		}
+		cheat_ccm_navy_lv1 = {
+			picture = generic_naval_manufacturer_1
+			available = { is_ai = no }
+			cancel_if_invalid = no
+			level = 3
+			modifier = {
+				AIR_DETECTION = 1
+				NAVAL_DETECTION = 1
+				NAVAL_COORDINATION = 0.3
+				POSITIONING = 0.3
+				NAVAL_MORALE_FACTOR = 0.3
+				naval_accidents_chance = -0.2
+
+				NAVY_ORG_FACTOR = 0.2
+				NAVAL_STRIKE = 0.3
+				NAVAL_HIT_CHANCE = 0.2
+				CARRIER_TRAFFIC = 0.5
+				NAVAL_SPEED_FACTOR = 0.5
+				NAVY_MAX_RANGE_FACTOR = 0.5
+			}
+		}
+		cheat_ccm_navy_lv2 = {
+			picture = generic_naval_manufacturer_1
+			available = { is_ai = no }
+			cancel_if_invalid = no
+			level = 4
+			modifier = {
+				AIR_DETECTION = 4
+				NAVAL_DETECTION = 4
+				NAVAL_COORDINATION = 0.5
+				POSITIONING = 0.5
+				NAVAL_MORALE_FACTOR = 0.5
+				naval_accidents_chance = -0.55
+
+				NAVY_ORG_FACTOR = 0.3
+				NAVAL_STRIKE = 0.3
+				NAVAL_HIT_CHANCE = 0.2
+				CARRIER_TRAFFIC = 0.5
+				NAVAL_SPEED_FACTOR = 0.8
+				SUBMARINE_ATTACK = 5
+				NAVY_MAX_RANGE_FACTOR = 1	
+			}
+		}
+	}
+}

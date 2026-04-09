@@ -1,0 +1,22 @@
+opinion_modifiers = {
+
+	esb_ccm_opinion_add_modifier = {
+		value = 10
+		years = 1
+	}
+
+	esb_ccm_opinion_decr_modifier = {
+		value = -10
+		years = 1
+	}
+
+	esb_ccm_opinion_shift_add_modifier = {
+		value = 150
+		years = 1
+	}
+
+	esb_ccm_opinion_shift_decr_modifier = {
+		value = -150
+		years = 1
+	}
+}

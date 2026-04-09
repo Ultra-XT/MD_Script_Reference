@@ -1,0 +1,227 @@
+ideas = {
+	cheat_construction = {
+		cheat_only_construction_lv1 = {
+			picture = generic_production_bonus
+			available = { is_ai = no }
+			cancel_if_invalid = no
+			level = 1
+			modifier = {
+				production_speed_buildings_factor = 0.5
+				industry_repair_factor = 0.5
+				industry_free_repair_factor = 0.25
+			}
+		}
+		cheat_only_construction_lv2 = {
+			picture = generic_production_bonus
+			available = { is_ai = no }
+			cancel_if_invalid = no
+			level = 2
+			modifier = {
+				production_speed_buildings_factor = 1
+				industry_repair_factor = 1
+				industry_free_repair_factor = 0.5
+			}
+		}
+		cheat_only_construction_lv3 = {
+			picture = generic_production_bonus
+			available = { is_ai = no }
+			cancel_if_invalid = no
+			level = 3
+			modifier = {
+				production_speed_buildings_factor = 5
+				industry_repair_factor = 5
+				industry_free_repair_factor = 5
+			}
+		}
+		cheat_construction_lv1 = {
+			picture = generic_production_bonus
+			available = { is_ai = no }
+			cancel_if_invalid = no
+			level = 4
+			modifier = {
+				global_building_slots_factor = 0.1
+
+				production_speed_buildings_factor = 0.5
+				LOCAL_RESOURCES_FACTOR = 0.2
+				industry_repair_factor = 0.2
+				repair_speed_factor = 0.5
+				refit_speed = 0.5
+				industry_free_repair_factor = 0.4
+				investment_duration_modifier = -0.25
+				receiving_investment_duration_modifier = -0.25
+
+				energy_gain_multiplier = 1
+				energy_use_multiplier = -0.7
+				non_electric_fuel_consumption_modifier = -0.2
+				nuclear_fuel_consumption_modifier = -0.2
+
+				total_workforce_modifier = 0.1
+				#workforce_eb_gdp_c_multiplier_modifier = 0.1
+				agricolture_productivity_modifier = 0.15
+				civilian_factories_productivity = 0.15
+				military_factories_productivity = 0.15
+				dockyard_productivity = 0.15
+				offices_productivity = 0.15
+				high_unemployment_threshold_modifier = 0.15
+				country_productivity_growth_modifier = 1
+
+				production_speed_facility_factor = 0.5
+			}
+		}
+		cheat_construction_lv2 = {
+			picture = generic_production_bonus
+			available = { is_ai = no }
+			cancel_if_invalid = no
+			level = 5
+			modifier = {
+				global_building_slots_factor = 0.2
+
+				production_speed_buildings_factor = 0.75
+				LOCAL_RESOURCES_FACTOR = 0.5
+				industry_repair_factor = 0.5
+				repair_speed_factor = 0.75
+				refit_speed = 0.75
+				industry_free_repair_factor = 1
+				investment_duration_modifier = -0.4
+				receiving_investment_duration_modifier = -0.4
+
+				LOCAL_MANPOWER = 0.1
+
+				energy_gain_multiplier = 1
+				energy_use_multiplier = -0.7
+				non_electric_fuel_consumption_modifier = -0.4
+				nuclear_fuel_consumption_modifier = -0.4
+
+				total_workforce_modifier = 0.25
+				#workforce_eb_gdp_c_multiplier_modifier = 0.25
+				agricolture_productivity_modifier = 0.45
+				civilian_factories_productivity = 0.45
+				military_factories_productivity = 0.45
+				dockyard_productivity = 0.45
+				offices_productivity = 0.45
+				high_unemployment_threshold_modifier = 0.45
+				country_productivity_growth_modifier = 2.5
+
+				production_speed_facility_factor = 0.75
+			}
+		}
+		cheat_construction_lv3 = {
+			picture = generic_production_bonus
+			available = { is_ai = no }
+			cancel_if_invalid = no
+			level = 6
+			modifier = {
+				global_building_slots_factor = 0.5
+
+				production_speed_buildings_factor = 1
+				LOCAL_RESOURCES_FACTOR = 1.2
+				industry_repair_factor = 0.7
+				repair_speed_factor = 1
+				refit_speed = 1
+				industry_free_repair_factor = 2
+				investment_duration_modifier = -0.5
+				receiving_investment_duration_modifier = -0.5
+
+				LOCAL_MANPOWER = 0.4
+
+				energy_gain_multiplier = 2
+				energy_use_multiplier = -0.7
+				non_electric_fuel_consumption_modifier = -0.55
+				nuclear_fuel_consumption_modifier = -0.55
+
+				total_workforce_modifier = 0.4
+				#workforce_eb_gdp_c_multiplier_modifier = 0.4
+				agricolture_productivity_modifier = 0.75
+				civilian_factories_productivity = 0.75
+				military_factories_productivity = 0.75
+				dockyard_productivity = 0.75
+				offices_productivity = 0.75
+				high_unemployment_threshold_modifier = 0.75
+				country_productivity_growth_modifier = 5
+
+				production_speed_facility_factor = 1
+			}
+		}
+		cheat_construction_lv4 = {
+			picture = generic_production_bonus
+			available = { is_ai = no }
+			cancel_if_invalid = no
+			level = 7
+			modifier = {
+				global_building_slots_factor = 1
+
+				production_speed_buildings_factor = 5
+				LOCAL_RESOURCES_FACTOR = 2
+				industry_repair_factor = 1
+				repair_speed_factor = 2.5
+				refit_speed = 2.5
+				industry_free_repair_factor = 2
+				investment_duration_modifier = -0.75
+				receiving_investment_duration_modifier = -0.75
+
+				LOCAL_MANPOWER = 1
+
+				energy_gain_multiplier = 7
+				energy_use_multiplier = -0.75
+				non_electric_fuel_consumption_modifier = -0.75
+				nuclear_fuel_consumption_modifier = -0.75
+
+				total_workforce_modifier = 0.75
+				#workforce_eb_gdp_c_multiplier_modifier = 0.75
+				agricolture_productivity_modifier = 1.5
+				civilian_factories_productivity = 1.5
+				military_factories_productivity = 1.5
+				dockyard_productivity = 1.5
+				offices_productivity = 1.5
+				high_unemployment_threshold_modifier = 1
+				country_productivity_growth_modifier = 10
+
+				production_speed_facility_factor = 5
+			}
+		}
+		cheat_construction_insane = {
+			picture = generic_production_bonus
+			available = { is_ai = no }
+			cancel_if_invalid = no
+			level = 8
+			modifier = {
+				global_building_slots_factor = 2
+
+				production_speed_buildings_factor = 100
+				LOCAL_RESOURCES = 10
+				LOCAL_RESOURCES_FACTOR = 10
+				industry_repair_factor = 20
+				repair_speed_factor = 25
+				refit_speed = 25
+				industry_free_repair_factor = 10
+				investment_duration_modifier = -0.999999
+				receiving_investment_duration_modifier = -0.999999
+
+				LOCAL_MANPOWER = 10
+
+				energy_gain_multiplier = 25
+				energy_use_multiplier = -0.96
+				non_electric_fuel_consumption_modifier = -0.99
+				nuclear_fuel_consumption_modifier = -0.99
+
+				total_workforce_modifier = 10
+				#workforce_eb_gdp_c_multiplier_modifier = 100
+				agricolture_productivity_modifier = 10
+				civilian_factories_productivity = 10
+				military_factories_productivity = 10
+				dockyard_productivity = 10
+				offices_productivity = 10
+				high_unemployment_threshold_modifier = 10
+				country_productivity_growth_modifier = 25
+
+				production_speed_facility_factor = 100
+			}
+		}
+		cheat_nothingconstruction={
+			picture = generic_pp_unity_bonus
+			available = { is_ai = no }
+			cancel_if_invalid = no
+			level = 9
+		}
+	}
+}
